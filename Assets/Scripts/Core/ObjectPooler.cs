@@ -42,7 +42,7 @@ namespace ScoreSpace.Core
             {
                 if (!item.objectToPool.CompareTag(objectTag)) continue;
                 if (!item.shouldExpand) continue;
-                var obj = (GameObject)Instantiate(item.objectToPool);
+                var obj = (GameObject)Instantiate(item.objectToPool,transform.position, Quaternion.identity);
                 obj.SetActive(false);
                 _pooledObjects.Add(obj);
                 return obj;

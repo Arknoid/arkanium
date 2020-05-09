@@ -3,8 +3,23 @@ using UnityEngine;
 
 namespace ScoreSpace.Player
 {
+    public enum Position
+    {
+        Right,
+        BottomRight,
+        Bottom,
+        BottomLeft,
+        Left,
+        TopLeft,
+        Top,
+        TopRight,
+    }
     public class PlayerMovement : MonoBehaviour
     {
+        public Position CurrentPosition => _currentPosition;
+
+        private Position _currentPosition = Position.Right;
+        
         private Rigidbody2D _rb;
         private PlayerInput _playerInput;
         private Animator _animator;
@@ -43,37 +58,45 @@ namespace ScoreSpace.Player
             if (_playerInput.Horizontal < -inputThreshold && _playerInput.Vertical > -inputThreshold &&
                 _playerInput.Vertical < inputThreshold)
             {
+                _currentPosition = Position.Left;
                 transform.rotation = Quaternion.Euler(0, 0, -180);
             }
             else if (_playerInput.Horizontal < -inputThreshold && _playerInput.Vertical < -inputThreshold)
             {
+                _currentPosition = Position.BottomLeft;
                 transform.rotation = Quaternion.Euler(0, 0, -135);
             }
             else if (_playerInput.Horizontal > inputThreshold && _playerInput.Vertical > -inputThreshold &&
                      _playerInput.Vertical < inputThreshold)
             {
+                _currentPosition = Position.Right;
                 transform.rotation = Quaternion.identity;
             }
             else if (_playerInput.Horizontal < -inputThreshold && _playerInput.Vertical > inputThreshold)
             {
+                _currentPosition = Position.TopLeft;
                 transform.rotation = Quaternion.Euler(0, 0, 135);
             }
             else if (_playerInput.Horizontal > inputThreshold && _playerInput.Vertical > inputThreshold)
             {
+                _currentPosition = Position.TopRight;
                 transform.rotation = Quaternion.Euler(0, 0, 45);
             }
             else if (_playerInput.Horizontal > inputThreshold && _playerInput.Vertical < -inputThreshold)
             {
+                _currentPosition = Position.BottomRight;
                 transform.rotation = Quaternion.Euler(0, 0, -45);
             }
             else if (_playerInput.Vertical < -inputThreshold && _playerInput.Horizontal > -inputThreshold &&
                      _playerInput.Horizontal < inputThreshold)
             {
+                _currentPosition = Position.Bottom;
                 transform.rotation = Quaternion.Euler(0, 0, -90);
             }
             else if (_playerInput.Vertical > inputThreshold && _playerInput.Horizontal > -inputThreshold &&
                      _playerInput.Horizontal < inputThreshold)
             {
+                _currentPosition = Position.Top;
                 transform.rotation = Quaternion.Euler(0, 0, 90);
             }
         }

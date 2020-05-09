@@ -1,4 +1,5 @@
-﻿using ScoreSpace.Interfaces;
+﻿using System;
+using ScoreSpace.Interfaces;
 using UnityEngine;
 
 namespace ScoreSpace
@@ -10,7 +11,6 @@ namespace ScoreSpace
         [SerializeField] private float _speed = 2;
         [SerializeField] private string _targetTag = "Player";
         private Rigidbody2D _rb;
-        
         
         private GameObject _target;
         private void Awake()
@@ -27,7 +27,12 @@ namespace ScoreSpace
                 this.gameObject.SetActive(false);
                 return;
             }
-            _rb.AddForce((_target.transform.position -_rb.transform.position).normalized * _speed, ForceMode2D.Impulse);
+            _rb.velocity = (_target.transform.position -_rb.transform.position).normalized * _speed;
+        }
+
+        private void Update()
+        {
+            _rb.velocity = (_target.transform.position -_rb.transform.position).normalized * _speed;
         }
 
         private void OnTriggerEnter2D(Collider2D other)

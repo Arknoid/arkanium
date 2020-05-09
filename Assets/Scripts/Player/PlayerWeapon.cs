@@ -13,15 +13,7 @@ namespace ScoreSpace.Player
         [SerializeField] private GameObject[] _baseWeaponShots;
 
         [SerializeField] private Transform _baseWeaponMountPoint;
-        [SerializeField] private Transform _beamMountPoint1;
-        [SerializeField] private Transform _beamMountPoint2;
-        [SerializeField] private Transform _sideShotMountPointLeft;
-        [SerializeField] private Transform _sideShotMountPointRight;
-        [SerializeField] private GameObject[] _beamLasers = new GameObject[5];
-        [SerializeField] private GameObject[] _doubleBeamLasers = new GameObject[5];
-        [SerializeField] private string _sideShotTag;
         [SerializeField] private string _baseShotTag;
-        [SerializeField] private AudioClip _beamSound;
         [SerializeField] private AudioClip _baseWeaponSound;
         [SerializeField] private float _shootRate = 0.2f;
 
@@ -32,7 +24,8 @@ namespace ScoreSpace.Player
         }
 
         private PlayerPowerUp _playerPowerUp;
-
+        private PlayerInput _playerInput;
+        private PlayerMovement _playerMovement;
         private bool _canShoot = true;
         private static readonly int Power = Animator.StringToHash("Power");
 
@@ -45,9 +38,11 @@ namespace ScoreSpace.Player
         }
         private void Awake()
         {
-            GetComponent<PlayerInput>().OnFire += HandleFire;
-            GetComponent<PlayerInput>().OnHoldFire += HandleBeamFire;
+            _playerInput = GetComponent<PlayerInput>();
+            _playerInput.OnFire += HandleFire;
+            _playerInput.OnHoldFire += HandleBeamFire;
             _playerPowerUp = GetComponent<PlayerPowerUp>();
+            _playerMovement = GetComponent<PlayerMovement>();
         }
         
         private void OnDestroy()
@@ -68,28 +63,49 @@ namespace ScoreSpace.Player
         
         private  void HandleFire()
         {
+
             if (!_canShoot) return;
-            SpawnShot(_baseShotTag, _baseWeaponMountPoint.transform, new Vector2(0f, 1f), _playerPowerUp.LaserLevel);
+            SpawnShot(_baseShotTag, _baseWeaponMountPoint.transform, GetDirectionByPlayerDirection(), 1 , transform.rotation.eulerAngles.z);
             SoundManager.Instance.RandomizeSfx(_baseWeaponSound);
-            if (_playerPowerUp.SideShotLevel > 0)
-            {
-                SpawnSideShots();
-            }
             StartCoroutine(FireDelay());
         }
 
-        private void SpawnSideShots()
+        private Vector2 GetDirectionByPlayerDirection()
         {
-            const float eulerAngle = 15f;
-            SpawnShot(_sideShotTag,_sideShotMountPointLeft,
-                new Vector2(-0.2f, 1f),_playerPowerUp.SideShotLevel -1,eulerAngle);
-            SpawnShot(_sideShotTag,_sideShotMountPointRight,
-                new Vector2(0.2f, 1f),_playerPowerUp.SideShotLevel -1,-eulerAngle);
-            
-            // extra shots
-            if (_playerPowerUp.SideShotLevel <= 4) return;
-            SpawnShot(_sideShotTag,_sideShotMountPointLeft,new Vector2(-0.5f, 1f),1,eulerAngle);
-            SpawnShot(_sideShotTag,_sideShotMountPointRight,new Vector2(0.5f, 1f),1,-eulerAngle);
+            Vector2 direction;
+            switch (_playerMovement.CurrentPosition)
+            {
+                case Position.Right:
+                    direction = Vector2.right;
+                    break;
+                case Position.BottomRight:
+                    direction = new Vector2(1, -1);
+                    break;
+                case Position.Bottom:
+                    direction = Vector2.down;
+                    break;
+                case Position.BottomLeft:
+                    direction = new Vector2(-1, -1);
+                    break;
+                case Position.Left:
+                    direction = Vector2.left;
+                    break;
+                case Position.TopLeft:
+                    direction = Vector2.right;
+                    direction = new Vector2(-1, 1);
+                    break;
+                case Position.Top:
+                    direction = Vector2.up;
+                    break;
+                case Position.TopRight:
+                    direction = new Vector2(1, 1);
+                    break;
+                default:
+                    direction = Vector2.zero;
+                    break;
+            }
+
+            return direction;
         }
 
         private void SpawnShot(string shotTag,Transform mountPoint, Vector2 direction,int power = 1,float eulerAngle = 0f)
@@ -105,15 +121,6 @@ namespace ScoreSpace.Player
 
         private void HandleBeamFire(bool isFull)
         {
-            var beamLevelIndex = _playerPowerUp.LaserLevel;
-            if (beamLevelIndex > _beamLasers.Length -1) beamLevelIndex = _beamLasers.Length -1;
-            var doubleBeamLevelIndex = _playerPowerUp.LaserLevel;
-            if (doubleBeamLevelIndex > _doubleBeamLasers.Length -1) doubleBeamLevelIndex = _doubleBeamLasers.Length -1;
-            SoundManager.Instance.RandomizeSfx(_beamSound);
-
-            var leftBeam = Instantiate( isFull ?  _doubleBeamLasers[doubleBeamLevelIndex] : _beamLasers[beamLevelIndex], _beamMountPoint1.transform.position, Quaternion.identity);
-            var rightBeam = Instantiate(isFull ?  _doubleBeamLasers[doubleBeamLevelIndex] : _beamLasers[beamLevelIndex], _beamMountPoint2.transform.position, Quaternion.identity);
-            
         }
         
     }

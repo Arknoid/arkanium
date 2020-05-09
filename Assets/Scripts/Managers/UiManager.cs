@@ -9,7 +9,6 @@ namespace ScoreSpace.Managers
     {
         [SerializeField] private Text _debugInfosText;
         [SerializeField] private bool _showDebugInfos = false;
-        [SerializeField] private LevelManager _levelManager;
         [SerializeField] private Text _scoreText;
         
         private PlayerPowerUp _playerPowerUp;
@@ -33,7 +32,6 @@ namespace ScoreSpace.Managers
         private void Start()
         {
             _debugInfosText.gameObject.SetActive(_showDebugInfos);
-            _levelManager = FindObjectOfType<LevelManager>();
         }
         
         private void Update()

@@ -10,18 +10,9 @@ namespace ScoreSpace.Managers
         [SerializeField] private GameObject _playerPrefab;
         [SerializeField] private float _playerDieSpawnDelay = 1f;
         
-        private LevelManager _currentLevelManager;
         
         public int PlayerScore { get; set; }
-
-        public LevelManager CurrentLevelManager
-        {
-            set
-            {
-                _currentLevelManager = value;
-                StartCoroutine(SpawnPlayer());
-            }
-        }
+        
         
         public void PlayerDie()
         {
@@ -34,12 +25,6 @@ namespace ScoreSpace.Managers
             yield return new WaitForSeconds(2);
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
-        private IEnumerator SpawnPlayer(float delay = 0)
-        {
-            
-            yield return new WaitForSeconds(delay);
-            _currentLevelManager.SpawnPlayer(_playerPrefab);
-        }
-        
+
     }
 }
