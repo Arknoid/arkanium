@@ -18,6 +18,7 @@
         <e p="Scripts" t="Include">
           <e p="Core" t="Include">
             <e p="CameraShake.cs" t="Include" />
+            <e p="EnemyHealth.cs" t="Include" />
             <e p="Health.cs" t="Include" />
             <e p="MovableObject.cs" t="Include" />
             <e p="ObjectPooler.cs" t="Include" />
@@ -37,6 +38,7 @@
             <e p="IProjectile.cs" t="Include" />
             <e p="IScorePoints.cs" t="Include" />
           </e>
+          <e p="LootOnTrigger.cs" t="Include" />
           <e p="MainMenu.cs" t="Include" />
           <e p="MAnagers" t="Include">
             <e p="GameManager.cs" t="Include" />
@@ -60,6 +62,7 @@
             <e p="DecreasePowersUp.cs" t="Include" />
             <e p="Shield.cs" t="Include" />
           </e>
+          <e p="Ship.cs" t="Include" />
           <e p="TargetShot.cs" t="Include" />
           <e p="UI" t="Include">
             <e p="ScoreObject.cs" t="Include" />

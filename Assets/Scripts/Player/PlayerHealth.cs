@@ -1,6 +1,5 @@
 ﻿using System.Collections;
 using ScoreSpace.Core;
-using ScoreSpace.Managers;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -17,12 +16,6 @@ namespace ScoreSpace.Player
             base.Awake();
         }
 
-        public override bool TakeDamage(int damageTaken)
-        {
-            // CameraShake.Instance.StartShake();
-            return base.TakeDamage(damageTaken);
-        }
-        
         protected override IEnumerator Explode()
         {
             

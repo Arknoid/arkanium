@@ -59,22 +59,27 @@ namespace ScoreSpace.Player
                     _playerMovement.SpeedBonus += _speedToAdd;
                     _playerWeapon.ShootRate -= _shootDelayBonus;
                     SoundManager.Instance.RandomizeSfx(_soundPowerUpSpeed);
-                    Destroy(other.gameObject);
+                    other.gameObject.SetActive(false);
                     break;
                 case "PowerUpHealth":
                     SoundManager.Instance.RandomizeSfx(_soundPowerUpEnergy);
                     _playerHealth.CurrentHealth += _healthToAdd;
-                    Destroy(other.gameObject);
+                    other.gameObject.SetActive(false);
                     break;
                 case "PowerUpShield":
                     ShieldLevel++;
                     SoundManager.Instance.RandomizeSfx(_soundPowerUpShield);
-                    Destroy(other.gameObject);
+                    other.gameObject.SetActive(false);
                     break;
                 case "PowerUpWeapon":
                     LaserLevel++;
                     SoundManager.Instance.RandomizeSfx(_soundPowerUpLaser);
-                    Destroy(other.gameObject);
+                    other.gameObject.SetActive(false);
+                    break;
+                case "Arkanium":
+                    GameManager.Instance.ArkaniumCount++;
+                    SoundManager.Instance.RandomizeSfx(_soundPowerUpLaser);
+                    other.gameObject.SetActive(false);
                     break;
             }
             

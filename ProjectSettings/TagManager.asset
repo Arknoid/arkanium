@@ -14,6 +14,8 @@ TagManager:
   - PowerUpShield
   - Shield
   - PlayerBeam
+  - Arkanium
+  - Mineral
   layers:
   - Default
   - TransparentFX
@@ -29,7 +31,7 @@ TagManager:
   - PowerUp
   - Shield
   - Obstacles
-  - 
+  - Ship
   - 
   - 
   - 

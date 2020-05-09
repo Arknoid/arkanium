@@ -51,7 +51,9 @@ namespace ScoreSpace.Managers
                            + "\nSideShot : " + _playerPowerUp.SideShotLevel
                            + "\nShield : " + _playerPowerUp.ShieldLevel
                            + "\nShoot rate : " + _playerWeapon.ShootRate
-                           + "\nSpeedBonus : " + _playerMovement.SpeedBonus;
+                           + "\nSpeedBonus : " + _playerMovement.SpeedBonus
+                           + "\nArkanium :" + GameManager.Instance.ArkaniumCount + "/" +
+                           GameManager.Instance.ArkaniumNeed;
         }
         
     }
