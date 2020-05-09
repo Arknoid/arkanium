@@ -13,8 +13,8 @@ namespace ScoreSpace.Player
         
         private void Awake()
         {
-            _leftReactParticles = GameObject.Find("Reactor Particle Right").GetComponent<ParticleSystem>();
-            _rightReactParticles = GameObject.Find("Reactor Particle Left").GetComponent<ParticleSystem>();
+            // _leftReactParticles = GameObject.Find("Reactor Particle Right").GetComponent<ParticleSystem>();
+            // _rightReactParticles = GameObject.Find("Reactor Particle Left").GetComponent<ParticleSystem>();
             _playerInput = GetComponent<PlayerInput>();
         }
 
@@ -23,18 +23,18 @@ namespace ScoreSpace.Player
 
             EnableBeamParticles();
 
-            EnableReactorParticles();
+            // EnableReactorParticles();
         }
 
         private void EnableReactorParticles()
         {
             if (_playerInput.Vertical <= -0.5f)
             {
-                StopParticles();
+                // StopParticles();
             }
             else if (_playerInput.Vertical >= 0 && !_leftReactParticles.isPlaying && !_rightReactParticles.isPlaying)
             {
-                PlayParticles();
+                // PlayParticles();
             }
         }
 

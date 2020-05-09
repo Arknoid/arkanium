@@ -13,6 +13,7 @@ TagManager:
   - PowerUpHealth
   - PowerUpShield
   - Shield
+  - PlayerBeam
   layers:
   - Default
   - TransparentFX
@@ -27,7 +28,7 @@ TagManager:
   - Enemy
   - PowerUp
   - Shield
-  - 
+  - Obstacles
   - 
   - 
   - 

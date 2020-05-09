@@ -13,8 +13,13 @@ namespace ScoreSpace.Player
         [SerializeField] private GameObject[] _baseWeaponShots;
 
         [SerializeField] private Transform _baseWeaponMountPoint;
+        [SerializeField] private Transform _beamWeaponMountPoint;
+        [SerializeField] private Transform _doubleBeamWeaponMountPoint1;
+        [SerializeField] private Transform _doubleBeamWeaponMountPoint2;
         [SerializeField] private string _baseShotTag;
+        [SerializeField] private string _beamShotTag;
         [SerializeField] private AudioClip _baseWeaponSound;
+        [SerializeField] private AudioClip _beamWeaponSound;
         [SerializeField] private float _shootRate = 0.2f;
 
         public float ShootRate
@@ -121,7 +126,18 @@ namespace ScoreSpace.Player
 
         private void HandleBeamFire(bool isFull)
         {
-
+            if (!_canShoot) return;
+            if (isFull)
+            {
+                SpawnShot(_beamShotTag, _doubleBeamWeaponMountPoint1.transform, GetDirectionByPlayerDirection(), 1 , transform.rotation.eulerAngles.z);
+                SpawnShot(_beamShotTag, _doubleBeamWeaponMountPoint2.transform, GetDirectionByPlayerDirection(), 1 , transform.rotation.eulerAngles.z);
+            }
+            else
+            {
+                SpawnShot(_beamShotTag, _beamWeaponMountPoint.transform, GetDirectionByPlayerDirection(), 1 , transform.rotation.eulerAngles.z);
+            }
+            SoundManager.Instance.RandomizeSfx(_beamWeaponSound);
+            StartCoroutine(FireDelay());
         }
         
     }
