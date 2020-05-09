@@ -121,6 +121,7 @@ namespace ScoreSpace.Player
 
         private void HandleBeamFire(bool isFull)
         {
+
         }
         
     }

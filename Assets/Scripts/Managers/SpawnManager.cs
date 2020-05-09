@@ -28,7 +28,7 @@ namespace ScoreSpace.Managers
             while (true)
             {
                 
-                if (nextIndex > 5)
+                if (nextIndex > 6)
                 {
                     randomSpawnPosIndex  = Random.Range(0, _spawnsPos.Length);
                     nextIndex = 0;
@@ -38,8 +38,7 @@ namespace ScoreSpace.Managers
                 {
                     finalIndex = 0;
                 }
-
-                Debug.Log(finalIndex);
+                
                 var spawnedObject = ObjectPooler.Instance.GetPooledObject(_poolObjectsTag[Random.Range(0, _poolObjectsTag.Length)]);
                 if (spawnedObject != null)
                 {

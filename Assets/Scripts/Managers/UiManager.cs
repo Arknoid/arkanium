@@ -32,12 +32,13 @@ namespace ScoreSpace.Managers
         private void Start()
         {
             _debugInfosText.gameObject.SetActive(_showDebugInfos);
+            Player = GameObject.FindGameObjectWithTag("Player");
         }
         
         private void Update()
         {
             if (_player == null) return;
-            _scoreText.text = "Score : " + GameManager.Instance.PlayerScore.ToString();
+            // _scoreText.text = "Score : " + GameManager.Instance.PlayerScore.ToString();
             if (!_showDebugInfos) return;
             BuildDebugInfos();
         }

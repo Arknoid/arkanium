@@ -15,8 +15,8 @@ GameObject:
   - component: {fileID: 8095788121969591549}
   - component: {fileID: 8095788121969591538}
   m_Layer: 0
-  m_Name: Ship
-  m_TagString: PlayerShip
+  m_Name: Block
+  m_TagString: Block
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -75,7 +75,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 8e434cb1f446eae48b5d4a1848cb7a03, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.27400666, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

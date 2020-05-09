@@ -12,7 +12,6 @@ namespace ScoreSpace.Player
         [SerializeField] private float _shootDelayBonus = 0.5f;
         [SerializeField] private int _speedToAdd = 25;
         
-        [SerializeField] private AudioClip _soundPowerUpSideShot;
         [SerializeField] private AudioClip _soundPowerUpSpeed;
         [SerializeField] private AudioClip _soundPowerUpEnergy;
         [SerializeField] private AudioClip _soundPowerUpShield;
@@ -56,28 +55,23 @@ namespace ScoreSpace.Player
         {
             switch (other.gameObject.tag)   
             {
-                case "Power Up Side Shot" : 
-                    SideShotLevel ++;
-                    SoundManager.Instance.RandomizeSfx(_soundPowerUpSideShot);
-                    Destroy(other.gameObject);
-                    break;
-                case "Power Up Speed" :
+                case "PowerUpSpeed" :
                     _playerMovement.SpeedBonus += _speedToAdd;
                     _playerWeapon.ShootRate -= _shootDelayBonus;
                     SoundManager.Instance.RandomizeSfx(_soundPowerUpSpeed);
                     Destroy(other.gameObject);
                     break;
-                case "Power Up Energy":
+                case "PowerUpHealth":
                     SoundManager.Instance.RandomizeSfx(_soundPowerUpEnergy);
                     _playerHealth.CurrentHealth += _healthToAdd;
                     Destroy(other.gameObject);
                     break;
-                case "Power Up Shield":
+                case "PowerUpShield":
                     ShieldLevel++;
                     SoundManager.Instance.RandomizeSfx(_soundPowerUpShield);
                     Destroy(other.gameObject);
                     break;
-                case "Power Up Laser":
+                case "PowerUpWeapon":
                     LaserLevel++;
                     SoundManager.Instance.RandomizeSfx(_soundPowerUpLaser);
                     Destroy(other.gameObject);

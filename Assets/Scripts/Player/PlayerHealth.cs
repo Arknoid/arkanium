@@ -2,6 +2,7 @@
 using ScoreSpace.Core;
 using ScoreSpace.Managers;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace ScoreSpace.Player
 {
@@ -18,19 +19,18 @@ namespace ScoreSpace.Player
 
         public override bool TakeDamage(int damageTaken)
         {
-            CameraShake.Instance.StartShake();
+            // CameraShake.Instance.StartShake();
             return base.TakeDamage(damageTaken);
         }
         
         protected override IEnumerator Explode()
         {
             
-            _playerParticles.StopParticles();
+            // _playerParticles.StopParticles();
             if (_rb!= null)_rb.simulated = false;
-            GameManager.Instance.PlayerDie();
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
             yield return StartCoroutine(base.Explode());
-
-            Destroy(this.gameObject);
+            
         }
     }
 }

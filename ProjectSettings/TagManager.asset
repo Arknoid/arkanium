@@ -7,6 +7,12 @@ TagManager:
   - PlayerShot
   - PlayerShip
   - Enemy
+  - Block
+  - PowerUpSpeed
+  - PowerUpWeapon
+  - PowerUpHealth
+  - PowerUpShield
+  - Shield
   layers:
   - Default
   - TransparentFX
@@ -19,8 +25,8 @@ TagManager:
   - Player
   - PlayerShot
   - Enemy
-  - 
-  - 
+  - PowerUp
+  - Shield
   - 
   - 
   - 
