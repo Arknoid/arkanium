@@ -63969,7 +63969,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _debugInfosText: {fileID: 1239336068}
-  _showDebugInfos: 1
+  _showDebugInfos: 0
   _scoreText: {fileID: 886923970}
   _arkaniumText: {fileID: 2094364234}
 --- !u!114 &938378913
@@ -66663,6 +66663,14 @@ PrefabInstance:
       propertyPath: _energyBar
       value: 
       objectReference: {fileID: 1988341899433210004}
+    - target: {fileID: 246145070, guid: ebe6b2ce4b79f6e4580d7ab1b3a6aa7f, type: 3}
+      propertyPath: _soundHit
+      value: 
+      objectReference: {fileID: 8300000, guid: 2f0ca1e0f2651204f9c3ffa0a0ac6aad, type: 3}
+    - target: {fileID: 246145070, guid: ebe6b2ce4b79f6e4580d7ab1b3a6aa7f, type: 3}
+      propertyPath: _soundExplode
+      value: 
+      objectReference: {fileID: 8300000, guid: 9f77aa3e2480ecf4d8c9c9e9cae12667, type: 3}
     - target: {fileID: 2430506093820117837, guid: ebe6b2ce4b79f6e4580d7ab1b3a6aa7f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -66723,6 +66731,41 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 2430506093820117844, guid: ebe6b2ce4b79f6e4580d7ab1b3a6aa7f,
+        type: 3}
+      propertyPath: _baseWeaponSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 4670cbd8196132d4d933c244f6d00180, type: 3}
+    - target: {fileID: 2430506093820117844, guid: ebe6b2ce4b79f6e4580d7ab1b3a6aa7f,
+        type: 3}
+      propertyPath: _beamWeaponSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 27d34f8018fd31443a6af6e9ca81a326, type: 3}
+    - target: {fileID: 3694494909600459358, guid: ebe6b2ce4b79f6e4580d7ab1b3a6aa7f,
+        type: 3}
+      propertyPath: _soundPowerUpSpeed
+      value: 
+      objectReference: {fileID: 8300000, guid: c47156667ad81d14e8c3b34472c4a4a4, type: 3}
+    - target: {fileID: 3694494909600459358, guid: ebe6b2ce4b79f6e4580d7ab1b3a6aa7f,
+        type: 3}
+      propertyPath: _soundPowerUpShield
+      value: 
+      objectReference: {fileID: 8300000, guid: 795c49a3f9f3bde46a8eaa8599777585, type: 3}
+    - target: {fileID: 3694494909600459358, guid: ebe6b2ce4b79f6e4580d7ab1b3a6aa7f,
+        type: 3}
+      propertyPath: _soundPowerUpEnergy
+      value: 
+      objectReference: {fileID: 8300000, guid: da9a25154a2227c4fb19c29b070612b6, type: 3}
+    - target: {fileID: 3694494909600459358, guid: ebe6b2ce4b79f6e4580d7ab1b3a6aa7f,
+        type: 3}
+      propertyPath: _soundPowerUpLaser
+      value: 
+      objectReference: {fileID: 8300000, guid: 780b564e30ef8224ab9edb1399c5232e, type: 3}
+    - target: {fileID: 3694494909600459358, guid: ebe6b2ce4b79f6e4580d7ab1b3a6aa7f,
+        type: 3}
+      propertyPath: _soundArkanium
+      value: 
+      objectReference: {fileID: 8300000, guid: 9b71f81a9f8380f4d963c827da547a32, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ebe6b2ce4b79f6e4580d7ab1b3a6aa7f, type: 3}
 --- !u!1001 &1887393877461583448

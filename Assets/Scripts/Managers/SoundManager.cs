@@ -19,6 +19,7 @@ namespace ScoreSpace.Managers
 
         protected void Start()
         {
+            musicSource.Stop();
             PlayMusic(_musics[Random.Range(0,_musics.Length)]);
         }
 
@@ -40,8 +41,7 @@ namespace ScoreSpace.Managers
         
         public void PlaySingle(AudioClip clip)
         {
-            efxSource.clip = clip;
-            efxSource.Play();
+            efxSource.PlayOneShot(clip);
         }
 
 

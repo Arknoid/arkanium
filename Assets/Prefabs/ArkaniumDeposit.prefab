@@ -142,6 +142,16 @@ PrefabInstance:
       propertyPath: m_WasSpriteAssigned
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7492034486982272302, guid: 007658eecbc8bde4cb09e5a2bfd0c611,
+        type: 3}
+      propertyPath: _health
+      value: 400
+      objectReference: {fileID: 0}
+    - target: {fileID: 7492034486982272302, guid: 007658eecbc8bde4cb09e5a2bfd0c611,
+        type: 3}
+      propertyPath: _soundHit
+      value: 
+      objectReference: {fileID: 8300000, guid: 782fc15c10958c649a51455fca2f6166, type: 3}
     - target: {fileID: 7492034486982272722, guid: 007658eecbc8bde4cb09e5a2bfd0c611,
         type: 3}
       propertyPath: m_Name

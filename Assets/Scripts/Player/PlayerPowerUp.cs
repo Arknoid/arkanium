@@ -16,7 +16,8 @@ namespace ScoreSpace.Player
         [SerializeField] private AudioClip _soundPowerUpEnergy;
         [SerializeField] private AudioClip _soundPowerUpShield;
         [SerializeField] private AudioClip _soundPowerUpLaser;
-
+        [SerializeField] private AudioClip _soundArkanium;
+        
         private PlayerWeapon _playerWeapon;
         private PlayerMovement _playerMovement;
 
@@ -78,7 +79,7 @@ namespace ScoreSpace.Player
                     break;
                 case "Arkanium":
                     GameManager.Instance.ArkaniumCount++;
-                    SoundManager.Instance.RandomizeSfx(_soundPowerUpLaser);
+                    SoundManager.Instance.RandomizeSfx(_soundArkanium);
                     other.gameObject.SetActive(false);
                     break;
             }
