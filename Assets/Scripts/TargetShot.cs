@@ -46,7 +46,7 @@ namespace ScoreSpace
 
         private void OnCollisionEnter2D(Collision2D other)
         {
-            if (_canDamage)
+            if (_canDamage && other.transform.CompareTag("Player"))
             {
                 other.gameObject.GetComponent<IDamageable>()?.TakeDamage(Power);
                 _canDamage = false;
