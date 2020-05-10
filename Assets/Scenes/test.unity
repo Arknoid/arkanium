@@ -65772,6 +65772,10 @@ MonoBehaviour:
   musicSource: {fileID: 1595690079}
   lowPitchRange: 0.95
   highPitchRange: 1.05
+  _musics:
+  - {fileID: 8300000, guid: cb8ebcae07c81614baaf850f17881fd3, type: 3}
+  - {fileID: 8300000, guid: 108fd926769ca254288bf91be2d28102, type: 3}
+  - {fileID: 8300000, guid: 4e815865881f34242b043fffd3165087, type: 3}
 --- !u!82 &1595690079
 AudioSource:
   m_ObjectHideFlags: 0
@@ -65783,10 +65787,10 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 108fd926769ca254288bf91be2d28102, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 0.38
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0

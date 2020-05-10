@@ -1,5 +1,7 @@
-﻿using ScoreSpace.Patterns;
+﻿using System;
+using ScoreSpace.Patterns;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 namespace ScoreSpace.Managers
 {
@@ -13,7 +15,13 @@ namespace ScoreSpace.Managers
         public AudioSource musicSource;
         public float lowPitchRange = .95f;
         public float highPitchRange = 1.05f;
-        
+        [SerializeField] private AudioClip[] _musics;
+
+        protected void Start()
+        {
+            PlayMusic(_musics[Random.Range(0,_musics.Length)]);
+        }
+
         protected override void Init()
         {
             DontDestroyOnLoad (gameObject);
@@ -21,6 +29,7 @@ namespace ScoreSpace.Managers
         
         public void PlayMusic(AudioClip clip)
         {
+            
             musicSource.clip = clip;
             musicSource.Play ();
         }
