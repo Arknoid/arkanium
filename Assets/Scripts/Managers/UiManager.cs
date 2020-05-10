@@ -10,6 +10,8 @@ namespace ScoreSpace.Managers
         [SerializeField] private Text _debugInfosText;
         [SerializeField] private bool _showDebugInfos = false;
         [SerializeField] private Text _scoreText;
+        [SerializeField] private Text _arkaniumText;
+        
         
         private PlayerPowerUp _playerPowerUp;
         private PlayerHealth _playerHealth;
@@ -38,7 +40,9 @@ namespace ScoreSpace.Managers
         private void Update()
         {
             if (_player == null) return;
-            // _scoreText.text = "Score : " + GameManager.Instance.PlayerScore.ToString();
+            _scoreText.text = "Score : " + GameManager.Instance.PlayerScore.ToString();
+            _arkaniumText.text = GameManager.Instance.ArkaniumCount + "/" +
+                                 GameManager.Instance.ArkaniumNeed;
             if (!_showDebugInfos) return;
             BuildDebugInfos();
         }
