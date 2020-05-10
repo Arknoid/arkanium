@@ -16,6 +16,10 @@ TagManager:
   - PlayerBeam
   - Arkanium
   - Mineral
+  - Enemy2
+  - EnemySpawner
+  - ArkaniumDeposit
+  - EnemySpawner2
   layers:
   - Default
   - TransparentFX

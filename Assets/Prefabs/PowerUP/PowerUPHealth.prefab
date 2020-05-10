@@ -10,7 +10,7 @@ PrefabInstance:
     - target: {fileID: 2596328838930472780, guid: e96ab46487429aa41ad6778de67e2ec7,
         type: 3}
       propertyPath: m_Color.r
-      value: 0.10323429
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2596328838930472780, guid: e96ab46487429aa41ad6778de67e2ec7,
         type: 3}
@@ -20,17 +20,23 @@ PrefabInstance:
     - target: {fileID: 2596328838930472780, guid: e96ab46487429aa41ad6778de67e2ec7,
         type: 3}
       propertyPath: m_Color.b
-      value: 0
+      value: 0.0450387
       objectReference: {fileID: 0}
+    - target: {fileID: 2596328838930472780, guid: e96ab46487429aa41ad6778de67e2ec7,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 110e05f3f2c416b4793af7ea7568dd1c,
+        type: 3}
     - target: {fileID: 2596328838930472781, guid: e96ab46487429aa41ad6778de67e2ec7,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.8948568
+      value: -20.01
       objectReference: {fileID: 0}
     - target: {fileID: 2596328838930472781, guid: e96ab46487429aa41ad6778de67e2ec7,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.775521
+      value: 1.33
       objectReference: {fileID: 0}
     - target: {fileID: 2596328838930472781, guid: e96ab46487429aa41ad6778de67e2ec7,
         type: 3}
@@ -85,7 +91,7 @@ PrefabInstance:
     - target: {fileID: 2596328838930472782, guid: e96ab46487429aa41ad6778de67e2ec7,
         type: 3}
       propertyPath: m_TagString
-      value: PowerUpHealth
+      value: Arkanium
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e96ab46487429aa41ad6778de67e2ec7, type: 3}

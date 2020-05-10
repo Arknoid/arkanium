@@ -121,7 +121,7 @@ namespace ScoreSpace.Player
             spawnedShot.transform.rotation = Quaternion.Euler(0, 0, eulerAngle);
             spawnedShot.SetActive(true);
             spawnedShot.GetComponent<IMovable>().Direction = direction;
-            spawnedShot.GetComponent<Animator>().SetInteger(Power, power);
+            // spawnedShot.GetComponent<Animator>().SetInteger(Power, power);
         }
 
         private void HandleBeamFire(bool isFull)

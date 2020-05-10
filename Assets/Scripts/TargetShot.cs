@@ -34,14 +34,12 @@ namespace ScoreSpace
             _rb.velocity = (_target.transform.position -_rb.transform.position).normalized * _speed;
         }
 
-        private void OnDisable()
-        {
-            
-        }
-
         private void Update()
         {
             _rb.velocity = (_target.transform.position -_rb.transform.position).normalized * _speed;
+            Vector2 lookDir = _target.transform.position - transform.position;
+            float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg + 90;
+            _rb.rotation = angle;
         }
         
         private void OnCollisionStay2D(Collision2D other)
@@ -53,8 +51,6 @@ namespace ScoreSpace
                StopCoroutine(ResetCanDamage());
             }
         }
-        
-        
         
         
         

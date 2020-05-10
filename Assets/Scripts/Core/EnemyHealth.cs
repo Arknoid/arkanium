@@ -34,7 +34,6 @@ namespace ScoreSpace.Core
                 {
                     if ( randomNumber <= item._chanceToLoot)
                     {
-                        Debug.Log(item._tag);
                         lootsTag.Add(item._tag);
                     }
                 }

@@ -20,6 +20,7 @@
             <e p="CameraShake.cs" t="Include" />
             <e p="EnemyHealth.cs" t="Include" />
             <e p="Health.cs" t="Include" />
+            <e p="LightShine.cs" t="Include" />
             <e p="MovableObject.cs" t="Include" />
             <e p="ObjectPooler.cs" t="Include" />
             <e p="PoolDisabler.cs" t="Include" />

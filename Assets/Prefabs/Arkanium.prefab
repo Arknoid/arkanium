@@ -9,13 +9,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 805068570609754744, guid: 6ed37d85f6380fe46879c15ee1c18d05,
         type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 96f94b8744a43ef45b9f4dfd91a58580,
+        type: 3}
+    - target: {fileID: 805068570609754744, guid: 6ed37d85f6380fe46879c15ee1c18d05,
+        type: 3}
       propertyPath: m_Color.r
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 805068570609754744, guid: 6ed37d85f6380fe46879c15ee1c18d05,
         type: 3}
       propertyPath: m_Color.g
-      value: 0.91487026
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 805068570609754744, guid: 6ed37d85f6380fe46879c15ee1c18d05,
         type: 3}
@@ -24,10 +30,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 805068570609754744, guid: 6ed37d85f6380fe46879c15ee1c18d05,
         type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: a6b03fc310c341449b3458197eae2333,
-        type: 3}
+      propertyPath: m_SortingOrder
+      value: 500
+      objectReference: {fileID: 0}
     - target: {fileID: 805068570609754745, guid: 6ed37d85f6380fe46879c15ee1c18d05,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -88,10 +93,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arkanium
       objectReference: {fileID: 0}
-    - target: {fileID: 805068570609754746, guid: 6ed37d85f6380fe46879c15ee1c18d05,
+    - target: {fileID: 6523283534091998616, guid: 6ed37d85f6380fe46879c15ee1c18d05,
         type: 3}
-      propertyPath: m_TagString
-      value: Arkanium
+      propertyPath: m_Intensity
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6ed37d85f6380fe46879c15ee1c18d05, type: 3}

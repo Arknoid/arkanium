@@ -118,7 +118,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9127773e0b4842249b0d9048216cf402, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _health: 10000
+  _health: 150
   _energyBar: {fileID: 0}
   _animatorTriggerHit: hit
   _animatorTriggerExplode: explode
