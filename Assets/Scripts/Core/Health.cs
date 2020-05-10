@@ -66,7 +66,7 @@ namespace ScoreSpace.Core
                 SoundManager.Instance.PlaySingle(_soundHit);
             }
             CurrentHealth -= damageTaken;
-            // _animator.SetTrigger(_animatorTriggerHit);
+            _animator.SetTrigger(_animatorTriggerHit);
             if (CurrentHealth > 0) return false;
             StartCoroutine(Explode());
             return true;

@@ -102,6 +102,8 @@ MonoBehaviour:
   _destroyOnTrigger: 1
   _power: 10
   _isPlayerShoot: 1
+  _autoDisable: 1
+  _autoDisableDelay: 2
 --- !u!50 &270270463007293052
 Rigidbody2D:
   serializedVersion: 4
@@ -110,7 +112,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 270270463007293049}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0

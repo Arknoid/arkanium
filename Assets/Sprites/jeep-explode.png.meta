@@ -1,58 +1,43 @@
 fileFormatVersion: 2
-guid: 582342b43174c944ba7d8b637e7a3fdd
+guid: 18fa03e96786379448841bbd57adb54a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6225478341872685984
-    second: Enemy1-sheet_0
+      213: -3717585580694278279
+    second: jeep-explode_0
   - first:
-      213: 3320280446351610025
-    second: Enemy1-sheet_1
+      213: -6053205113573075031
+    second: jeep-explode_1
   - first:
-      213: 1886479445087006658
-    second: Enemy1-sheet_2
+      213: -5351931515083468054
+    second: jeep-explode_2
   - first:
-      213: -1169114781137889881
-    second: Enemy1-sheet_3
+      213: 2650120921735752174
+    second: jeep-explode_3
   - first:
-      213: -7343043967392182537
-    second: Enemy1-sheet_4
+      213: -1401703791091443070
+    second: jeep-explode_4
   - first:
-      213: 6799580490279463754
-    second: Enemy1-sheet_5
+      213: 2929492988287239196
+    second: jeep-explode_5
   - first:
-      213: 2892780136223266763
-    second: Enemy1-sheet_6
+      213: -2590606795762723964
+    second: jeep-explode_6
   - first:
-      213: -6438692698269784645
-    second: Enemy1-sheet_0
+      213: -8337333061335747683
+    second: jeep-explode_7
   - first:
-      213: -1252650549275525441
-    second: Enemy1-sheet_1
+      213: -8881083388212809088
+    second: jeep-explode_8
   - first:
-      213: 6777726343135548585
-    second: Enemy1-sheet_2
+      213: -8678995334477044692
+    second: jeep-explode_9
   - first:
-      213: 992014987676511379
-    second: Enemy1-sheet_3
+      213: -2081736441711946461
+    second: jeep-explode_10
   - first:
-      213: -224450173695976440
-    second: Enemy1-sheet_4
-  - first:
-      213: -1793274030375430482
-    second: Enemy1-sheet_5
-  - first:
-      213: 5871332165535494918
-    second: Enemy1-sheet_6
-  - first:
-      213: -3256883161433338632
-    second: Enemy1-sheet_7
-  - first:
-      213: 4994094332889027957
-    second: Enemy1-sheet_8
-  - first:
-      213: 3769244165335238284
-    second: Enemy1-sheet_9
+      213: -7814990943887622774
+    second: jeep-explode_11
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -162,13 +147,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Enemy1-sheet_0
+      name: jeep-explode_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 16
-        height: 24
+        width: 20
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -176,20 +161,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bb56ab5ca1b25a6a0800000000000000
-      internalID: -6438692698269784645
+      spriteID: 97f6a986c9b786cc0800000000000000
+      internalID: -3717585580694278279
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemy1-sheet_1
+      name: jeep-explode_1
       rect:
         serializedVersion: 2
-        x: 16
+        x: 20
         y: 0
-        width: 16
-        height: 24
+        width: 20
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -197,20 +182,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fbefbb656f0bd9ee0800000000000000
-      internalID: -1252650549275525441
+      spriteID: 9a716ec3502befba0800000000000000
+      internalID: -6053205113573075031
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemy1-sheet_2
+      name: jeep-explode_2
       rect:
         serializedVersion: 2
-        x: 32
+        x: 40
         y: 0
-        width: 16
-        height: 24
+        width: 20
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -218,20 +203,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9a4d66bf2325f0e50800000000000000
-      internalID: 6777726343135548585
+      spriteID: ae25b3d84ae1ab5b0800000000000000
+      internalID: -5351931515083468054
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemy1-sheet_3
+      name: jeep-explode_3
       rect:
         serializedVersion: 2
-        x: 48
+        x: 60
         y: 0
-        width: 16
-        height: 24
+        width: 20
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -239,41 +224,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 39c6258106854cd00800000000000000
-      internalID: 992014987676511379
+      spriteID: ee9e3e7ffee17c420800000000000000
+      internalID: 2650120921735752174
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemy1-sheet_4
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 0
-        width: 16
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 80c931791c792ecf0800000000000000
-      internalID: -224450173695976440
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Enemy1-sheet_5
+      name: jeep-explode_4
       rect:
         serializedVersion: 2
         x: 80
         y: 0
-        width: 16
-        height: 24
+        width: 20
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -281,20 +245,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ea61a8245c20d17e0800000000000000
-      internalID: -1793274030375430482
+      spriteID: 28a1dab14d52c8ce0800000000000000
+      internalID: -1401703791091443070
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemy1-sheet_6
+      name: jeep-explode_5
       rect:
         serializedVersion: 2
-        x: 96
+        x: 100
         y: 0
-        width: 16
-        height: 24
+        width: 20
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -302,20 +266,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 60371153f792b7150800000000000000
-      internalID: 5871332165535494918
+      spriteID: c14cbda0a56a7a820800000000000000
+      internalID: 2929492988287239196
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemy1-sheet_7
+      name: jeep-explode_6
       rect:
         serializedVersion: 2
-        x: 112
+        x: 120
         y: 0
-        width: 16
-        height: 24
+        width: 20
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -323,20 +287,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8fc80d7350a3dc2d0800000000000000
-      internalID: -3256883161433338632
+      spriteID: 48399d948d05c0cd0800000000000000
+      internalID: -2590606795762723964
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemy1-sheet_8
+      name: jeep-explode_7
       rect:
         serializedVersion: 2
-        x: 128
+        x: 140
         y: 0
-        width: 16
-        height: 24
+        width: 20
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -344,20 +308,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 57554aef5569e4540800000000000000
-      internalID: 4994094332889027957
+      spriteID: d9376f8f0c7db4c80800000000000000
+      internalID: -8337333061335747683
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemy1-sheet_9
+      name: jeep-explode_8
       rect:
         serializedVersion: 2
-        x: 144
+        x: 160
         y: 0
-        width: 16
-        height: 24
+        width: 20
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -365,8 +329,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c86458a199b0f4430800000000000000
-      internalID: 3769244165335238284
+      spriteID: 082f3f066bd00c480800000000000000
+      internalID: -8881083388212809088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jeep-explode_9
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 0
+        width: 20
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2429310ab30e8780800000000000000
+      internalID: -8678995334477044692
       vertices: []
       indices: 
       edges: []

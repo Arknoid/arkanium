@@ -14,21 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _tagItemTOLoot: Arkanium
   _lootRange: 4
---- !u!114 &6047120476835061971
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2101588196615909871}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9debc58b385741eebe5a7cac7f6761f2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _minIntensity: 3
-  _maxIntensity: 4
-  _rate: 0.01
 --- !u!1001 &9054544209523743504
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -55,6 +40,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Color.b
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4839558088924043128, guid: 007658eecbc8bde4cb09e5a2bfd0c611,
+        type: 3}
+      propertyPath: m_PointLightOuterRadius
+      value: 4.56
       objectReference: {fileID: 0}
     - target: {fileID: 7492034486982272297, guid: 007658eecbc8bde4cb09e5a2bfd0c611,
         type: 3}
@@ -131,6 +121,27 @@ PrefabInstance:
       propertyPath: m_Color.b
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7492034486982272301, guid: 007658eecbc8bde4cb09e5a2bfd0c611,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 92ff22ebd22d6ba4e92452199037bb3d,
+        type: 3}
+    - target: {fileID: 7492034486982272301, guid: 007658eecbc8bde4cb09e5a2bfd0c611,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7492034486982272301, guid: 007658eecbc8bde4cb09e5a2bfd0c611,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7492034486982272301, guid: 007658eecbc8bde4cb09e5a2bfd0c611,
+        type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7492034486982272722, guid: 007658eecbc8bde4cb09e5a2bfd0c611,
         type: 3}
       propertyPath: m_Name
@@ -142,12 +153,6 @@ PrefabInstance:
 --- !u!1 &1896365464338464194 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7492034486982272722, guid: 007658eecbc8bde4cb09e5a2bfd0c611,
-    type: 3}
-  m_PrefabInstance: {fileID: 9054544209523743504}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &2101588196615909871 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6954231450699459327, guid: 007658eecbc8bde4cb09e5a2bfd0c611,
     type: 3}
   m_PrefabInstance: {fileID: 9054544209523743504}
   m_PrefabAsset: {fileID: 0}

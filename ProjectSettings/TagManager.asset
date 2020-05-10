@@ -63,3 +63,6 @@ TagManager:
   - name: Objects
     uniqueID: 2004542757
     locked: 0
+  - name: Pickable
+    uniqueID: 3791445707
+    locked: 0

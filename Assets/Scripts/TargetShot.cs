@@ -1,4 +1,5 @@
 ﻿
+using System;
 using System.Collections;
 using ScoreSpace.Interfaces;
 using UnityEngine;
@@ -42,18 +43,18 @@ namespace ScoreSpace
             _rb.rotation = angle;
         }
         
-        private void OnCollisionStay2D(Collision2D other)
+
+        private void OnCollisionEnter2D(Collision2D other)
         {
             if (_canDamage)
             {
                 other.gameObject.GetComponent<IDamageable>()?.TakeDamage(Power);
                 _canDamage = false;
-               StopCoroutine(ResetCanDamage());
+                StartCoroutine(ResetCanDamage());
             }
         }
-        
-        
-        
+
+
         private IEnumerator ResetCanDamage()
         {
             yield return new WaitForSeconds(_attackDelay);

@@ -33,6 +33,16 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 500
       objectReference: {fileID: 0}
+    - target: {fileID: 805068570609754744, guid: 6ed37d85f6380fe46879c15ee1c18d05,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: -503521589
+      objectReference: {fileID: 0}
+    - target: {fileID: 805068570609754744, guid: 6ed37d85f6380fe46879c15ee1c18d05,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 805068570609754745, guid: 6ed37d85f6380fe46879c15ee1c18d05,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -91,6 +101,11 @@ PrefabInstance:
     - target: {fileID: 805068570609754746, guid: 6ed37d85f6380fe46879c15ee1c18d05,
         type: 3}
       propertyPath: m_Name
+      value: Arkanium
+      objectReference: {fileID: 0}
+    - target: {fileID: 805068570609754746, guid: 6ed37d85f6380fe46879c15ee1c18d05,
+        type: 3}
+      propertyPath: m_TagString
       value: Arkanium
       objectReference: {fileID: 0}
     - target: {fileID: 6523283534091998616, guid: 6ed37d85f6380fe46879c15ee1c18d05,

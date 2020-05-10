@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using ScoreSpace.Core;
+using ScoreSpace.Managers;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -16,14 +17,14 @@ namespace ScoreSpace.Player
             base.Awake();
         }
 
+
+        
         protected override IEnumerator Explode()
         {
-            
             // _playerParticles.StopParticles();
             if (_rb!= null)_rb.simulated = false;
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            StartCoroutine(GameManager.Instance.RestartLevel());
             yield return StartCoroutine(base.Explode());
-            
         }
     }
 }
