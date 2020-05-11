@@ -1,29 +1,37 @@
 ﻿
+using System;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 namespace ScoreSpace
 {
     public class MainMenu : UnityEngine.MonoBehaviour
     {
-        [SerializeField] private GameObject _hallOfFamePanel;
         [SerializeField] private GameObject _creditsPanel;
-
+        [SerializeField] private Text _hiScoreText;
+        
+        private void Update()
+        {
+            if( Input.GetButton("Jump"))
+            {
+                StartGame();
+            }
+        }
 
         private void Start()
         {
-            _hallOfFamePanel.SetActive(false);
             _creditsPanel.SetActive(false);
+            _hiScoreText.text = "HiScore : " + PlayerPrefs.GetInt("HiScore", 0);
         }
         
         public void ShowHallOfFamePanel(bool show)
         {
-            _hallOfFamePanel.SetActive(show);
         }
         public void ShowCreditsPanel(bool show)
         {
-            _hallOfFamePanel.SetActive(show);
+            _creditsPanel.SetActive(show);
         }
 
         public void StartGame()
@@ -31,6 +39,14 @@ namespace ScoreSpace
             SceneManager.LoadScene("Scenes/Level1");
         }
         
-        
+        public void Exit()
+        {
+#if UNITY_EDITOR
+
+            UnityEditor.EditorApplication.isPlaying = false;
+#else
+         Application.Quit();
+#endif
+        }
     }
 }

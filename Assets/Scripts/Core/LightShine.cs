@@ -12,7 +12,8 @@ namespace ScoreSpace.Core
         [SerializeField] private float _minIntensity = 0.1f;
         [SerializeField] private float _maxIntensity = 0.3f;
         [SerializeField] private float _rate = 0.2f;
-    
+        [SerializeField] private bool _intensity = false;
+        
         private void Awake()
         {
             _light = GetComponent<Light2D>();
@@ -29,9 +30,18 @@ namespace ScoreSpace.Core
             while (true)
             {
                 yield return new WaitForSeconds(_rate);
-                _light.pointLightOuterRadius =(float) Random.Range(_minIntensity, _maxIntensity);
+                if (_intensity)
+                {
+                    _light.intensity =(float) Random.Range(_minIntensity, _maxIntensity);
+                }
+                else
+                {
+                    _light.pointLightOuterRadius =(float) Random.Range(_minIntensity, _maxIntensity);
+                }
+
             }
 
         }
+        
     }
 }

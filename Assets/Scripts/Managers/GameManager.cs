@@ -11,7 +11,6 @@ namespace ScoreSpace.Managers
         [SerializeField] private int _arkaniumNeed = 10;
         [SerializeField] private GameObject _playerPrefab;
         [SerializeField] private GameObject _player;
-        private bool _newHiScore = false;
         private int _arkaniumCount;
         public int ArkaniumNeed
         {
@@ -20,11 +19,7 @@ namespace ScoreSpace.Managers
         }
 
 
-        public bool NewHiScore
-        {
-            get => _newHiScore;
-            set => _newHiScore = value;
-        }
+        public bool NewHiScore { get; private set; } = false;
 
         private int _playerScore;
         private int _hiScore;
