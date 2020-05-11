@@ -22,26 +22,14 @@ namespace ScoreSpace.Player
         private PlayerMovement _playerMovement;
         private PlayerShield _playerShield;
         public int SpeedToAdd => _speedToAdd;
-
-        public int SideShotLevel
-        {
-            get => _sideShotLevel;
-            set => _sideShotLevel = Mathf.Clamp(value,0,_sideShotLevelMax);
-        }
-        public int ShieldLevel
-        {
-            get => _shieldLevel;
-            set => _shieldLevel = Mathf.Clamp(value,0,_shieldLevelMax);
-        }
+        
         public int LaserLevel
         {
             get => _laserLevel;
-            set => _laserLevel = Mathf.Clamp(value,0,_laserLevelMax);
+            set => _laserLevel = Mathf.Clamp(value,1,_laserLevelMax);
         }
         
-        private int _laserLevel = 0;
-        private int _shieldLevel = 0;
-        private int _sideShotLevel = 0;
+        private int _laserLevel = 1;
 
         private PlayerHealth _playerHealth;
         
@@ -69,7 +57,6 @@ namespace ScoreSpace.Player
                     other.gameObject.SetActive(false);
                     break;
                 case "PowerUpShield":
-                    ShieldLevel++;
                     SoundManager.Instance.RandomizeSfx(_soundPowerUpShield);
                     _playerShield.ActivateShield();
                     other.gameObject.SetActive(false);

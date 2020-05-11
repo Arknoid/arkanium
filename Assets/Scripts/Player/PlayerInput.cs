@@ -52,10 +52,8 @@ namespace ScoreSpace.Player
             
             Horizontal = Input.GetAxis("Horizontal");
             Vertical = Input.GetAxis("Vertical");
-            _isFire = Input.GetButtonUp("Fire1");
-            _isHoldFireButton = Input.GetButton("Fire1");
-
-
+            _isFire = Input.GetButtonUp("Fire1") || Input.GetButtonUp("Jump");
+            _isHoldFireButton = Input.GetButton("Fire1") || Input.GetButton("Jump");
 
         }
 

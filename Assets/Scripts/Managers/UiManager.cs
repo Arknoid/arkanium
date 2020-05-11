@@ -52,8 +52,6 @@ namespace ScoreSpace.Managers
             _debugInfosText.text =
                 "Health :" + _playerHealth.CurrentHealth
                            + "\nLaser : " + _playerPowerUp.LaserLevel
-                           + "\nSideShot : " + _playerPowerUp.SideShotLevel
-                           + "\nShield : " + _playerPowerUp.ShieldLevel
                            + "\nShoot rate : " + _playerWeapon.ShootRate
                            + "\nSpeedBonus : " + _playerMovement.SpeedBonus
                            + "\nArkanium :" + GameManager.Instance.ArkaniumCount + "/" +

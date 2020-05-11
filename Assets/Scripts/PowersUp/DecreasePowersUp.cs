@@ -12,8 +12,6 @@ namespace ScoreSpace.PowersUp
             _playerPowerUp = other.GetComponent<PlayerPowerUp>();
             _playerMovement = other.GetComponent<PlayerMovement>();
             if (_playerPowerUp == null) return;
-            _playerPowerUp.ShieldLevel--;
-            _playerPowerUp.SideShotLevel--;
             _playerMovement.SpeedBonus -= _playerPowerUp.SpeedToAdd;
             _playerPowerUp.LaserLevel--;
         }

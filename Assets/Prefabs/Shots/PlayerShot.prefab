@@ -31,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 270270463007293049}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -5.5, y: 0.81, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 5, z: 1}
   m_Children:
   - {fileID: 4951143396314743590}
   m_Father: {fileID: 0}
@@ -100,7 +100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _destroyOnTrigger: 1
-  _power: 10
+  _power: 14
   _isPlayerShoot: 1
   _autoDisable: 1
   _autoDisableDelay: 2
@@ -156,7 +156,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.004258156}
+  m_Offset: {x: 0.0035488605, y: 0.00389871}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -167,7 +167,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.45209122}
+  m_Size: {x: 0.5711694, y: 0.19561595}
   m_EdgeRadius: 0
 --- !u!95 &6563777163062334889
 Animator:
@@ -179,7 +179,7 @@ Animator:
   m_GameObject: {fileID: 270270463007293049}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 816116bc9f4e1bd4683b86f6ddb2a86f, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

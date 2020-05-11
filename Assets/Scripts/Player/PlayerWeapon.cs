@@ -32,7 +32,7 @@ namespace ScoreSpace.Player
         private PlayerInput _playerInput;
         private PlayerMovement _playerMovement;
         private bool _canShoot = true;
-        private static readonly int Power = Animator.StringToHash("Power");
+        private static readonly int Power = Animator.StringToHash("power");
 
         private IEnumerator FireDelay()
         {
@@ -70,7 +70,7 @@ namespace ScoreSpace.Player
         {
 
             if (!_canShoot) return;
-            SpawnShot(_baseShotTag, _baseWeaponMountPoint.transform, GetDirectionByPlayerDirection(), 1 , transform.rotation.eulerAngles.z);
+            SpawnShot(_baseShotTag, _baseWeaponMountPoint.transform, GetDirectionByPlayerDirection(), _playerPowerUp.LaserLevel , transform.rotation.eulerAngles.z);
             SoundManager.Instance.RandomizeSfx(_baseWeaponSound);
             StartCoroutine(FireDelay());
         }
@@ -121,7 +121,7 @@ namespace ScoreSpace.Player
             spawnedShot.transform.rotation = Quaternion.Euler(0, 0, eulerAngle);
             spawnedShot.SetActive(true);
             spawnedShot.GetComponent<IMovable>().Direction = direction;
-            // spawnedShot.GetComponent<Animator>().SetInteger(Power, power);
+            spawnedShot.GetComponent<Animator>().SetInteger(Power, power);
         }
 
         private void HandleBeamFire(bool isFull)
@@ -129,12 +129,12 @@ namespace ScoreSpace.Player
             if (!_canShoot) return;
             if (isFull)
             {
-                SpawnShot(_beamShotTag, _doubleBeamWeaponMountPoint1.transform, GetDirectionByPlayerDirection(), 1 , transform.rotation.eulerAngles.z);
-                SpawnShot(_beamShotTag, _doubleBeamWeaponMountPoint2.transform, GetDirectionByPlayerDirection(), 1 , transform.rotation.eulerAngles.z);
+                SpawnShot(_beamShotTag, _doubleBeamWeaponMountPoint1.transform, GetDirectionByPlayerDirection(), _playerPowerUp.LaserLevel , transform.rotation.eulerAngles.z);
+                SpawnShot(_beamShotTag, _doubleBeamWeaponMountPoint2.transform, GetDirectionByPlayerDirection(), _playerPowerUp.LaserLevel , transform.rotation.eulerAngles.z);
             }
             else
             {
-                SpawnShot(_beamShotTag, _beamWeaponMountPoint.transform, GetDirectionByPlayerDirection(), 1 , transform.rotation.eulerAngles.z);
+                SpawnShot(_beamShotTag, _beamWeaponMountPoint.transform, GetDirectionByPlayerDirection(), _playerPowerUp.LaserLevel , transform.rotation.eulerAngles.z);
             }
             SoundManager.Instance.RandomizeSfx(_beamWeaponSound);
             StartCoroutine(FireDelay());
