@@ -19,6 +19,7 @@ namespace ScoreSpace
             if (GameManager.Instance.ArkaniumCount >= GameManager.Instance.ArkaniumNeed )
             {
                 other.gameObject.SetActive(false);
+                GameManager.Instance.PlayerScore += GameManager.Instance.ArkaniumNeed;
                 _animator.SetTrigger("exit");
             }
 

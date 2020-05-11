@@ -215,11 +215,11 @@ MonoBehaviour:
   - _tag: PowerUpSpeed
     _chanceToLoot: 100
   - _tag: PowerUpWeapon
-    _chanceToLoot: 87
+    _chanceToLoot: 100
   - _tag: PowerUpHealth
-    _chanceToLoot: 75
+    _chanceToLoot: 55
   - _tag: PowerUpShield
-    _chanceToLoot: 69
+    _chanceToLoot: 100
 --- !u!95 &7492034486982272297
 Animator:
   serializedVersion: 3

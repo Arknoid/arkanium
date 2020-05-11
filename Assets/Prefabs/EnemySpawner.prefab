@@ -275,6 +275,11 @@ PrefabInstance:
       propertyPath: _scoreValue
       value: 50
       objectReference: {fileID: 0}
+    - target: {fileID: 7492034486982272302, guid: 007658eecbc8bde4cb09e5a2bfd0c611,
+        type: 3}
+      propertyPath: _itemsToLoots.Array.data[2]._chanceToLoot
+      value: 29
+      objectReference: {fileID: 0}
     - target: {fileID: 7492034486982272303, guid: 007658eecbc8bde4cb09e5a2bfd0c611,
         type: 3}
       propertyPath: m_Offset.x

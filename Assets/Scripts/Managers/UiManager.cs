@@ -65,10 +65,7 @@ namespace ScoreSpace.Managers
                 _gameOverScoreText.color = Color.red;
                 _gameOverScoreText.text = "Score : " + GameManager.Instance.PlayerScore.ToString();
             }
-            
-            
         }
-        
         
         private void Update()
         {
