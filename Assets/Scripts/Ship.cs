@@ -6,15 +6,27 @@ namespace ScoreSpace
 {
     public class Ship : UnityEngine.MonoBehaviour
     {
+        private Animator _animator;
+
+        private void Awake()
+        {
+            _animator = GetComponent<Animator>();
+        }
+
         private void OnCollisionEnter2D(Collision2D other)
         {
             if (!other.gameObject.CompareTag("Player")) return;
             if (GameManager.Instance.ArkaniumCount >= GameManager.Instance.ArkaniumNeed )
             {
-                Debug.Log("WIN");
-                Time.timeScale = 0;
+                other.gameObject.SetActive(false);
+                _animator.SetTrigger("exit");
             }
 
+        }
+
+        public void SetEndGame()
+        {
+            GameManager.Instance.Win();
         }
     }   
 }

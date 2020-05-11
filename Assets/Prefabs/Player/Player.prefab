@@ -253,7 +253,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 2004542757
   m_SortingLayer: 2
-  m_SortingOrder: 0
+  m_SortingOrder: 100
   m_Sprite: {fileID: 21300000, guid: 56ed85b0722ebbc41907f07b3a4556f5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -360,8 +360,8 @@ MonoBehaviour:
   _doubleBeamWeaponMountPoint2: {fileID: 1081630797}
   _baseShotTag: PlayerShot
   _beamShotTag: PlayerBeam
-  _baseWeaponSound: {fileID: 0}
-  _beamWeaponSound: {fileID: 0}
+  _baseWeaponSound: {fileID: 8300000, guid: 4670cbd8196132d4d933c244f6d00180, type: 3}
+  _beamWeaponSound: {fileID: 8300000, guid: 27d34f8018fd31443a6af6e9ca81a326, type: 3}
   _shootRate: 0.2
 --- !u!114 &3694494909600459358
 MonoBehaviour:
@@ -381,11 +381,12 @@ MonoBehaviour:
   _healthToAdd: 10
   _shootDelayBonus: 0.01
   _speedToAdd: 50
-  _soundPowerUpSpeed: {fileID: 0}
-  _soundPowerUpEnergy: {fileID: 0}
-  _soundPowerUpShield: {fileID: 0}
-  _soundPowerUpLaser: {fileID: 0}
-  _soundArkanium: {fileID: 0}
+  _arkaniumPickupScore: 10
+  _soundPowerUpSpeed: {fileID: 8300000, guid: c47156667ad81d14e8c3b34472c4a4a4, type: 3}
+  _soundPowerUpEnergy: {fileID: 8300000, guid: da9a25154a2227c4fb19c29b070612b6, type: 3}
+  _soundPowerUpShield: {fileID: 8300000, guid: 795c49a3f9f3bde46a8eaa8599777585, type: 3}
+  _soundPowerUpLaser: {fileID: 8300000, guid: 780b564e30ef8224ab9edb1399c5232e, type: 3}
+  _soundArkanium: {fileID: 8300000, guid: 9b71f81a9f8380f4d963c827da547a32, type: 3}
 --- !u!114 &246145070
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -402,8 +403,8 @@ MonoBehaviour:
   _energyBar: {fileID: 0}
   _animatorTriggerHit: hit
   _animatorTriggerExplode: explode
-  _soundHit: {fileID: 0}
-  _soundExplode: {fileID: 0}
+  _soundHit: {fileID: 8300000, guid: 2f0ca1e0f2651204f9c3ffa0a0ac6aad, type: 3}
+  _soundExplode: {fileID: 8300000, guid: 9f77aa3e2480ecf4d8c9c9e9cae12667, type: 3}
   _scoreValue: 0
 --- !u!114 &246145072
 MonoBehaviour:
@@ -417,7 +418,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32139f5567da1d54d8d0ec25b867c954, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _shield: {fileID: 2467062299627618002}
+  _shield: {fileID: 691952438}
+  _shieldHealth: 100
 --- !u!114 &246145073
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -493,7 +495,7 @@ GameObject:
   - component: {fileID: 6635571837968897360}
   - component: {fileID: 5016641523438578817}
   - component: {fileID: 1770378106}
-  - component: {fileID: 1770378102}
+  - component: {fileID: 691952438}
   m_Layer: 12
   m_Name: Shield
   m_TagString: Shield
@@ -555,7 +557,7 @@ SpriteRenderer:
   m_SortingLayer: 2
   m_SortingOrder: 100
   m_Sprite: {fileID: 21300000, guid: 110e05f3f2c416b4793af7ea7568dd1c, type: 3}
-  m_Color: {r: 0.07075471, g: 0.30882588, b: 1, a: 0.29803923}
+  m_Color: {r: 0, g: 0.3438449, b: 1, a: 0.34117648}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -600,7 +602,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &1770378102
+--- !u!114 &691952438
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -612,7 +614,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48aa0db0b48040da84b87acfdd565308, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _decreaseTimer: 1
+  _damage: 10
+  _health: 0
 --- !u!1 &3983331592214393974
 GameObject:
   m_ObjectHideFlags: 0

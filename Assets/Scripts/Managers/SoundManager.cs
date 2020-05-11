@@ -22,11 +22,6 @@ namespace ScoreSpace.Managers
             musicSource.Stop();
             PlayMusic(_musics[Random.Range(0,_musics.Length)]);
         }
-
-        protected override void Init()
-        {
-            DontDestroyOnLoad (gameObject);
-        }
         
         public void PlayMusic(AudioClip clip)
         {

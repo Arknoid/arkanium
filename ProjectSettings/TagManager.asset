@@ -20,6 +20,9 @@ TagManager:
   - EnemySpawner
   - ArkaniumDeposit
   - EnemySpawner2
+  - Score
+  - Ship
+  - PlayerStartPos
   layers:
   - Default
   - TransparentFX

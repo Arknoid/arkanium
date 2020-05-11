@@ -9,16 +9,14 @@ namespace ScoreSpace
     {
         [SerializeField] private GameObject _hallOfFamePanel;
         [SerializeField] private GameObject _creditsPanel;
-        [SerializeField] private SceneAsset _startScene;
-        
+
 
         private void Start()
         {
             _hallOfFamePanel.SetActive(false);
             _creditsPanel.SetActive(false);
         }
-
-
+        
         public void ShowHallOfFamePanel(bool show)
         {
             _hallOfFamePanel.SetActive(show);
@@ -30,7 +28,7 @@ namespace ScoreSpace
 
         public void StartGame()
         {
-            SceneManager.LoadScene(_startScene.name);
+            SceneManager.LoadScene("Scenes/Level1");
         }
         
         

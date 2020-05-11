@@ -32,7 +32,6 @@ namespace ScoreSpace.Core
                 {
                     _energyBar.SetValue(_currentHealth);
                 }
-
             } 
         }
         private Animator _animator;
