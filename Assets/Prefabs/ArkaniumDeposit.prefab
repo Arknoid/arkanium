@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _tagItemTOLoot: Arkanium
-  _lootRange: 4
+  _lootRange: 6
 --- !u!1001 &9054544209523743504
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -54,32 +54,32 @@ PrefabInstance:
     - target: {fileID: 7492034486982272300, guid: 007658eecbc8bde4cb09e5a2bfd0c611,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.66
+      value: 47.1
       objectReference: {fileID: 0}
     - target: {fileID: 7492034486982272300, guid: 007658eecbc8bde4cb09e5a2bfd0c611,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -8.46
+      value: -8.1
       objectReference: {fileID: 0}
     - target: {fileID: 7492034486982272300, guid: 007658eecbc8bde4cb09e5a2bfd0c611,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 24.472656
       objectReference: {fileID: 0}
     - target: {fileID: 7492034486982272300, guid: 007658eecbc8bde4cb09e5a2bfd0c611,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 7492034486982272300, guid: 007658eecbc8bde4cb09e5a2bfd0c611,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 7492034486982272300, guid: 007658eecbc8bde4cb09e5a2bfd0c611,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 7492034486982272300, guid: 007658eecbc8bde4cb09e5a2bfd0c611,
         type: 3}
@@ -155,7 +155,7 @@ PrefabInstance:
     - target: {fileID: 7492034486982272722, guid: 007658eecbc8bde4cb09e5a2bfd0c611,
         type: 3}
       propertyPath: m_Name
-      value: ArkaniumDeposit
+      value: ArkaniumDeposit (12)
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 4690592091920348971, guid: 007658eecbc8bde4cb09e5a2bfd0c611, type: 3}

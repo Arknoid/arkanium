@@ -1,4 +1,4 @@
-﻿using System;
+﻿
 using ScoreSpace.Core;
 using UnityEngine;
 using Random = UnityEngine.Random;
@@ -12,10 +12,10 @@ namespace ScoreSpace
         
         private void OnTriggerEnter2D(Collider2D other)
         {
-            var randomPos = Random.insideUnitSphere * _lootRange;
+            var randomPos = Random.insideUnitCircle * _lootRange;
             var spawnedLoot = ObjectPooler.Instance.GetPooledObject(_tagItemTOLoot);
             if (spawnedLoot == null) return;
-            spawnedLoot.transform.position = transform.position + randomPos;
+            spawnedLoot.transform.position = transform.position + new Vector3(randomPos.x , randomPos.y, 24.47266f );
             spawnedLoot.SetActive(true);
         }
     }
