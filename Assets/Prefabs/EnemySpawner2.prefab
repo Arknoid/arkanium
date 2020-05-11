@@ -88,6 +88,7 @@ MonoBehaviour:
   _minIntensity: 3
   _maxIntensity: 4
   _rate: 0.01
+  _intensity: 0
 --- !u!1 &7492034486982272722
 GameObject:
   m_ObjectHideFlags: 0
@@ -203,7 +204,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9dcba9d40724892b46f2505160a6938, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _health: 400
+  _health: 300
   _energyBar: {fileID: 0}
   _animatorTriggerHit: hit
   _animatorTriggerExplode: explode

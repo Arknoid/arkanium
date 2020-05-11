@@ -13,7 +13,7 @@ PlayerSettings:
   useOnDemandResources: 0
   accelerometerFrequency: 60
   companyName: Arknoid'games
-  productName: ScoreSpace_GameJam
+  productName: Arkanium
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.03529412, g: 0.07058824, b: 0.18431373, a: 1}

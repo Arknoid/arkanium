@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -62683,7 +62683,7 @@ MonoBehaviour:
   _cameraSpawnPoints: {fileID: 1403549372}
   _spawnRate: 0.5
   _spawnerSpawnRate: 30
-  _spanwerEnemy2Delay: 120
+  _spanwerEnemy2Delay: 180
   _spawnRateDecreaseDelay: 20
 --- !u!4 &823318449 stripped
 Transform:

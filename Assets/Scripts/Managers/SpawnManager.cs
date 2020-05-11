@@ -47,7 +47,7 @@ namespace ScoreSpace.Managers
             yield return new WaitForSeconds(2);
             while (true)  
             {
-                var spawnedObject = Time.time > _spanwerEnemy2Delay ? ObjectPooler.Instance.GetPooledObject("EnemySpawner2") : ObjectPooler.Instance.GetPooledObject("EnemySpawner");
+                var spawnedObject = Time.timeSinceLevelLoad > _spanwerEnemy2Delay ? ObjectPooler.Instance.GetPooledObject("EnemySpawner2") : ObjectPooler.Instance.GetPooledObject("EnemySpawner");
                 if (spawnedObject != null)
                 {
                     var randIndex = Random.Range(0, _spawnsPos.Length);
@@ -78,7 +78,7 @@ namespace ScoreSpace.Managers
                     finalIndex = 0;
                 }
                 
-                var spawnedObject = Time.time > _spanwerEnemy2Delay ? ObjectPooler.Instance.GetPooledObject("Enemy2") : ObjectPooler.Instance.GetPooledObject("Enemy");
+                var spawnedObject = Time.timeSinceLevelLoad > _spanwerEnemy2Delay ? ObjectPooler.Instance.GetPooledObject("Enemy2") : ObjectPooler.Instance.GetPooledObject("Enemy");
                 if (spawnedObject != null)
                 {
                     var spawnPos = _cameraSpawnsPos[finalIndex];
