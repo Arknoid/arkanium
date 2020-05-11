@@ -1,43 +1,49 @@
-﻿using System.Collections;
-using ScoreSpace.Player;
+﻿
+using System;
+using System.Collections;
+using ScoreSpace.Interfaces;
 using UnityEngine;
 
 namespace ScoreSpace.PowersUp
 {
-    public class Shield : MonoBehaviour
+    public class Shield : MonoBehaviour, IDamageable
     {
-        private PlayerPowerUp _playerPowerUp;
-        private Animator _animator;
-        [SerializeField] private float _decreaseTimer = 1f;
-        private static readonly int Hit = Animator.StringToHash("Hit");
 
-        private bool _isDecreasing;
+        [SerializeField] private int _damage = 40;
+        [SerializeField] private int _health = 50;
+        private SpriteRenderer _spriteRenderer;
+
 
         private void Awake()
         {
-            _playerPowerUp = FindObjectOfType<PlayerPowerUp>();
-            _animator = GetComponent<Animator>();
+            _spriteRenderer = GetComponent<SpriteRenderer>();
         }
 
-        private void OnEnable()
+        public int Health
         {
-            _animator.Rebind();
+            get => _health;
+            set => _health = value <= 0 ? 0 : value;
         }
+        
 
         private void OnTriggerEnter2D(Collider2D other)
         {
-            other.gameObject.SetActive(false);
-            if(_playerPowerUp == null || _isDecreasing) return;
-            StartCoroutine(HitAndDecrease());
+
+                other.gameObject.GetComponent<IDamageable>()?.TakeDamage(_damage);
+                TakeDamage();
+                Debug.Log(Health);
         }
 
-        private IEnumerator HitAndDecrease()
+        private void Update()
         {
-            _animator.SetTrigger(Hit);
-            _isDecreasing = true;
-            yield return  new WaitForSeconds(_decreaseTimer);
-            _playerPowerUp.ShieldLevel--;
-            _isDecreasing = false;
+            if (Health <= 0) gameObject.SetActive(false);
         }
+
+        public bool TakeDamage(int damageTaken = 5)
+        { 
+            _health -= damageTaken;
+            return false;
+        }
+        
     }
 }

@@ -20,7 +20,7 @@ namespace ScoreSpace.Player
         
         private PlayerWeapon _playerWeapon;
         private PlayerMovement _playerMovement;
-
+        private PlayerShield _playerShield;
         public int SpeedToAdd => _speedToAdd;
 
         public int SideShotLevel
@@ -50,6 +50,7 @@ namespace ScoreSpace.Player
             _playerHealth = GetComponent<PlayerHealth>();
             _playerWeapon = GetComponent<PlayerWeapon>();
             _playerMovement = GetComponent<PlayerMovement>();
+            _playerShield = GetComponent<PlayerShield>();
         }
 
         private void OnTriggerEnter2D(Collider2D other)
@@ -70,6 +71,7 @@ namespace ScoreSpace.Player
                 case "PowerUpShield":
                     ShieldLevel++;
                     SoundManager.Instance.RandomizeSfx(_soundPowerUpShield);
+                    _playerShield.ActivateShield();
                     other.gameObject.SetActive(false);
                     break;
                 case "PowerUpWeapon":

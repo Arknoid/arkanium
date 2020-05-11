@@ -175,13 +175,11 @@ MonoBehaviour:
   - _tag: PowerUpSpeed
     _chanceToLoot: 1.2
   - _tag: PowerUpWeapon
-    _chanceToLoot: 0.8
+    _chanceToLoot: 2
   - _tag: PowerUpHealth
-    _chanceToLoot: 1
-  - _tag: PowerUpShield
-    _chanceToLoot: 0.5
+    _chanceToLoot: 3
   - _tag: Arkanium
-    _chanceToLoot: 64
+    _chanceToLoot: 81
 --- !u!95 &669567725016632115
 Animator:
   serializedVersion: 3
