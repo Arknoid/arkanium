@@ -18,7 +18,9 @@ namespace ScoreSpace.Managers
         [SerializeField] private GameObject _energyBar;
         [SerializeField] private Text _gameOverScoreText;
         [SerializeField] private Text _gameOverHiScoreText;
+        [SerializeField] private GameObject _pausePanel;
         
+
         private PlayerPowerUp _playerPowerUp;
         private PlayerHealth _playerHealth;
         private PlayerWeapon _playerWeapon;
@@ -66,9 +68,27 @@ namespace ScoreSpace.Managers
                 _gameOverScoreText.text = "Score : " + GameManager.Instance.PlayerScore.ToString();
             }
         }
+
+        public void Pause(bool value = true)
+        {
+            if (value)
+            {
+                Time.timeScale = 0;
+                _pausePanel.SetActive(true);
+            }
+            else
+            {
+                Time.timeScale = 1;
+                _pausePanel.SetActive(false);
+            }
+        }
         
         private void Update()
         {
+            if (Input.GetButton("Cancel") || Input.GetKeyDown(KeyCode.Escape))
+            {
+                Pause(true);
+            }
             if (_player == null) return;
             _scoreText.text = "Score : " + GameManager.Instance.PlayerScore.ToString();
             _arkaniumText.text = GameManager.Instance.ArkaniumCount + "/" +
