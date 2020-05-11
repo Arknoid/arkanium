@@ -209,7 +209,7 @@ MonoBehaviour:
   _animatorTriggerExplode: explode
   _soundHit: {fileID: 0}
   _soundExplode: {fileID: 0}
-  _scoreValue: 0
+  _scoreValue: 100
   _lootOnDie: 1
   _itemsToLoots:
   - _tag: PowerUpSpeed

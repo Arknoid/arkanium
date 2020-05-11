@@ -23,7 +23,6 @@ namespace ScoreSpace.UI
             
             _slider.maxValue = value;
             _slider.value = value;
-            // _border.color = _gradient.Evaluate(1f);
             _fill.color = _gradient.Evaluate(1f);
         }  
 

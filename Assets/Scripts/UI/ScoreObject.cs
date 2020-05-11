@@ -23,7 +23,6 @@ namespace ScoreSpace.UI
 
         private void SetScale()
         {
-            Debug.Log(ScoreValue);
             if (ScoreValue <= 10)
             {
                 gameObject.transform.localScale = new Vector3(1,1,1);

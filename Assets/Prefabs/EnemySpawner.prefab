@@ -270,6 +270,11 @@ PrefabInstance:
       propertyPath: _soundExplode
       value: 
       objectReference: {fileID: 8300000, guid: 887d2184e52a154499c6ddbd33742e03, type: 3}
+    - target: {fileID: 7492034486982272302, guid: 007658eecbc8bde4cb09e5a2bfd0c611,
+        type: 3}
+      propertyPath: _scoreValue
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 7492034486982272303, guid: 007658eecbc8bde4cb09e5a2bfd0c611,
         type: 3}
       propertyPath: m_Offset.x

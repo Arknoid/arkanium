@@ -1,4 +1,7 @@
-﻿using ScoreSpace.Managers;
+﻿using ScoreSpace.Core;
+using ScoreSpace.Interfaces;
+using ScoreSpace.Managers;
+using ScoreSpace.UI;
 using UnityEngine;
 
 namespace ScoreSpace.Player
@@ -11,6 +14,9 @@ namespace ScoreSpace.Player
         [SerializeField] private int _healthToAdd = 10;
         [SerializeField] private float _shootDelayBonus = 0.5f;
         [SerializeField] private int _speedToAdd = 25;
+
+        [SerializeField] private int _arkaniumPickupScore = 50;
+        
         
         [SerializeField] private AudioClip _soundPowerUpSpeed;
         [SerializeField] private AudioClip _soundPowerUpEnergy;
@@ -69,7 +75,16 @@ namespace ScoreSpace.Player
                 case "Arkanium":
                     GameManager.Instance.ArkaniumCount++;
                     SoundManager.Instance.RandomizeSfx(_soundArkanium);
+                    var spawnedScore = ObjectPooler.Instance.GetPooledObject("Score");
+                    if (spawnedScore != null)
+                    {
+                        spawnedScore.transform.position = other.transform.position;
+                        spawnedScore.GetComponent<ScoreObject>().ScoreValue = _arkaniumPickupScore;
+                        spawnedScore.SetActive(true);
+                    }
+
                     other.gameObject.SetActive(false);
+                    GameManager.Instance.PlayerScore += _arkaniumPickupScore;
                     break;
             }
             

@@ -48,15 +48,15 @@ namespace ScoreSpace.Core
             var otherCanDamage = other.gameObject.GetComponent<IDamageable>();
             if (otherCanDamage !=null && otherCanDamage.TakeDamage(Power) && _isPlayerShoot)
             {
-                // GameManager.Instance.PlayerScore += other.GetComponent<IScorePoints>().PointsToAdd;
-                // var scoreObj = ObjectPooler.Instance.GetPooledObject("Score") ;
-                // if (scoreObj != null)
-                // {
-                //     scoreObj.transform.position = new Vector3(other.transform.position.x,
-                //         other.transform.position.y - 2, other.transform.position.z);
-                //     scoreObj.GetComponent<ScoreObject>().ScoreValue = other.GetComponent<IScorePoints>().PointsToAdd;    
-                //     scoreObj.SetActive(true);
-                // }
+                
+                var spawnedScore = ObjectPooler.Instance.GetPooledObject("Score");
+                if (spawnedScore != null)
+                {
+                    spawnedScore.transform.position = other.transform.position;
+                    spawnedScore.GetComponent<ScoreObject>().ScoreValue = other.GetComponent<Health>().ScoreValue;
+                    spawnedScore.SetActive(true);
+                }
+                
             }
             
             if (_destroyOnTrigger)

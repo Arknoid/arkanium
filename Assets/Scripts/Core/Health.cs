@@ -15,7 +15,9 @@ namespace ScoreSpace.Core
         [SerializeField] private AudioClip _soundHit;
         [SerializeField] private AudioClip _soundExplode;
         [SerializeField] private int _scoreValue;
-        
+
+        public int ScoreValue => _scoreValue;
+
         public bool IsDie => _currentHealth <= 0;
         private int _currentHealth;
         private bool _hasHealthBar;
@@ -68,6 +70,7 @@ namespace ScoreSpace.Core
             CurrentHealth -= damageTaken;
             _animator.SetTrigger(_animatorTriggerHit);
             if (CurrentHealth > 0) return false;
+            GameManager.Instance.PlayerScore += _scoreValue;
             StartCoroutine(Explode());
             return true;
         }

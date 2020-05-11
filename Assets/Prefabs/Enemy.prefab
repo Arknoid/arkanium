@@ -169,7 +169,7 @@ MonoBehaviour:
   _animatorTriggerExplode: die
   _soundHit: {fileID: 0}
   _soundExplode: {fileID: 8300000, guid: 887d2184e52a154499c6ddbd33742e03, type: 3}
-  _scoreValue: 5
+  _scoreValue: 1
   _lootOnDie: 1
   _itemsToLoots:
   - _tag: PowerUpSpeed
