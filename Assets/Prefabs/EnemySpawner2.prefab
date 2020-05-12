@@ -254,4 +254,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _objectTag: Enemy2
   _range: 4
-  _spawnRate: 1
+  _spawnRate: 3

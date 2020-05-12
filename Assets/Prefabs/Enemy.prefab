@@ -179,7 +179,7 @@ MonoBehaviour:
   - _tag: PowerUpHealth
     _chanceToLoot: 3
   - _tag: Arkanium
-    _chanceToLoot: 80
+    _chanceToLoot: 6
   - _tag: PowerUpShield
     _chanceToLoot: 0.5
 --- !u!95 &669567725016632115

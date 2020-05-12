@@ -33,7 +33,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_Enabled
-    path: Point Light 2D
+    path: HeadLight1
     classID: 114
     script: {fileID: 11500000, guid: 073797afb82c5a1438f328866b10b3f0, type: 3}
   - curve:
@@ -51,10 +51,10 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    attribute: m_IsActive
-    path: Point Light 2D
-    classID: 1
-    script: {fileID: 0}
+    attribute: m_Enabled
+    path: GlobalLight
+    classID: 114
+    script: {fileID: 11500000, guid: 073797afb82c5a1438f328866b10b3f0, type: 3}
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -70,10 +70,10 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    attribute: m_IsActive
-    path: Point Light 2D (1)
-    classID: 1
-    script: {fileID: 0}
+    attribute: m_Enabled
+    path: HeadLight2
+    classID: 114
+    script: {fileID: 11500000, guid: 073797afb82c5a1438f328866b10b3f0, type: 3}
   m_PPtrCurves:
   - curve:
     - time: 0
@@ -90,25 +90,25 @@ AnimationClip:
   m_ClipBindingConstant:
     genericBindings:
     - serializedVersion: 2
-      path: 2303167742
+      path: 229316059
       attribute: 3305885265
       script: {fileID: 11500000, guid: 073797afb82c5a1438f328866b10b3f0, type: 3}
       typeID: 114
       customType: 24
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 2303167742
-      attribute: 2086281974
-      script: {fileID: 0}
-      typeID: 1
-      customType: 0
+      path: 1882569811
+      attribute: 3305885265
+      script: {fileID: 11500000, guid: 073797afb82c5a1438f328866b10b3f0, type: 3}
+      typeID: 114
+      customType: 24
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 2517473682
-      attribute: 2086281974
-      script: {fileID: 0}
-      typeID: 1
-      customType: 0
+      path: 2493662305
+      attribute: 3305885265
+      script: {fileID: 11500000, guid: 073797afb82c5a1438f328866b10b3f0, type: 3}
+      typeID: 114
+      customType: 24
       isPPtrCurve: 0
     - serializedVersion: 2
       path: 0
@@ -156,7 +156,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_Enabled
-    path: Point Light 2D
+    path: HeadLight1
     classID: 114
     script: {fileID: 11500000, guid: 073797afb82c5a1438f328866b10b3f0, type: 3}
   - curve:
@@ -174,10 +174,10 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    attribute: m_IsActive
-    path: Point Light 2D
-    classID: 1
-    script: {fileID: 0}
+    attribute: m_Enabled
+    path: GlobalLight
+    classID: 114
+    script: {fileID: 11500000, guid: 073797afb82c5a1438f328866b10b3f0, type: 3}
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -193,10 +193,10 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    attribute: m_IsActive
-    path: Point Light 2D (1)
-    classID: 1
-    script: {fileID: 0}
+    attribute: m_Enabled
+    path: HeadLight2
+    classID: 114
+    script: {fileID: 11500000, guid: 073797afb82c5a1438f328866b10b3f0, type: 3}
   m_EulerEditorCurves: []
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0

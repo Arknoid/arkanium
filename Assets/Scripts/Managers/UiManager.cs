@@ -15,6 +15,8 @@ namespace ScoreSpace.Managers
         [SerializeField] private GameObject _player;
         [SerializeField] private GameObject _gameOverPanel;
         [SerializeField] private AudioClip _gameOverMusic;
+        [SerializeField] private AudioClip _winMusic;
+        [SerializeField] private Text _gameOverText;
         [SerializeField] private GameObject _energyBar;
         [SerializeField] private Text _gameOverScoreText;
         [SerializeField] private Text _gameOverHiScoreText;
@@ -47,14 +49,22 @@ namespace ScoreSpace.Managers
             _playerMovement = _player.GetComponent<PlayerMovement>();
         }
 
-        public void ShowGameOver(bool value = true)
+        public void ShowGameOver(bool isWin, bool value = true)
         {
             _energyBar.gameObject.SetActive(false);
             _returnText.gameObject.SetActive(false);
             _scoreText.gameObject.SetActive(false);
             _gameOverPanel.SetActive(value);
-            SoundManager.Instance.PlayMusic(_gameOverMusic);
-           
+            if (isWin)
+            {
+                SoundManager.Instance.PlayMusic(_winMusic);
+                _gameOverText.text = "YOU WIN";
+            }
+            else
+            {
+                SoundManager.Instance.PlayMusic(_gameOverMusic);
+            }
+
             if (GameManager.Instance.NewHiScore)
             {
                 _gameOverHiScoreText.color = Color.yellow;

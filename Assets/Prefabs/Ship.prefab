@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 908271680}
   - component: {fileID: 908271682}
   - component: {fileID: 908271681}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Point Light 2D (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -47,7 +47,7 @@ MonoBehaviour:
   m_LightType: 3
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 1
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.68256474, g: 0.6745283, b: 1, a: 1}
   m_Intensity: 1
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: b332346c
@@ -88,6 +88,7 @@ MonoBehaviour:
   _minIntensity: 6
   _maxIntensity: 9
   _rate: 0.02
+  _intensity: 0
 --- !u!1 &407936333965044857
 GameObject:
   m_ObjectHideFlags: 0
@@ -99,7 +100,7 @@ GameObject:
   - component: {fileID: 5908727206286055980}
   - component: {fileID: 5909954541403773834}
   - component: {fileID: 397473590}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Point Light 2D
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -176,6 +177,7 @@ MonoBehaviour:
   _minIntensity: 6
   _maxIntensity: 7
   _rate: 0.02
+  _intensity: 0
 --- !u!1 &6945676078486987831
 GameObject:
   m_ObjectHideFlags: 0
@@ -190,9 +192,9 @@ GameObject:
   - component: {fileID: 6945676078486987828}
   - component: {fileID: 6945676078486987834}
   - component: {fileID: 257929222}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Ship
-  m_TagString: Block
+  m_TagString: Ship
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

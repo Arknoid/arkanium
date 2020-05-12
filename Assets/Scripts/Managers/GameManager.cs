@@ -75,14 +75,15 @@ namespace ScoreSpace.Managers
         public void Win()
         {
             Time.timeScale = 0;
-            UiManager.Instance.ShowGameOver();
+            UiManager.Instance.ShowGameOver(true);
         }
 
 
         private IEnumerator CorLoose()  
         {
             yield return new WaitForSeconds(2f);
-            Win();
+            Time.timeScale = 0;
+            UiManager.Instance.ShowGameOver(false);
         }
         
         public void Loose()

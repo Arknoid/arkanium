@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _objectTag: Enemy
   _range: 4
-  _spawnRate: 10
+  _spawnRate: 7
 --- !u!1001 &3424874142674097096
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -258,7 +258,7 @@ PrefabInstance:
     - target: {fileID: 7492034486982272302, guid: 007658eecbc8bde4cb09e5a2bfd0c611,
         type: 3}
       propertyPath: _health
-      value: 80
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 7492034486982272302, guid: 007658eecbc8bde4cb09e5a2bfd0c611,
         type: 3}
@@ -278,7 +278,22 @@ PrefabInstance:
     - target: {fileID: 7492034486982272302, guid: 007658eecbc8bde4cb09e5a2bfd0c611,
         type: 3}
       propertyPath: _itemsToLoots.Array.data[2]._chanceToLoot
-      value: 29
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7492034486982272302, guid: 007658eecbc8bde4cb09e5a2bfd0c611,
+        type: 3}
+      propertyPath: _itemsToLoots.Array.data[0]._chanceToLoot
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 7492034486982272302, guid: 007658eecbc8bde4cb09e5a2bfd0c611,
+        type: 3}
+      propertyPath: _itemsToLoots.Array.data[1]._chanceToLoot
+      value: 99
+      objectReference: {fileID: 0}
+    - target: {fileID: 7492034486982272302, guid: 007658eecbc8bde4cb09e5a2bfd0c611,
+        type: 3}
+      propertyPath: _itemsToLoots.Array.data[3]._chanceToLoot
+      value: 99
       objectReference: {fileID: 0}
     - target: {fileID: 7492034486982272303, guid: 007658eecbc8bde4cb09e5a2bfd0c611,
         type: 3}

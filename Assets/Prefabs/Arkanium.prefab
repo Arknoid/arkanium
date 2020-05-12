@@ -108,6 +108,26 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Arkanium
       objectReference: {fileID: 0}
+    - target: {fileID: 805068570609754747, guid: 6ed37d85f6380fe46879c15ee1c18d05,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: -0.04576516
+      objectReference: {fileID: 0}
+    - target: {fileID: 805068570609754747, guid: 6ed37d85f6380fe46879c15ee1c18d05,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 1.9864955
+      objectReference: {fileID: 0}
+    - target: {fileID: 805068570609754747, guid: 6ed37d85f6380fe46879c15ee1c18d05,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: -0.02479142
+      objectReference: {fileID: 0}
+    - target: {fileID: 805068570609754747, guid: 6ed37d85f6380fe46879c15ee1c18d05,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 1.8032354
+      objectReference: {fileID: 0}
     - target: {fileID: 6523283534091998616, guid: 6ed37d85f6380fe46879c15ee1c18d05,
         type: 3}
       propertyPath: m_Intensity
