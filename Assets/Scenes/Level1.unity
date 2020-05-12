@@ -826,7 +826,7 @@ MonoBehaviour:
       type: 3}
     shouldExpand: 1
   - amountToPool: 5
-    objectToPool: {fileID: 2596328838930472782, guid: e96ab46487429aa41ad6778de67e2ec7,
+    objectToPool: {fileID: 6523752893314298650, guid: f409303eaac2c5d4ab4ee563366f5ea7,
       type: 3}
     shouldExpand: 1
   - amountToPool: 5
@@ -61442,18 +61442,18 @@ PrefabInstance:
       objectReference: {fileID: 1988341899433210004}
     - target: {fileID: 458366527028415624, guid: ebe6b2ce4b79f6e4580d7ab1b3a6aa7f,
         type: 3}
-      propertyPath: m_PointLightOuterRadius
-      value: 10
+      propertyPath: m_Color.r
+      value: 0.8490566
       objectReference: {fileID: 0}
     - target: {fileID: 458366527028415624, guid: ebe6b2ce4b79f6e4580d7ab1b3a6aa7f,
         type: 3}
-      propertyPath: m_Intensity
-      value: 0.35
+      propertyPath: m_Color.g
+      value: 0.8490566
       objectReference: {fileID: 0}
     - target: {fileID: 458366527028415624, guid: ebe6b2ce4b79f6e4580d7ab1b3a6aa7f,
         type: 3}
-      propertyPath: m_PointLightInnerAngle
-      value: 74
+      propertyPath: m_Color.b
+      value: 0.8490566
       objectReference: {fileID: 0}
     - target: {fileID: 2430506093820117837, guid: ebe6b2ce4b79f6e4580d7ab1b3a6aa7f,
         type: 3}
@@ -61520,30 +61520,30 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2430506093820117844, guid: ebe6b2ce4b79f6e4580d7ab1b3a6aa7f,
-        type: 3}
-      propertyPath: _shootRate
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3694494909600459358, guid: ebe6b2ce4b79f6e4580d7ab1b3a6aa7f,
-        type: 3}
-      propertyPath: _arkaniumPickupScore
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 8162378130257750076, guid: ebe6b2ce4b79f6e4580d7ab1b3a6aa7f,
-        type: 3}
-      propertyPath: m_PointLightOuterRadius
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 8162378130257750076, guid: ebe6b2ce4b79f6e4580d7ab1b3a6aa7f,
+    - target: {fileID: 4490913788690422260, guid: ebe6b2ce4b79f6e4580d7ab1b3a6aa7f,
         type: 3}
       propertyPath: m_Intensity
-      value: 0.35
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4490913788690422260, guid: ebe6b2ce4b79f6e4580d7ab1b3a6aa7f,
+        type: 3}
+      propertyPath: m_PointLightOuterRadius
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8162378130257750076, guid: ebe6b2ce4b79f6e4580d7ab1b3a6aa7f,
         type: 3}
-      propertyPath: m_PointLightInnerAngle
-      value: 74
+      propertyPath: m_Color.r
+      value: 0.8490566
+      objectReference: {fileID: 0}
+    - target: {fileID: 8162378130257750076, guid: ebe6b2ce4b79f6e4580d7ab1b3a6aa7f,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.8490566
+      objectReference: {fileID: 0}
+    - target: {fileID: 8162378130257750076, guid: ebe6b2ce4b79f6e4580d7ab1b3a6aa7f,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.8490566
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ebe6b2ce4b79f6e4580d7ab1b3a6aa7f, type: 3}
@@ -61715,10 +61715,10 @@ MonoBehaviour:
   _poolObjectsTag:
   - Enemy
   _cameraSpawnPoints: {fileID: 1403549372}
-  _spawnRate: 0.7
-  _spawnerSpawnRate: 45
-  _spanwerEnemy2Delay: 250
-  _spawnRateDecreaseDelay: 20
+  _spawnRate: 1
+  _spawnerSpawnRate: 30
+  _spanwerEnemy2Delay: 260
+  _spawnRateDecreaseDelay: 16
 --- !u!4 &823318449 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1896365464338464316, guid: 6800f684cee971b4fb2de84dbf8bb5a5,
@@ -63587,13 +63587,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   efxSource: {fileID: 1595690080}
-  shotSource: {fileID: 0}
   musicSource: {fileID: 1595690079}
   lowPitchRange: 0.95
   highPitchRange: 1.05
   _musics:
   - {fileID: 8300000, guid: cb8ebcae07c81614baaf850f17881fd3, type: 3}
   - {fileID: 8300000, guid: 108fd926769ca254288bf91be2d28102, type: 3}
+  _canPlayDelay: 0.03
 --- !u!82 &1595690079
 AudioSource:
   m_ObjectHideFlags: 0
@@ -78600,6 +78600,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3625291451873853167, guid: b9094561e6fa345439385db73d2fb6c6,
+        type: 3}
+      propertyPath: m_Intensity
+      value: 0.15
+      objectReference: {fileID: 0}
     - target: {fileID: 3625291453135854674, guid: b9094561e6fa345439385db73d2fb6c6,
         type: 3}
       propertyPath: m_LocalPosition.x

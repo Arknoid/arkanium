@@ -41,7 +41,7 @@ namespace ScoreSpace.Core
                 spawnedShot.SetActive(true);
             }
            
-            SoundManager.Instance.RandomizeSfx(_weaponSound, true);
+            SoundManager.Instance.RandomizeSfx(_weaponSound);
             StartCoroutine(FireDelay());
 
         }

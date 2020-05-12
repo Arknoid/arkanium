@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _tagItemTOLoot: Arkanium
   _lootRange: 4
-  _numberOfItems: 3
+  _numberOfItems: 2
 --- !u!1001 &9054544209523743504
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -146,17 +146,27 @@ PrefabInstance:
     - target: {fileID: 7492034486982272302, guid: 007658eecbc8bde4cb09e5a2bfd0c611,
         type: 3}
       propertyPath: _health
-      value: 400
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 7492034486982272302, guid: 007658eecbc8bde4cb09e5a2bfd0c611,
         type: 3}
       propertyPath: _soundHit
       value: 
       objectReference: {fileID: 8300000, guid: 782fc15c10958c649a51455fca2f6166, type: 3}
+    - target: {fileID: 7492034486982272302, guid: 007658eecbc8bde4cb09e5a2bfd0c611,
+        type: 3}
+      propertyPath: _lootOnDie
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7492034486982272302, guid: 007658eecbc8bde4cb09e5a2bfd0c611,
+        type: 3}
+      propertyPath: _scoreValue
+      value: 200
+      objectReference: {fileID: 0}
     - target: {fileID: 7492034486982272722, guid: 007658eecbc8bde4cb09e5a2bfd0c611,
         type: 3}
       propertyPath: m_Name
-      value: ArkaniumDeposit (16)
+      value: ArkaniumDeposit
       objectReference: {fileID: 0}
     - target: {fileID: 7495295819393958295, guid: 007658eecbc8bde4cb09e5a2bfd0c611,
         type: 3}

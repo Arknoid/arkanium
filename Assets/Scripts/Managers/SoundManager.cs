@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using ScoreSpace.Patterns;
 using UnityEngine;
 using Random = UnityEngine.Random;
@@ -11,12 +12,14 @@ namespace ScoreSpace.Managers
     {
     
         public AudioSource efxSource;
-        public AudioSource shotSource;
         public AudioSource musicSource;
         public float lowPitchRange = .95f;
         public float highPitchRange = 1.05f;
         [SerializeField] private AudioClip[] _musics;
 
+        private bool _canPlay = false;
+        [SerializeField] private float _canPlayDelay = 0.1f;
+        
         protected void Start()
         {
             musicSource.Stop();
@@ -34,22 +37,29 @@ namespace ScoreSpace.Managers
             musicSource.Stop();
         }
         
-        public void PlaySingle(AudioClip clip)
+        public void PlaySingle(AudioClip clip, bool forcePlay = false)
         {
-            efxSource.PlayOneShot(clip);
-        }
-
-
-        public void RandomizeSfx(AudioClip clip, bool secondChannel = false)
-        {
-            var randomPitch = UnityEngine.Random.Range(lowPitchRange, highPitchRange);
-            if (secondChannel)
+            if (_canPlay || forcePlay)
             {
-                shotSource.pitch = randomPitch;
-                shotSource.clip = clip;
-                shotSource.Play();
+                efxSource.PlayOneShot(clip);
+                _canPlay = false;
             }
             else
+            {
+                StartCoroutine(ResetCanPlay());
+            }
+            
+        }
+
+        private IEnumerator ResetCanPlay()
+        {
+            yield return new WaitForSeconds(_canPlayDelay);
+            _canPlay = true;
+        }
+
+        public void RandomizeSfx(AudioClip clip)
+        {
+            var randomPitch = UnityEngine.Random.Range(lowPitchRange, highPitchRange);
             {
                 efxSource.pitch = randomPitch;
                 efxSource.clip = clip;

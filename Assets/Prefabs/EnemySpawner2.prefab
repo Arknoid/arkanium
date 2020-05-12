@@ -204,13 +204,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9dcba9d40724892b46f2505160a6938, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _health: 300
+  _health: 100
   _energyBar: {fileID: 0}
   _animatorTriggerHit: hit
   _animatorTriggerExplode: explode
   _soundHit: {fileID: 0}
   _soundExplode: {fileID: 0}
   _scoreValue: 100
+  _forceSoundExplode: 0
   _lootOnDie: 1
   _itemsToLoots:
   - _tag: PowerUpSpeed
@@ -254,4 +255,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _objectTag: Enemy2
   _range: 4
-  _spawnRate: 3
+  _spawnRate: 2

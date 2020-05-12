@@ -15,6 +15,7 @@ namespace ScoreSpace.Core
         [SerializeField] private AudioClip _soundHit;
         [SerializeField] private AudioClip _soundExplode;
         [SerializeField] private int _scoreValue;
+        [SerializeField] private bool _forceSoundExplode = false;
 
         public int ScoreValue => _scoreValue;
 
@@ -83,7 +84,7 @@ namespace ScoreSpace.Core
             _collider.enabled = false;
             if (_soundExplode != null)
             {
-                SoundManager.Instance.PlaySingle(_soundExplode);
+                SoundManager.Instance.PlaySingle(_soundExplode, _forceSoundExplode);
             }
             _animator.SetTrigger(_animatorTriggerExplode);
             yield return new WaitForSeconds(1);

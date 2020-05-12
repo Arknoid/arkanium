@@ -270,8 +270,8 @@ MonoBehaviour:
   m_Text: "This game was developed in 72 hours during the GameJam \"ScoreSpace x
     8 Bits to Infinity Arcade Controls Jam\"\r\n\r\nAll the graphics we were made
     by myself for the gamejam.\r\n\r\nA big thank you to JOSHUA MCLEAN for all these
-    inspiring music and to the whole team and participant of the GameJam\r\n\r\nFonts:
-    Invasion 2000 by Jakob Fischer at www.pizzadude.dk\r\nMusic: JOSHUA MCLEAN http://mrjoshuamclean.com/\r\n\r\nHave
+    inspiring music,lilou cormic for its welcome  and all  participant of the GameJam\r\n\r\nFonts:
+    Invasion 2000 by Jakob Fischer at pizzadude.dk\r\nMusic: JOSHUA MCLEAN mrjoshuamclean.com\n\r\nHave
     fun\r :)\n\r\nOlivier Malige."
 --- !u!222 &50994641
 CanvasRenderer:
@@ -627,12 +627,12 @@ PrefabInstance:
     - target: {fileID: 1561781682108439175, guid: 6800f684cee971b4fb2de84dbf8bb5a5,
         type: 3}
       propertyPath: _minIntensity
-      value: 1
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 1561781682108439175, guid: 6800f684cee971b4fb2de84dbf8bb5a5,
         type: 3}
       propertyPath: _maxIntensity
-      value: 1.5
+      value: 1.1
       objectReference: {fileID: 0}
     - target: {fileID: 1896365464338464194, guid: 6800f684cee971b4fb2de84dbf8bb5a5,
         type: 3}
@@ -1197,12 +1197,12 @@ PrefabInstance:
     - target: {fileID: 1561781682108439175, guid: 6800f684cee971b4fb2de84dbf8bb5a5,
         type: 3}
       propertyPath: _minIntensity
-      value: 1
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 1561781682108439175, guid: 6800f684cee971b4fb2de84dbf8bb5a5,
         type: 3}
       propertyPath: _maxIntensity
-      value: 1.5
+      value: 1.1
       objectReference: {fileID: 0}
     - target: {fileID: 1896365464338464194, guid: 6800f684cee971b4fb2de84dbf8bb5a5,
         type: 3}
@@ -2476,7 +2476,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1867492690
 RectTransform:
   m_ObjectHideFlags: 0

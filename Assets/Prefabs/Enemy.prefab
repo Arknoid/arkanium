@@ -167,9 +167,10 @@ MonoBehaviour:
   _energyBar: {fileID: 0}
   _animatorTriggerHit: hit
   _animatorTriggerExplode: die
-  _soundHit: {fileID: 0}
+  _soundHit: {fileID: 8300000, guid: 887d2184e52a154499c6ddbd33742e03, type: 3}
   _soundExplode: {fileID: 8300000, guid: 887d2184e52a154499c6ddbd33742e03, type: 3}
   _scoreValue: 1
+  _forceSoundExplode: 0
   _lootOnDie: 1
   _itemsToLoots:
   - _tag: PowerUpSpeed
@@ -179,9 +180,9 @@ MonoBehaviour:
   - _tag: PowerUpHealth
     _chanceToLoot: 3
   - _tag: Arkanium
-    _chanceToLoot: 6
+    _chanceToLoot: 3
   - _tag: PowerUpShield
-    _chanceToLoot: 0.5
+    _chanceToLoot: 1
 --- !u!95 &669567725016632115
 Animator:
   serializedVersion: 3
