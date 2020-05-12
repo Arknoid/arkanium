@@ -61440,6 +61440,21 @@ PrefabInstance:
       propertyPath: _energyBar
       value: 
       objectReference: {fileID: 1988341899433210004}
+    - target: {fileID: 458366527028415624, guid: ebe6b2ce4b79f6e4580d7ab1b3a6aa7f,
+        type: 3}
+      propertyPath: m_PointLightOuterRadius
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 458366527028415624, guid: ebe6b2ce4b79f6e4580d7ab1b3a6aa7f,
+        type: 3}
+      propertyPath: m_Intensity
+      value: 0.35
+      objectReference: {fileID: 0}
+    - target: {fileID: 458366527028415624, guid: ebe6b2ce4b79f6e4580d7ab1b3a6aa7f,
+        type: 3}
+      propertyPath: m_PointLightInnerAngle
+      value: 74
+      objectReference: {fileID: 0}
     - target: {fileID: 2430506093820117837, guid: ebe6b2ce4b79f6e4580d7ab1b3a6aa7f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -61514,6 +61529,21 @@ PrefabInstance:
         type: 3}
       propertyPath: _arkaniumPickupScore
       value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 8162378130257750076, guid: ebe6b2ce4b79f6e4580d7ab1b3a6aa7f,
+        type: 3}
+      propertyPath: m_PointLightOuterRadius
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8162378130257750076, guid: ebe6b2ce4b79f6e4580d7ab1b3a6aa7f,
+        type: 3}
+      propertyPath: m_Intensity
+      value: 0.35
+      objectReference: {fileID: 0}
+    - target: {fileID: 8162378130257750076, guid: ebe6b2ce4b79f6e4580d7ab1b3a6aa7f,
+        type: 3}
+      propertyPath: m_PointLightInnerAngle
+      value: 74
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ebe6b2ce4b79f6e4580d7ab1b3a6aa7f, type: 3}
@@ -61816,11 +61846,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1605943006}
     m_Modifications:
-    - target: {fileID: 438085011219457807, guid: 6800f684cee971b4fb2de84dbf8bb5a5,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 24
-      objectReference: {fileID: 0}
     - target: {fileID: 1896365464338464194, guid: 6800f684cee971b4fb2de84dbf8bb5a5,
         type: 3}
       propertyPath: m_Name
@@ -61880,21 +61905,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1896365464338464317, guid: 6800f684cee971b4fb2de84dbf8bb5a5,
-        type: 3}
-      propertyPath: m_Size.x
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 1896365464338464317, guid: 6800f684cee971b4fb2de84dbf8bb5a5,
-        type: 3}
-      propertyPath: m_Size.y
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 1896365464338464317, guid: 6800f684cee971b4fb2de84dbf8bb5a5,
-        type: 3}
-      propertyPath: m_WasSpriteAssigned
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6800f684cee971b4fb2de84dbf8bb5a5, type: 3}

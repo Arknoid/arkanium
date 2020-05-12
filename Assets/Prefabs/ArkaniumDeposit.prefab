@@ -30,7 +30,7 @@ PrefabInstance:
     - target: {fileID: 4839558088924043128, guid: 007658eecbc8bde4cb09e5a2bfd0c611,
         type: 3}
       propertyPath: m_Intensity
-      value: 0.5
+      value: 0.6
       objectReference: {fileID: 0}
     - target: {fileID: 4839558088924043128, guid: 007658eecbc8bde4cb09e5a2bfd0c611,
         type: 3}
@@ -55,12 +55,12 @@ PrefabInstance:
     - target: {fileID: 7492034486982272300, guid: 007658eecbc8bde4cb09e5a2bfd0c611,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -44.2
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 7492034486982272300, guid: 007658eecbc8bde4cb09e5a2bfd0c611,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.7
+      value: 23.4
       objectReference: {fileID: 0}
     - target: {fileID: 7492034486982272300, guid: 007658eecbc8bde4cb09e5a2bfd0c611,
         type: 3}
@@ -156,7 +156,12 @@ PrefabInstance:
     - target: {fileID: 7492034486982272722, guid: 007658eecbc8bde4cb09e5a2bfd0c611,
         type: 3}
       propertyPath: m_Name
-      value: ArkaniumDeposit (2)
+      value: ArkaniumDeposit (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7495295819393958295, guid: 007658eecbc8bde4cb09e5a2bfd0c611,
+        type: 3}
+      propertyPath: _maxIntensity
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 4690592091920348971, guid: 007658eecbc8bde4cb09e5a2bfd0c611, type: 3}
