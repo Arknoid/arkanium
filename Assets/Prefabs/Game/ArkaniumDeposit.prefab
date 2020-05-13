@@ -22,6 +22,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 505880070089543312, guid: 007658eecbc8bde4cb09e5a2bfd0c611,
+        type: 3}
+      propertyPath: m_Value
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 505880070089543319, guid: 007658eecbc8bde4cb09e5a2bfd0c611,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -1.5700073
+      objectReference: {fileID: 0}
+    - target: {fileID: 1170013364890612070, guid: 007658eecbc8bde4cb09e5a2bfd0c611,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4839558088924043128, guid: 007658eecbc8bde4cb09e5a2bfd0c611,
         type: 3}
       propertyPath: m_PointLightInnerRadius
@@ -46,6 +61,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_PointLightOuterRadius
       value: 4.56
+      objectReference: {fileID: 0}
+    - target: {fileID: 6395997797655888746, guid: 007658eecbc8bde4cb09e5a2bfd0c611,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6395997797655888746, guid: 007658eecbc8bde4cb09e5a2bfd0c611,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7492034486982272297, guid: 007658eecbc8bde4cb09e5a2bfd0c611,
         type: 3}

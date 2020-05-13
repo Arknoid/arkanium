@@ -99,6 +99,16 @@ PrefabInstance:
       propertyPath: _objectTag
       value: Enemy
       objectReference: {fileID: 0}
+    - target: {fileID: 1927208438282178482, guid: 007658eecbc8bde4cb09e5a2bfd0c611,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3387636471786444259, guid: 007658eecbc8bde4cb09e5a2bfd0c611,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4690592091920348971, guid: 007658eecbc8bde4cb09e5a2bfd0c611,
         type: 3}
       propertyPath: m_Enabled
@@ -303,12 +313,12 @@ PrefabInstance:
     - target: {fileID: 7492034486982272303, guid: 007658eecbc8bde4cb09e5a2bfd0c611,
         type: 3}
       propertyPath: m_Offset.y
-      value: -0.05744368
+      value: -0.05744362
       objectReference: {fileID: 0}
     - target: {fileID: 7492034486982272303, guid: 007658eecbc8bde4cb09e5a2bfd0c611,
         type: 3}
       propertyPath: m_Radius
-      value: 0.92783743
+      value: 1.417881
       objectReference: {fileID: 0}
     - target: {fileID: 7492034486982272722, guid: 007658eecbc8bde4cb09e5a2bfd0c611,
         type: 3}
