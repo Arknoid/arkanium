@@ -24,6 +24,9 @@ namespace ScoreSpace.Core
         [SerializeField] private ItemToLoot[] _itemsToLoots;
         
         
+        
+        
+        
         protected override IEnumerator Explode()
         {
             if (_lootOnDie)

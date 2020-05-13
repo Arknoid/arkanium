@@ -42,6 +42,11 @@ namespace ScoreSpace.Core
         {
             _hasHealthBar = _energyBar != null;
             CurrentHealth = _health;
+
+            if (_hasHealthBar)
+            {
+                _energyBar.SetMaxValue(CurrentHealth);
+            }
         }
 
         protected void OnEnable()
