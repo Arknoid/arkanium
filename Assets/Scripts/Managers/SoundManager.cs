@@ -15,15 +15,14 @@ namespace ScoreSpace.Managers
         public AudioSource musicSource;
         public float lowPitchRange = .95f;
         public float highPitchRange = 1.05f;
-        [SerializeField] private AudioClip[] _musics;
 
-        private bool _canPlay = false;
+
+        private bool _canPlay = true;
         [SerializeField] private float _canPlayDelay = 0.1f;
         
         protected void Start()
         {
             musicSource.Stop();
-            PlayMusic(_musics[Random.Range(0,_musics.Length)]);
         }
         
         public void PlayMusic(AudioClip clip)

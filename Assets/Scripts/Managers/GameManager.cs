@@ -1,5 +1,6 @@
 ﻿
 using System.Collections;
+using ScoreSpace.Core;
 using ScoreSpace.Patterns;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -11,6 +12,7 @@ namespace ScoreSpace.Managers
         [SerializeField] private int _arkaniumNeed = 10;
         [SerializeField] private GameObject _playerPrefab;
         [SerializeField] private GameObject _player;
+        [SerializeField] private AudioClip[] _musics;
         private int _arkaniumCount;
         public int ArkaniumNeed
         {
@@ -67,6 +69,7 @@ namespace ScoreSpace.Managers
         private IEnumerator StartGame()
         {
             yield return new WaitForSeconds(1.5f);
+            SoundManager.Instance.PlayMusic(_musics[Random.Range(0,_musics.Length)]);
             _player.SetActive(true);
         }
 
