@@ -31,7 +31,6 @@ namespace ScoreSpace.PowersUp
 
                 other.gameObject.GetComponent<IDamageable>()?.TakeDamage(_damage);
                 TakeDamage();
-                Debug.Log(Health);
         }
 
         private void Update()

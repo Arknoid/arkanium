@@ -17,8 +17,7 @@ namespace ScoreSpace.Managers
             get => _arkaniumNeed;
             set => _arkaniumNeed = value;
         }
-
-
+        
         public bool NewHiScore { get; private set; } = false;
 
         private int _playerScore;
@@ -75,6 +74,7 @@ namespace ScoreSpace.Managers
         public void Win()
         {
             Time.timeScale = 0;
+            _playerScore += ArkaniumNeed * 10;
             UiManager.Instance.ShowGameOver(true);
         }
 

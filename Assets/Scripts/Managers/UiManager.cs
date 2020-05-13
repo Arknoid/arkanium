@@ -20,9 +20,9 @@ namespace ScoreSpace.Managers
         [SerializeField] private GameObject _energyBar;
         [SerializeField] private Text _gameOverScoreText;
         [SerializeField] private Text _gameOverHiScoreText;
+        [SerializeField] private Text _winBonusText;
         [SerializeField] private GameObject _pausePanel;
         
-
         private PlayerPowerUp _playerPowerUp;
         private PlayerHealth _playerHealth;
         private PlayerWeapon _playerWeapon;
@@ -42,6 +42,7 @@ namespace ScoreSpace.Managers
         private void Start()
         {
             _gameOverPanel.SetActive(false);
+            _winBonusText.gameObject.SetActive(false);
             _debugInfosText.gameObject.SetActive(_showDebugInfos);
             _playerHealth = _player.GetComponent<PlayerHealth>();
             _playerPowerUp = _player.GetComponent<PlayerPowerUp>();
@@ -58,18 +59,21 @@ namespace ScoreSpace.Managers
             if (isWin)
             {
                 SoundManager.Instance.PlayMusic(_winMusic);
+                _winBonusText.gameObject.SetActive(true);
+                _winBonusText.text = "Arkanium bonus : " + (GameManager.Instance.ArkaniumCount * 10);
                 _gameOverText.text = "YOU WIN";
             }
             else
             {
                 SoundManager.Instance.PlayMusic(_gameOverMusic);
             }
-
+            
+            
             if (GameManager.Instance.NewHiScore)
             {
                 _gameOverHiScoreText.color = Color.yellow;
-                   _gameOverHiScoreText.text = "New HiScore : " + GameManager.Instance.HiScore.ToString();
-                   _gameOverScoreText.text = "";
+               _gameOverHiScoreText.text = "New HiScore : " + GameManager.Instance.HiScore.ToString();
+               _gameOverScoreText.text = "";
             }       
             else
             {
