@@ -73,7 +73,7 @@ namespace ScoreSpace.Player
                     other.gameObject.SetActive(false);
                     break;
                 case "Arkanium":
-                    GameManager.Instance.ArkaniumCount++;
+                    LevelManager.Instance.ArkaniumCount++;
                     SoundManager.Instance.RandomizeSfx(_soundArkanium);
                     var spawnedScore = ObjectPooler.Instance.GetPooledObject("Score");
                     if (spawnedScore != null)
@@ -84,7 +84,7 @@ namespace ScoreSpace.Player
                     }
 
                     other.gameObject.SetActive(false);
-                    GameManager.Instance.PlayerScore += _arkaniumPickupScore;
+                    LevelManager.Instance.PlayerScore += _arkaniumPickupScore;
                     break;
             }
             

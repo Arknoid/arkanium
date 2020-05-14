@@ -208,7 +208,7 @@ Transform:
   m_GameObject: {fileID: 6945676078486987831}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -10.97, y: 0.8, z: 0}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 5908727206286055980}
   - {fileID: 908271680}
@@ -315,6 +315,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67ac8cbd8cc4245428cb45421eda4e87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _landingSound: {fileID: 8300000, guid: a98c502c50ed9f34cb8b74e7dec871e1, type: 3}
+  _landingShakeDuration: 1.5
 --- !u!95 &257929222
 Animator:
   serializedVersion: 3

@@ -75,7 +75,7 @@ namespace ScoreSpace.Core
             CurrentHealth -= damageTaken;
             _animator.SetTrigger(_animatorTriggerHit);
             if (CurrentHealth > 0) return false;
-            GameManager.Instance.PlayerScore += _scoreValue;
+            LevelManager.Instance.PlayerScore += _scoreValue;
             StartCoroutine(Explode());
             return true;
         }

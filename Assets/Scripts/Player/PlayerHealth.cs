@@ -20,7 +20,7 @@ namespace ScoreSpace.Player
         protected override IEnumerator Explode()
         {
             if (_rb!= null)_rb.simulated = false;
-            GameManager.Instance.Loose();
+            LevelManager.Instance.Loose();
             CameraShakeCinemachine.Instance.ShakeDuration = 0.5f;
             yield return StartCoroutine(base.Explode());
         }

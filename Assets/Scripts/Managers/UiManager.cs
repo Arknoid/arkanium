@@ -60,7 +60,7 @@ namespace ScoreSpace.Managers
             {
                 SoundManager.Instance.PlayMusic(_winMusic);
                 _winBonusText.gameObject.SetActive(true);
-                _winBonusText.text = "Arkanium bonus : " + (GameManager.Instance.ArkaniumCount * 10);
+                _winBonusText.text = "Arkanium bonus : " + (LevelManager.Instance.ArkaniumCount * 10);
                 _gameOverText.text = "YOU WIN";
             }
             else
@@ -69,17 +69,17 @@ namespace ScoreSpace.Managers
             }
             
             
-            if (GameManager.Instance.NewHiScore)
+            if (LevelManager.Instance.NewHiScore)
             {
                 _gameOverHiScoreText.color = Color.yellow;
-               _gameOverHiScoreText.text = "New HiScore : " + GameManager.Instance.HiScore.ToString();
+               _gameOverHiScoreText.text = "New HiScore : " + LevelManager.Instance.HiScore.ToString();
                _gameOverScoreText.text = "";
             }       
             else
             {
-                _gameOverHiScoreText.text = "HiScore : " + GameManager.Instance.HiScore.ToString();
+                _gameOverHiScoreText.text = "HiScore : " + LevelManager.Instance.HiScore.ToString();
                 _gameOverScoreText.color = Color.red;
-                _gameOverScoreText.text = "Score : " + GameManager.Instance.PlayerScore.ToString();
+                _gameOverScoreText.text = "Score : " + LevelManager.Instance.PlayerScore.ToString();
             }
         }
 
@@ -104,9 +104,9 @@ namespace ScoreSpace.Managers
                 Pause(true);
             }
             if (_player == null) return;
-            _scoreText.text = "Score : " + GameManager.Instance.PlayerScore.ToString();
-            _arkaniumText.text = GameManager.Instance.ArkaniumCount + "/" +
-                                 GameManager.Instance.ArkaniumNeed;
+            _scoreText.text = "Score : " + LevelManager.Instance.PlayerScore.ToString();
+            _arkaniumText.text = LevelManager.Instance.ArkaniumCount + "/" +
+                                 LevelManager.Instance.ArkaniumNeed;
             if (!_showDebugInfos) return;
             BuildDebugInfos();
         }
@@ -118,8 +118,8 @@ namespace ScoreSpace.Managers
                            + "\nLaser : " + _playerPowerUp.LaserLevel
                            + "\nShoot rate : " + _playerWeapon.ShootRate
                            + "\nSpeedBonus : " + _playerMovement.SpeedBonus
-                           + "\nArkanium :" + GameManager.Instance.ArkaniumCount + "/" +
-                           GameManager.Instance.ArkaniumNeed;
+                           + "\nArkanium :" + LevelManager.Instance.ArkaniumCount + "/" +
+                           LevelManager.Instance.ArkaniumNeed;
         }
         
     }

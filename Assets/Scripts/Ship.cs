@@ -24,7 +24,7 @@ namespace ScoreSpace
         private void OnCollisionEnter2D(Collision2D other)
         {
             if (!other.gameObject.CompareTag("Player")) return;
-            if (GameManager.Instance.ArkaniumCount >= GameManager.Instance.ArkaniumNeed )
+            if (LevelManager.Instance.ArkaniumCount >= LevelManager.Instance.ArkaniumNeed )
             {
                 other.gameObject.SetActive(false);
                 SoundManager.Instance.StopMusic();
@@ -38,7 +38,7 @@ namespace ScoreSpace
 
         public void SetEndGame()
         {
-            GameManager.Instance.Win();
+            LevelManager.Instance.Win();
         }
     }   
 }

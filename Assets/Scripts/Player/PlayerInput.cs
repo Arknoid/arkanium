@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using ScoreSpace.Managers;
+using UnityEngine;
 
 namespace ScoreSpace.Player
 {
@@ -13,7 +14,11 @@ namespace ScoreSpace.Player
         
         [SerializeField] private float _holdFirePressThreshold = 0.5f;
         [SerializeField] private float _holdFireFullPressThreshold = 2f;
+        [SerializeField] private AudioClip _soundHoldFire;
+        [SerializeField] private AudioClip _soundFullHoldFire;
         
+        
+
         private bool _isFire;
         private bool _isHoldFireButton;
         private float _holdFireTimer = 0f;
@@ -33,6 +38,7 @@ namespace ScoreSpace.Player
             }
 
             if (!_isFire) return;
+
             if (_holdFireTimer <= _holdFirePressThreshold)
             {
                 OnFire?.Invoke();
@@ -70,10 +76,18 @@ namespace ScoreSpace.Player
         private void IncrementHoldFireButtonTimer()
         {
             _holdFireTimer += Time.deltaTime;
+            if (_holdFireTimer >=  _holdFireFullPressThreshold)
+            {
+                SoundManager.Instance.PlayLoop(_soundFullHoldFire);
+            } else if (_holdFireTimer >= _holdFirePressThreshold)
+            {
+                SoundManager.Instance.PlayLoop(_soundHoldFire);
+            }
         }
         
         private void ResetHoldFireButtonTimer()
         {
+            SoundManager.Instance.StopLoop();
             _holdFireTimer = 0;
         }
     }

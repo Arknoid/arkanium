@@ -136,7 +136,7 @@ MonoBehaviour:
   m_LightType: 3
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.71
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.735849, g: 0.735849, b: 0.735849, a: 1}
   m_Intensity: 0.35
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 25e57a7700000000b332346c
@@ -279,6 +279,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _holdFirePressThreshold: 0.5
   _holdFireFullPressThreshold: 2
+  _soundHoldFire: {fileID: 0}
+  _soundFullHoldFire: {fileID: 0}
 --- !u!114 &2430506093820117842
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -503,7 +505,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &8705065455679580684
 Transform:
   m_ObjectHideFlags: 0
@@ -558,7 +560,7 @@ SpriteRenderer:
   m_SortingLayer: 2
   m_SortingOrder: 100
   m_Sprite: {fileID: 21300000, guid: 110e05f3f2c416b4793af7ea7568dd1c, type: 3}
-  m_Color: {r: 0, g: 0.3438449, b: 1, a: 0.34117648}
+  m_Color: {r: 0.68467, g: 0, b: 1, a: 0.34117648}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -664,7 +666,7 @@ MonoBehaviour:
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1.2
+  m_Intensity: 1
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 25e57a77
   m_LightCookieSprite: {fileID: 0}
@@ -676,7 +678,7 @@ MonoBehaviour:
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0.25
-  m_PointLightOuterRadius: 1.45
+  m_PointLightOuterRadius: 2
   m_PointLightDistance: 3
   m_PointLightQuality: 1
   m_ShapeLightParametricSides: 5
@@ -735,7 +737,7 @@ MonoBehaviour:
   m_LightType: 3
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.71
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.735849, g: 0.735849, b: 0.735849, a: 1}
   m_Intensity: 0.35
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 25e57a7700000000b332346c

@@ -12,6 +12,7 @@ namespace ScoreSpace.Managers
     {
     
         public AudioSource efxSource;
+        public AudioSource loopSource;
         public AudioSource musicSource;
         public float lowPitchRange = .95f;
         public float highPitchRange = 1.05f;
@@ -24,12 +25,28 @@ namespace ScoreSpace.Managers
         {
             musicSource.Stop();
         }
+
+        public void PlayLoop(AudioClip clip)
+        {
+            loopSource.clip = clip;
+            if (!loopSource.isPlaying)
+            {
+             
+                loopSource.Play();
+            }
+           
+        }
+
+        public void StopLoop()
+        {
+            loopSource.Stop();
+        }
         
         public void PlayMusic(AudioClip clip)
         {
             
             musicSource.clip = clip;
-            musicSource.Play ();
+            musicSource.Play();
         }
         public void StopMusic()
         {
