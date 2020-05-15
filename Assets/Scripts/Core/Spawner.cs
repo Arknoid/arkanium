@@ -15,8 +15,12 @@ namespace ScoreSpace.Core
         
         [SerializeField] private float _spawnRate;
 
+        private void OnDisable()
+        {
+            StopCoroutine(StartSpawn());
+        }
 
-        private void Start()
+        private void OnEnable()
         {
             StartCoroutine(StartSpawn());
         }

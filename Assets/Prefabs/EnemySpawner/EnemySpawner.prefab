@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _objectTag: Enemy
-  _range: 4
+  _range: 1
   _spawnRate: 3
 --- !u!1001 &3424874142674097096
 PrefabInstance:
@@ -99,6 +99,11 @@ PrefabInstance:
       propertyPath: _objectTag
       value: Enemy
       objectReference: {fileID: 0}
+    - target: {fileID: 505880070089543318, guid: 007658eecbc8bde4cb09e5a2bfd0c611,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1927208438282178482, guid: 007658eecbc8bde4cb09e5a2bfd0c611,
         type: 3}
       propertyPath: m_RootOrder
@@ -138,6 +143,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_PointLightInnerRadius
       value: 1.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 6395997797655888746, guid: 007658eecbc8bde4cb09e5a2bfd0c611,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6395997797655888746, guid: 007658eecbc8bde4cb09e5a2bfd0c611,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6954231450699459327, guid: 007658eecbc8bde4cb09e5a2bfd0c611,
         type: 3}
@@ -217,6 +232,11 @@ PrefabInstance:
     - target: {fileID: 7492034486982272300, guid: 007658eecbc8bde4cb09e5a2bfd0c611,
         type: 3}
       propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7492034486982272300, guid: 007658eecbc8bde4cb09e5a2bfd0c611,
+        type: 3}
+      propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7492034486982272301, guid: 007658eecbc8bde4cb09e5a2bfd0c611,
@@ -319,6 +339,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Radius
       value: 1.417881
+      objectReference: {fileID: 0}
+    - target: {fileID: 7492034486982272303, guid: 007658eecbc8bde4cb09e5a2bfd0c611,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7492034486982272722, guid: 007658eecbc8bde4cb09e5a2bfd0c611,
         type: 3}

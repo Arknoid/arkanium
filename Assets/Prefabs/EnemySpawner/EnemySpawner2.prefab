@@ -255,8 +255,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _objectTag: Enemy2
-  _range: 4
-  _spawnRate: 2
+  _range: 1
+  _spawnRate: 1
 --- !u!1001 &4466593368054352281
 PrefabInstance:
   m_ObjectHideFlags: 0

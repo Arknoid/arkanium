@@ -15,14 +15,14 @@ namespace ScoreSpace
         
         private void OnTriggerEnter2D(Collider2D other)
         {
-            int numberOfLoot = _numberOfItems;
+            var numberOfLoot = _numberOfItems;
 
             if (_isRandom)
             {
                 numberOfLoot = Random.Range(0, _numberOfItems);
             }
             
-            for (int i = 0; i < numberOfLoot; i++)
+            for (var i = 1; i < numberOfLoot; i++)
             {
                 var randomPos = Random.insideUnitCircle * _lootRange;
                 var spawnedLoot = ObjectPooler.Instance.GetPooledObject(_tagItemTOLoot);
