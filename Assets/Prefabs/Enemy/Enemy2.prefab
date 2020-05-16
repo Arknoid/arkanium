@@ -10,7 +10,7 @@ PrefabInstance:
     - target: {fileID: -1873161344377526903, guid: b528609d4654b0a459c1a3e1a7804d01,
         type: 3}
       propertyPath: _health
-      value: 14
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: -1873161344377526903, guid: b528609d4654b0a459c1a3e1a7804d01,
         type: 3}
@@ -45,22 +45,22 @@ PrefabInstance:
     - target: {fileID: 4077594963578474306, guid: b528609d4654b0a459c1a3e1a7804d01,
         type: 3}
       propertyPath: _power
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4077594963578474306, guid: b528609d4654b0a459c1a3e1a7804d01,
         type: 3}
       propertyPath: _speed
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4077594963578474307, guid: b528609d4654b0a459c1a3e1a7804d01,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.914938
+      value: -1.08619
       objectReference: {fileID: 0}
     - target: {fileID: 4077594963578474307, guid: b528609d4654b0a459c1a3e1a7804d01,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -7.2554173
+      value: 0.89769435
       objectReference: {fileID: 0}
     - target: {fileID: 4077594963578474307, guid: b528609d4654b0a459c1a3e1a7804d01,
         type: 3}
@@ -107,6 +107,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4077594963578474307, guid: b528609d4654b0a459c1a3e1a7804d01,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4077594963578474307, guid: b528609d4654b0a459c1a3e1a7804d01,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.5
+      objectReference: {fileID: 0}
     - target: {fileID: 4077594963578474332, guid: b528609d4654b0a459c1a3e1a7804d01,
         type: 3}
       propertyPath: m_Color.r
@@ -115,12 +125,12 @@ PrefabInstance:
     - target: {fileID: 4077594963578474332, guid: b528609d4654b0a459c1a3e1a7804d01,
         type: 3}
       propertyPath: m_Color.g
-      value: 0
+      value: 0.5875732
       objectReference: {fileID: 0}
     - target: {fileID: 4077594963578474332, guid: b528609d4654b0a459c1a3e1a7804d01,
         type: 3}
       propertyPath: m_Color.b
-      value: 0
+      value: 0.18396229
       objectReference: {fileID: 0}
     - target: {fileID: 4077594963578474332, guid: b528609d4654b0a459c1a3e1a7804d01,
         type: 3}
