@@ -46,6 +46,7 @@
           <e p="LootOnTrigger.cs" t="Include" />
           <e p="MainMenu.cs" t="Include" />
           <e p="Managers" t="Include">
+            <e p="GameManager.cs" t="Include" />
             <e p="LevelManager.cs" t="Include" />
             <e p="SoundManager.cs" t="Include" />
             <e p="SpawnManager.cs" t="Include" />

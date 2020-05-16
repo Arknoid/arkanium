@@ -19,10 +19,10 @@ namespace ScoreSpace
 
             if (_isRandom)
             {
-                numberOfLoot = Random.Range(0, _numberOfItems);
+                numberOfLoot = Random.Range(1, _numberOfItems);
             }
             
-            for (var i = 1; i < numberOfLoot; i++)
+            for (var i = 0; i < numberOfLoot; i++)
             {
                 var randomPos = Random.insideUnitCircle * _lootRange;
                 var spawnedLoot = ObjectPooler.Instance.GetPooledObject(_tagItemTOLoot);

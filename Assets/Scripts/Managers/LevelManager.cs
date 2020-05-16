@@ -19,33 +19,7 @@ namespace ScoreSpace.Managers
             get => _arkaniumNeed;
             set => _arkaniumNeed = value;
         }
-        
-        public bool NewHiScore { get; private set; } = false;
 
-        private int _playerScore;
-        private int _hiScore;
-        public int PlayerScore
-        {
-            get => _playerScore;
-            set
-            {
-                _playerScore = value;
-                if (_playerScore > HiScore)
-                {
-                    HiScore = value;
-                }
-            }
-        }
-
-        public int HiScore
-        {
-            get => PlayerPrefs.GetInt("HiScore", 0);
-            private set
-            {
-                PlayerPrefs.SetInt("HiScore", value);
-                NewHiScore = true;
-            } 
-        }
         public int ArkaniumCount
         {
             get => _arkaniumCount;
@@ -61,7 +35,6 @@ namespace ScoreSpace.Managers
 
         private void Start()
         {
-            PlayerScore = 0;
             ArkaniumCount = 0;
             StartCoroutine(StartGame());
         }
@@ -77,7 +50,7 @@ namespace ScoreSpace.Managers
         public void Win()
         {
             Time.timeScale = 0;
-            _playerScore += ArkaniumNeed * 10;
+            GameManager.Instance.PlayerScore += ArkaniumNeed * 10;
             UiManager.Instance.ShowGameOver(true);
         }
 

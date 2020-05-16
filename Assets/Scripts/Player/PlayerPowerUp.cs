@@ -84,7 +84,7 @@ namespace ScoreSpace.Player
                     }
 
                     other.gameObject.SetActive(false);
-                    LevelManager.Instance.PlayerScore += _arkaniumPickupScore;
+                    GameManager.Instance.PlayerScore += _arkaniumPickupScore;
                     break;
             }
             
