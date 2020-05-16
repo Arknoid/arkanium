@@ -9,6 +9,8 @@ namespace ScoreSpace.Core
     public class Health : MonoBehaviour, IDamageable
     {
         [SerializeField] private int _health = 3;
+        [SerializeField] private int _damageTakenLimit = 100;
+        
         [SerializeField] private SliderBar _energyBar;
         [SerializeField] private string _animatorTriggerHit = "hit";
         [SerializeField] private string _animatorTriggerExplode = "explode";
@@ -68,6 +70,10 @@ namespace ScoreSpace.Core
 
         public virtual bool TakeDamage(int damageTaken)
         {
+            if (damageTaken >= _damageTakenLimit)
+            {
+                damageTaken = _damageTakenLimit;
+            }
             if (_soundHit != null)
             {
                 SoundManager.Instance.PlaySingle(_soundHit);

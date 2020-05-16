@@ -188,7 +188,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2430506093820117837
 Transform:
   m_ObjectHideFlags: 0
@@ -278,9 +278,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _holdFirePressThreshold: 0.5
-  _holdFireFullPressThreshold: 2
-  _soundHoldFire: {fileID: 0}
-  _soundFullHoldFire: {fileID: 0}
+  _holdFireFullPressThreshold: 2.5
+  _soundHoldFire: {fileID: 8300000, guid: 20b96c4206e284744b0d9b027b8a90f5, type: 3}
+  _soundFullHoldFire: {fileID: 8300000, guid: 02e8ff862108846408b72854887ececb, type: 3}
 --- !u!114 &2430506093820117842
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -362,7 +362,7 @@ MonoBehaviour:
   _doubleBeamWeaponMountPoint2: {fileID: 1081630797}
   _baseShotTag: PlayerShot
   _beamShotTag: PlayerBeam
-  _baseWeaponSound: {fileID: 8300000, guid: 4670cbd8196132d4d933c244f6d00180, type: 3}
+  _baseWeaponSound: {fileID: 8300000, guid: 7a270a5a20ca4434f9674492636986ac, type: 3}
   _beamWeaponSound: {fileID: 8300000, guid: 27d34f8018fd31443a6af6e9ca81a326, type: 3}
   _shootRate: 0.2
 --- !u!114 &3694494909600459358
@@ -505,7 +505,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8705065455679580684
 Transform:
   m_ObjectHideFlags: 0
@@ -560,7 +560,7 @@ SpriteRenderer:
   m_SortingLayer: 2
   m_SortingOrder: 100
   m_Sprite: {fileID: 21300000, guid: 110e05f3f2c416b4793af7ea7568dd1c, type: 3}
-  m_Color: {r: 0.68467, g: 0, b: 1, a: 0.34117648}
+  m_Color: {r: 0, g: 0.5261216, b: 1, a: 0.3254902}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -666,7 +666,7 @@ MonoBehaviour:
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1
+  m_Intensity: 0.8
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 25e57a77
   m_LightCookieSprite: {fileID: 0}
@@ -818,7 +818,7 @@ PrefabInstance:
     - target: {fileID: 5524746968744274227, guid: 347471206da17884784d717686117434,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.011000156
+      value: 0.42
       objectReference: {fileID: 0}
     - target: {fileID: 5524746968744274227, guid: 347471206da17884784d717686117434,
         type: 3}
@@ -954,7 +954,7 @@ PrefabInstance:
     - target: {fileID: 5404310571790350838, guid: f21587064c0da984898a49002cf84574,
         type: 3}
       propertyPath: InitialModule.startSize.scalar
-      value: 0.08
+      value: 0.07
       objectReference: {fileID: 0}
     - target: {fileID: 5404310571790350838, guid: f21587064c0da984898a49002cf84574,
         type: 3}
@@ -1034,7 +1034,7 @@ PrefabInstance:
     - target: {fileID: 6674133801278849956, guid: f21587064c0da984898a49002cf84574,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.014000416
+      value: 0.4230008
       objectReference: {fileID: 0}
     - target: {fileID: 6674133801278849956, guid: f21587064c0da984898a49002cf84574,
         type: 3}

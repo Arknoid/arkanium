@@ -11,6 +11,7 @@ namespace ScoreSpace
     {
         [SerializeField] private GameObject _creditsPanel;
         [SerializeField] private Text _hiScoreText;
+        [SerializeField] private Text _versionText;
         
         private void Update()
         {
@@ -24,6 +25,7 @@ namespace ScoreSpace
         {
             _creditsPanel.SetActive(false);
             _hiScoreText.text = "HiScore : " + PlayerPrefs.GetInt("HiScore", 0);
+            _versionText.text = "Version : " + Application.version;
         }
         
         public void ShowHallOfFamePanel(bool show)

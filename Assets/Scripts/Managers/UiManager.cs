@@ -69,17 +69,17 @@ namespace ScoreSpace.Managers
             }
             
             
-            if (LevelManager.Instance.NewHiScore)
+            if (GameManager.Instance.NewHiScore)
             {
                 _gameOverHiScoreText.color = Color.yellow;
-               _gameOverHiScoreText.text = "New HiScore : " + LevelManager.Instance.HiScore.ToString();
+               _gameOverHiScoreText.text = "New HiScore : " + GameManager.Instance.HiScore.ToString();
                _gameOverScoreText.text = "";
             }       
             else
             {
-                _gameOverHiScoreText.text = "HiScore : " + LevelManager.Instance.HiScore.ToString();
+                _gameOverHiScoreText.text = "HiScore : " + GameManager.Instance.HiScore.ToString();
                 _gameOverScoreText.color = Color.red;
-                _gameOverScoreText.text = "Score : " + LevelManager.Instance.PlayerScore.ToString();
+                _gameOverScoreText.text = "Score : " + GameManager.Instance.PlayerScore.ToString();
             }
         }
 
@@ -104,7 +104,7 @@ namespace ScoreSpace.Managers
                 Pause(true);
             }
             if (_player == null) return;
-            _scoreText.text = "Score : " + LevelManager.Instance.PlayerScore.ToString();
+            _scoreText.text = "Score : " + GameManager.Instance.PlayerScore.ToString();
             _arkaniumText.text = LevelManager.Instance.ArkaniumCount + "/" +
                                  LevelManager.Instance.ArkaniumNeed;
             if (!_showDebugInfos) return;

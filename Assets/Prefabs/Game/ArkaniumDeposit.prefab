@@ -115,6 +115,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _health: 200
+  _damageTakenLimit: 10
   _energyBar: {fileID: 0}
   _animatorTriggerHit: hit
   _animatorTriggerExplode: explode
@@ -166,6 +167,7 @@ MonoBehaviour:
   _tagItemTOLoot: Arkanium
   _lootRange: 4
   _numberOfItems: 3
+  _isRandom: 1
 --- !u!1 &2101588196615909871
 GameObject:
   m_ObjectHideFlags: 0
