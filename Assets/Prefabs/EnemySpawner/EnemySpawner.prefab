@@ -112,7 +112,7 @@ PrefabInstance:
     - target: {fileID: 3387636471786444259, guid: 007658eecbc8bde4cb09e5a2bfd0c611,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4690592091920348971, guid: 007658eecbc8bde4cb09e5a2bfd0c611,
         type: 3}
@@ -153,6 +153,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Color.b
       value: 0.0047169924
+      objectReference: {fileID: 0}
+    - target: {fileID: 6232744529892403976, guid: 007658eecbc8bde4cb09e5a2bfd0c611,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: 1815360179
       objectReference: {fileID: 0}
     - target: {fileID: 6395997797655888746, guid: 007658eecbc8bde4cb09e5a2bfd0c611,
         type: 3}
@@ -358,7 +363,7 @@ PrefabInstance:
     - target: {fileID: 7492034486982272722, guid: 007658eecbc8bde4cb09e5a2bfd0c611,
         type: 3}
       propertyPath: m_Name
-      value: EnemySpawner (1)
+      value: EnemySpawner
       objectReference: {fileID: 0}
     - target: {fileID: 7492034486982272722, guid: 007658eecbc8bde4cb09e5a2bfd0c611,
         type: 3}

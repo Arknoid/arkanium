@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -83864,6 +83864,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3625291451873853167, guid: b9094561e6fa345439385db73d2fb6c6,
+        type: 3}
+      propertyPath: m_Intensity
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 3625291453135854674, guid: b9094561e6fa345439385db73d2fb6c6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -84091,7 +84096,7 @@ PrefabInstance:
     - target: {fileID: 6945676078486987829, guid: 24b77abe806bc7140a93c2df281b2dfc,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.013264088
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6945676078486987829, guid: 24b77abe806bc7140a93c2df281b2dfc,
         type: 3}
@@ -84101,7 +84106,7 @@ PrefabInstance:
     - target: {fileID: 6945676078486987829, guid: 24b77abe806bc7140a93c2df281b2dfc,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.999912
+      value: 0.92387956
       objectReference: {fileID: 0}
     - target: {fileID: 6945676078486987829, guid: 24b77abe806bc7140a93c2df281b2dfc,
         type: 3}
