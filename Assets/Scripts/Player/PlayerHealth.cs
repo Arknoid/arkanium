@@ -21,9 +21,9 @@ namespace ScoreSpace.Player
         {
             if (_rb!= null)_rb.simulated = false;
             LevelManager.Instance.Loose();
-            SoundManager.Instance.StopLoop();
             CameraShakeCinemachine.Instance.ShakeDuration = 0.5f;
             yield return StartCoroutine(base.Explode());
+            SoundManager.Instance.StopLoop();
         }
     }
 }

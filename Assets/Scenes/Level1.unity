@@ -82569,7 +82569,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 577d4fafb3d643e0a31251e2be5d52ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _arkaniumNeed: 200
+  _arkaniumNeed: 150
   _playerPrefab: {fileID: 0}
   _player: {fileID: 1141347688}
   _musics:
@@ -84091,7 +84091,7 @@ PrefabInstance:
     - target: {fileID: 6945676078486987829, guid: 24b77abe806bc7140a93c2df281b2dfc,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0.013264088
       objectReference: {fileID: 0}
     - target: {fileID: 6945676078486987829, guid: 24b77abe806bc7140a93c2df281b2dfc,
         type: 3}
@@ -84101,7 +84101,7 @@ PrefabInstance:
     - target: {fileID: 6945676078486987829, guid: 24b77abe806bc7140a93c2df281b2dfc,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.92387956
+      value: 0.999912
       objectReference: {fileID: 0}
     - target: {fileID: 6945676078486987829, guid: 24b77abe806bc7140a93c2df281b2dfc,
         type: 3}
