@@ -649,10 +649,10 @@ PlayerSettings:
     m_VersionCode: 1
     m_VersionName: 
   apiCompatibilityLevel: 6
-  cloudProjectId: 
+  cloudProjectId: 568928bf-a9f1-4f65-8dc0-0201a56e083b
   framebufferDepthMemorylessMode: 0
-  projectName: 
-  organizationId: 
+  projectName: Arkanium
+  organizationId: strontium
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
   disableOldInputManagerSupport: 0
