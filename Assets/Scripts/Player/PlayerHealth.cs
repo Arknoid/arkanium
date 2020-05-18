@@ -14,16 +14,14 @@ namespace ScoreSpace.Player
             _rb = GetComponent<Rigidbody2D>();
             base.Awake();
         }
-
-
         
         protected override IEnumerator Explode()
         {
             if (_rb!= null)_rb.simulated = false;
             LevelManager.Instance.Loose();
             CameraShakeCinemachine.Instance.ShakeDuration = 0.5f;
-            yield return StartCoroutine(base.Explode());
             SoundManager.Instance.StopLoop();
+            yield return StartCoroutine(base.Explode());
         }
     }
 }

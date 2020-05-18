@@ -9,6 +9,7 @@ using Random = UnityEngine.Random;
 
 namespace ScoreSpace.Core
 {
+
     [Serializable]
     public class ItemToLoot
     {
@@ -22,16 +23,20 @@ namespace ScoreSpace.Core
 
         [SerializeField] private bool _lootOnDie = true;
         [SerializeField] private ItemToLoot[] _itemsToLoots;
-        
-        
-        
-        
-        
+        private bool _hasLoot = false;
+
+
+        protected override void OnEnable()
+        {
+            base.OnEnable();
+            _hasLoot = false;
+        }
+
         protected override IEnumerator Explode()
         {
-            if (_lootOnDie)
+            if (_lootOnDie && !_hasLoot)
             {
-                var randomNumber = Random.Range(0f, 100f);
+                var randomNumber = Random.Range(1f, 100f);
                 var lootsTag = new List<string>();  
                 foreach (var item in _itemsToLoots)
                 {
@@ -46,6 +51,7 @@ namespace ScoreSpace.Core
                 if (spawnedLoot == null) return base.Explode();
                 spawnedLoot.transform.position = transform.position;
                 spawnedLoot.SetActive(true);
+                _hasLoot = true;
 
             }
             return base.Explode();

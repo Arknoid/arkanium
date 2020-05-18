@@ -114,13 +114,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9dcba9d40724892b46f2505160a6938, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _health: 200
+  _health: 300
   _damageTakenLimit: 10
   _energyBar: {fileID: 0}
   _animatorTriggerHit: hit
   _animatorTriggerExplode: explode
   _soundHit: {fileID: 8300000, guid: 782fc15c10958c649a51455fca2f6166, type: 3}
-  _soundExplode: {fileID: 0}
+  _soundExplode: {fileID: 8300000, guid: ea39f7f37dc2b9c47bc5a118a23a125f, type: 3}
   _scoreValue: 200
   _forceSoundExplode: 0
   _lootOnDie: 0
@@ -253,7 +253,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9debc58b385741eebe5a7cac7f6761f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _minIntensity: 3
-  _maxIntensity: 5
+  _minIntensity: 0.5
+  _maxIntensity: 0.6
   _rate: 0.01
-  _intensity: 0
+  _intensity: 1

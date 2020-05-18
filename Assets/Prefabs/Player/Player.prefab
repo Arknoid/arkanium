@@ -402,6 +402,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _health: 100
+  _damageTakenLimit: 100
   _energyBar: {fileID: 0}
   _animatorTriggerHit: hit
   _animatorTriggerExplode: explode
@@ -1190,17 +1191,17 @@ PrefabInstance:
     - target: {fileID: 7487759630800556970, guid: b6abd3607ced8e1408bfe7874093f8ab,
         type: 3}
       propertyPath: InitialModule.startColor.maxColor.r
-      value: 0.8018868
+      value: 0.9811321
       objectReference: {fileID: 0}
     - target: {fileID: 7487759630800556970, guid: b6abd3607ced8e1408bfe7874093f8ab,
         type: 3}
       propertyPath: InitialModule.startColor.maxColor.g
-      value: 0.52938825
+      value: 0.53196317
       objectReference: {fileID: 0}
     - target: {fileID: 7487759630800556970, guid: b6abd3607ced8e1408bfe7874093f8ab,
         type: 3}
       propertyPath: InitialModule.startColor.maxColor.b
-      value: 0
+      value: 0.29156283
       objectReference: {fileID: 0}
     - target: {fileID: 7487759630800556970, guid: b6abd3607ced8e1408bfe7874093f8ab,
         type: 3}
@@ -1315,17 +1316,17 @@ PrefabInstance:
     - target: {fileID: 7487759630800556970, guid: b6abd3607ced8e1408bfe7874093f8ab,
         type: 3}
       propertyPath: InitialModule.startColor.maxColor.r
-      value: 0.8018868
+      value: 0.9811321
       objectReference: {fileID: 0}
     - target: {fileID: 7487759630800556970, guid: b6abd3607ced8e1408bfe7874093f8ab,
         type: 3}
       propertyPath: InitialModule.startColor.maxColor.g
-      value: 0.52938825
+      value: 0.53196317
       objectReference: {fileID: 0}
     - target: {fileID: 7487759630800556970, guid: b6abd3607ced8e1408bfe7874093f8ab,
         type: 3}
       propertyPath: InitialModule.startColor.maxColor.b
-      value: 0
+      value: 0.29156283
       objectReference: {fileID: 0}
     - target: {fileID: 7487759630800556970, guid: b6abd3607ced8e1408bfe7874093f8ab,
         type: 3}

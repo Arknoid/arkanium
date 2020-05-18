@@ -99,6 +99,16 @@ PrefabInstance:
       propertyPath: _objectTag
       value: Enemy
       objectReference: {fileID: 0}
+    - target: {fileID: 505880070089543313, guid: 007658eecbc8bde4cb09e5a2bfd0c611,
+        type: 3}
+      propertyPath: _gradient.ctime1
+      value: 65535
+      objectReference: {fileID: 0}
+    - target: {fileID: 505880070089543313, guid: 007658eecbc8bde4cb09e5a2bfd0c611,
+        type: 3}
+      propertyPath: _gradient.m_NumColorKeys
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 505880070089543318, guid: 007658eecbc8bde4cb09e5a2bfd0c611,
         type: 3}
       propertyPath: m_IsActive
@@ -187,12 +197,12 @@ PrefabInstance:
     - target: {fileID: 7492034486982272300, guid: 007658eecbc8bde4cb09e5a2bfd0c611,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.9285183
+      value: -2.6022396
       objectReference: {fileID: 0}
     - target: {fileID: 7492034486982272300, guid: 007658eecbc8bde4cb09e5a2bfd0c611,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.97451663
+      value: -6.4159164
       objectReference: {fileID: 0}
     - target: {fileID: 7492034486982272300, guid: 007658eecbc8bde4cb09e5a2bfd0c611,
         type: 3}
@@ -363,7 +373,7 @@ PrefabInstance:
     - target: {fileID: 7492034486982272722, guid: 007658eecbc8bde4cb09e5a2bfd0c611,
         type: 3}
       propertyPath: m_Name
-      value: EnemySpawner
+      value: EnemySpawner (2)
       objectReference: {fileID: 0}
     - target: {fileID: 7492034486982272722, guid: 007658eecbc8bde4cb09e5a2bfd0c611,
         type: 3}

@@ -164,11 +164,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _health: 3
+  _damageTakenLimit: 100
   _energyBar: {fileID: 0}
   _animatorTriggerHit: hit
   _animatorTriggerExplode: die
-  _soundHit: {fileID: 8300000, guid: 887d2184e52a154499c6ddbd33742e03, type: 3}
-  _soundExplode: {fileID: 8300000, guid: 887d2184e52a154499c6ddbd33742e03, type: 3}
+  _soundHit: {fileID: 8300000, guid: 5b645235dc427474d815545cb75aef53, type: 3}
+  _soundExplode: {fileID: 8300000, guid: 5b645235dc427474d815545cb75aef53, type: 3}
   _scoreValue: 1
   _forceSoundExplode: 0
   _lootOnDie: 1
@@ -217,7 +218,7 @@ PrefabInstance:
     - target: {fileID: 4288679304930476604, guid: 39ddea2beb3d4ad46bd8d38f126366c5,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.534
+      value: 0.502
       objectReference: {fileID: 0}
     - target: {fileID: 4288679304930476604, guid: 39ddea2beb3d4ad46bd8d38f126366c5,
         type: 3}
@@ -272,12 +273,12 @@ PrefabInstance:
     - target: {fileID: 5539371890457052575, guid: 39ddea2beb3d4ad46bd8d38f126366c5,
         type: 3}
       propertyPath: InitialModule.startColor.maxColor.g
-      value: 0.7481682
+      value: 0.54891306
       objectReference: {fileID: 0}
     - target: {fileID: 5539371890457052575, guid: 39ddea2beb3d4ad46bd8d38f126366c5,
         type: 3}
       propertyPath: InitialModule.startColor.maxColor.b
-      value: 0.4481132
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 5539371890457052575, guid: 39ddea2beb3d4ad46bd8d38f126366c5,
         type: 3}
@@ -304,10 +305,20 @@ PrefabInstance:
       propertyPath: EmissionModule.rateOverDistance.scalar
       value: 100
       objectReference: {fileID: 0}
+    - target: {fileID: 5539371890457052575, guid: 39ddea2beb3d4ad46bd8d38f126366c5,
+        type: 3}
+      propertyPath: InitialModule.startColor.maxColor.a
+      value: 0.21960784
+      objectReference: {fileID: 0}
     - target: {fileID: 6753010430223774307, guid: 39ddea2beb3d4ad46bd8d38f126366c5,
         type: 3}
       propertyPath: m_Name
       value: Dust Particle
+      objectReference: {fileID: 0}
+    - target: {fileID: 6753010430223774307, guid: 39ddea2beb3d4ad46bd8d38f126366c5,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8763364920528384181, guid: 39ddea2beb3d4ad46bd8d38f126366c5,
         type: 3}

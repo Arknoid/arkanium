@@ -51,7 +51,7 @@ namespace ScoreSpace.Core
             }
         }
 
-        protected void OnEnable()
+        protected virtual void OnEnable()
         {
             if (_hasHealthBar)
             {

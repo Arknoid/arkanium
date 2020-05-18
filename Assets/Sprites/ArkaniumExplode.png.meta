@@ -1,0 +1,539 @@
+fileFormatVersion: 2
+guid: e1428ab824fb0af4fbafc5bafc2a5c4f
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -164551075699123546
+    second: ArkaniumExplode_0
+  - first:
+      213: 3524890426608972122
+    second: ArkaniumExplode_1
+  - first:
+      213: 6482085004132669430
+    second: ArkaniumExplode_2
+  - first:
+      213: -5354645579739317406
+    second: ArkaniumExplode_3
+  - first:
+      213: 1598011352939057891
+    second: ArkaniumExplode_4
+  - first:
+      213: 2845570821957296299
+    second: ArkaniumExplode_5
+  - first:
+      213: 8264037517876613254
+    second: ArkaniumExplode_6
+  - first:
+      213: -5554305990039635327
+    second: ArkaniumExplode_7
+  - first:
+      213: -2686990391889090695
+    second: ArkaniumExplode_8
+  - first:
+      213: -4017206808845592353
+    second: ArkaniumExplode_9
+  - first:
+      213: -5279637652069113034
+    second: ArkaniumExplode_10
+  - first:
+      213: 7413128204094907601
+    second: ArkaniumExplode_11
+  - first:
+      213: 1957121692152045446
+    second: ArkaniumExplode_12
+  - first:
+      213: -1509908120826278385
+    second: ArkaniumExplode_13
+  - first:
+      213: -6811817814748875109
+    second: ArkaniumExplode_14
+  - first:
+      213: -219420553914126458
+    second: ArkaniumExplode_15
+  - first:
+      213: 3074899758916488167
+    second: ArkaniumExplode_16
+  - first:
+      213: 3553901685136732428
+    second: ArkaniumExplode_17
+  - first:
+      213: -736535164462922981
+    second: ArkaniumExplode_18
+  - first:
+      213: 5120840379050279292
+    second: ArkaniumExplode_19
+  - first:
+      213: -2115666004973403332
+    second: ArkaniumExplode_20
+  - first:
+      213: -1113328438284821940
+    second: ArkaniumExplode_21
+  - first:
+      213: -6279755902690309637
+    second: ArkaniumExplode_22
+  - first:
+      213: 712635902029710858
+    second: ArkaniumExplode_23
+  - first:
+      213: -5162254385749954300
+    second: ArkaniumExplode_24
+  - first:
+      213: -1961820434056673924
+    second: ArkaniumExplode_25
+  - first:
+      213: 4269100789051002601
+    second: ArkaniumExplode_26
+  - first:
+      213: -6147729008019603708
+    second: ArkaniumExplode_27
+  - first:
+      213: 1170664553526957683
+    second: ArkaniumExplode_28
+  - first:
+      213: -4624468339105473316
+    second: ArkaniumExplode_29
+  - first:
+      213: -3305701887486461699
+    second: ArkaniumExplode_30
+  - first:
+      213: -4931924296174837507
+    second: ArkaniumExplode_31
+  - first:
+      213: 8705745545119068919
+    second: ArkaniumExplode_32
+  - first:
+      213: 7624008480303305358
+    second: ArkaniumExplode_33
+  - first:
+      213: -5332014311095926433
+    second: ArkaniumExplode_34
+  - first:
+      213: -4978238150817458044
+    second: ArkaniumExplode_35
+  - first:
+      213: -4847909101017134128
+    second: ArkaniumExplode_36
+  - first:
+      213: 2209849157506864660
+    second: ArkaniumExplode_37
+  - first:
+      213: -2100184688835046849
+    second: ArkaniumExplode_38
+  - first:
+      213: -8065659977231122338
+    second: ArkaniumExplode_39
+  - first:
+      213: 2045780242399850503
+    second: ArkaniumExplode_40
+  - first:
+      213: 9191696480608116379
+    second: ArkaniumExplode_41
+  - first:
+      213: -7434578305316060412
+    second: ArkaniumExplode_42
+  - first:
+      213: 6684468850520052501
+    second: ArkaniumExplode_43
+  - first:
+      213: 7865139649680471467
+    second: ArkaniumExplode_44
+  - first:
+      213: -5700963775076923595
+    second: ArkaniumExplode_45
+  - first:
+      213: 5078531183958569964
+    second: ArkaniumExplode_46
+  - first:
+      213: -96328269771769530
+    second: ArkaniumExplode_47
+  - first:
+      213: 2800206665778830990
+    second: ArkaniumExplode_48
+  - first:
+      213: 315366506436331194
+    second: ArkaniumExplode_49
+  - first:
+      213: -5580654004033794798
+    second: ArkaniumExplode_50
+  - first:
+      213: 8513025568388507660
+    second: ArkaniumExplode_51
+  - first:
+      213: -269633996542204358
+    second: ArkaniumExplode_52
+  - first:
+      213: -1998164120953773631
+    second: ArkaniumExplode_53
+  - first:
+      213: -5207803574389746460
+    second: ArkaniumExplode_54
+  - first:
+      213: 2499077807439013688
+    second: ArkaniumExplode_55
+  - first:
+      213: -1887502593819394098
+    second: ArkaniumExplode_56
+  - first:
+      213: 1904805887499817079
+    second: ArkaniumExplode_57
+  - first:
+      213: 8145842739191836337
+    second: ArkaniumExplode_58
+  - first:
+      213: -6781271120462926345
+    second: ArkaniumExplode_59
+  - first:
+      213: -4089314705903184838
+    second: ArkaniumExplode_60
+  - first:
+      213: 4546925661156450090
+    second: ArkaniumExplode_61
+  - first:
+      213: -3631833345209094808
+    second: ArkaniumExplode_62
+  - first:
+      213: -5784934792172766172
+    second: ArkaniumExplode_63
+  - first:
+      213: 5963455671327695804
+    second: ArkaniumExplode_64
+  - first:
+      213: 6794396432482736992
+    second: ArkaniumExplode_65
+  - first:
+      213: -1838119434436601551
+    second: ArkaniumExplode_66
+  - first:
+      213: 7894048706102094096
+    second: ArkaniumExplode_67
+  - first:
+      213: 1911420996289586391
+    second: ArkaniumExplode_68
+  - first:
+      213: -879348385982355559
+    second: ArkaniumExplode_69
+  - first:
+      213: 8221746449777522076
+    second: ArkaniumExplode_70
+  - first:
+      213: 3054887507405048565
+    second: ArkaniumExplode_71
+  - first:
+      213: -8248945362820652094
+    second: ArkaniumExplode_72
+  - first:
+      213: 3766394020849456466
+    second: ArkaniumExplode_73
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ArkaniumExplode_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6aa9b812ba567bdf0800000000000000
+      internalID: -164551075699123546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ArkaniumExplode_1
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a51f336da2deae030800000000000000
+      internalID: 3524890426608972122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ArkaniumExplode_2
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f7d63bb7fdf4f950800000000000000
+      internalID: 6482085004132669430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ArkaniumExplode_3
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26bb581273a70b5b0800000000000000
+      internalID: -5354645579739317406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ArkaniumExplode_4
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e259fedbd64d2610800000000000000
+      internalID: 1598011352939057891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ArkaniumExplode_5
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba02bf9069f7d7720800000000000000
+      internalID: 2845570821957296299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ArkaniumExplode_6
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68059877652cfa270800000000000000
+      internalID: 8264037517876613254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ArkaniumExplode_7
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18afcd941242be2b0800000000000000
+      internalID: -5554305990039635327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ArkaniumExplode_8
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97720909974e5bad0800000000000000
+      internalID: -2686990391889090695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
