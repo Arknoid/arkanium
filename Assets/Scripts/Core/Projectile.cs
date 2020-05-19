@@ -44,7 +44,13 @@ namespace ScoreSpace.Core
 
 
         private void OnTriggerEnter2D(Collider2D other)
+        
         {
+            if (other.gameObject.CompareTag("Block") )
+            {
+                this.gameObject.SetActive(false);
+            }
+            
             var otherCanDamage = other.gameObject.GetComponent<IDamageable>();
             if (otherCanDamage !=null && otherCanDamage.TakeDamage(Power) && _isPlayerShoot)
             {

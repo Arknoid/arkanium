@@ -17,13 +17,10 @@ namespace ScoreSpace.Player
         [SerializeField] private AudioClip _soundHoldFire;
         [SerializeField] private AudioClip _soundFullHoldFire;
         
-        
-
         private bool _isFire;
         private bool _isHoldFireButton;
         private float _holdFireTimer = 0f;
         
-
         public delegate void OnFireHandler();
         public event OnFireHandler OnFire;
         public delegate void OnHoldFireHandler(bool isFull);
@@ -66,6 +63,7 @@ namespace ScoreSpace.Player
         private void OnDisable()
         {
             IsFireHolding = false;
+            SoundManager.Instance.StopLoop();
         }
 
         private void OnDestroy()

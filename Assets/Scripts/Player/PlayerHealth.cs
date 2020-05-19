@@ -18,9 +18,9 @@ namespace ScoreSpace.Player
         protected override IEnumerator Explode()
         {
             if (_rb!= null)_rb.simulated = false;
+            SoundManager.Instance.StopLoop();
             LevelManager.Instance.Loose();
             CameraShakeCinemachine.Instance.ShakeDuration = 0.5f;
-            SoundManager.Instance.StopLoop();
             yield return StartCoroutine(base.Explode());
         }
     }

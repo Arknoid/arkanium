@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _objectTag: Enemy
   _range: 1
-  _spawnRate: 3
+  _spawnRate: 1
 --- !u!1001 &3424874142674097096
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -373,7 +373,7 @@ PrefabInstance:
     - target: {fileID: 7492034486982272722, guid: 007658eecbc8bde4cb09e5a2bfd0c611,
         type: 3}
       propertyPath: m_Name
-      value: EnemySpawner (2)
+      value: EnemySpawner
       objectReference: {fileID: 0}
     - target: {fileID: 7492034486982272722, guid: 007658eecbc8bde4cb09e5a2bfd0c611,
         type: 3}
