@@ -23,6 +23,7 @@ TagManager:
   - Score
   - Ship
   - PlayerStartPos
+  - PowerUpSideShot
   layers:
   - Default
   - TransparentFX

@@ -103,7 +103,16 @@ namespace ScoreSpace.Player
 
         private void FixedUpdate()
         {
-            _rb.velocity = new Vector2(_playerInput.Horizontal * _speed * Time.fixedDeltaTime, _playerInput.Vertical* _speed * Time.fixedDeltaTime);
+            if (_playerInput.Horizontal != 0 && _playerInput.Vertical != 0)
+            {
+                _rb.velocity = new Vector2(_playerInput.Horizontal * _speed/ 1.15f  * Time.fixedDeltaTime, _playerInput.Vertical * _speed/ 1.15f * Time.fixedDeltaTime);
+            }
+            else
+            {
+                _rb.velocity = new Vector2(_playerInput.Horizontal * _speed * Time.fixedDeltaTime, _playerInput.Vertical* _speed * Time.fixedDeltaTime);
+            }
+            
+          
         }
         
         private void CheckHoldingFireAndSlowSpeed()

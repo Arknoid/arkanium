@@ -22,6 +22,7 @@ namespace ScoreSpace.Player
         [SerializeField] private AudioClip _soundPowerUpEnergy;
         [SerializeField] private AudioClip _soundPowerUpShield;
         [SerializeField] private AudioClip _soundPowerUpLaser;
+        [SerializeField] private AudioClip _soundPowerUpSideShots;
         [SerializeField] private AudioClip _soundArkanium;
         
         private PlayerWeapon _playerWeapon;
@@ -35,8 +36,16 @@ namespace ScoreSpace.Player
             set => _laserLevel = Mathf.Clamp(value,1,_laserLevelMax);
         }
         
+        public int SideShotsLevel
+        {
+            get => _sideShotsLevel;
+            set => _sideShotsLevel = Mathf.Clamp(value,1,_sideShotLevelMax);
+        }
+        
         private int _laserLevel = 1;
-
+        private int _sideShotsLevel = 0;
+        
+        
         private PlayerHealth _playerHealth;
         
         private void Start()
@@ -55,6 +64,11 @@ namespace ScoreSpace.Player
                     _playerMovement.SpeedBonus += _speedToAdd;
                     _playerWeapon.ShootRate -= _shootDelayBonus;
                     SoundManager.Instance.Play(_soundPowerUpSpeed);
+                    other.gameObject.SetActive(false);
+                    break;
+                case "PowerUpSideShot" :
+                    SideShotsLevel++;
+                    SoundManager.Instance.Play(_soundPowerUpSideShots);
                     other.gameObject.SetActive(false);
                     break;
                 case "PowerUpHealth":
