@@ -224,6 +224,8 @@ MonoBehaviour:
     _chanceToLoot: 55
   - _tag: PowerUpShield
     _chanceToLoot: 100
+  - _tag: PowerUpSideShot
+    _chanceToLoot: 100
 --- !u!95 &7492034486982272297
 Animator:
   serializedVersion: 3
