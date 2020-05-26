@@ -19,10 +19,10 @@ namespace ScoreSpace.Player
         public Position CurrentPosition => _currentPosition;
 
         private Position _currentPosition = Position.Right;
+        [SerializeField] private Transform _sprite;
         
         private Rigidbody2D _rb;
         private PlayerInput _playerInput;
-        private Animator _animator;
         [SerializeField]
         private float _baseSpeed;
         [SerializeField] private float _slowSpeedFireHolding = 50;
@@ -31,6 +31,7 @@ namespace ScoreSpace.Player
 
         [SerializeField] private int _speedBonusMax = 200;
         private float _speedBonus = 0;
+
 
         public float SpeedBonus
         {
@@ -42,7 +43,6 @@ namespace ScoreSpace.Player
         {
             _rb = GetComponent<Rigidbody2D>();
             _playerInput = GetComponent<PlayerInput>();
-            _animator = GetComponent<Animator>();
             _speed = _baseSpeed;
         }
 
@@ -59,45 +59,45 @@ namespace ScoreSpace.Player
                 _playerInput.Vertical < inputThreshold)
             {
                 _currentPosition = Position.Left;
-                transform.rotation = Quaternion.Euler(0, 0, -180);
+                _sprite.rotation = Quaternion.Euler(0, 0, -180);
             }
             else if (_playerInput.Horizontal < -inputThreshold && _playerInput.Vertical < -inputThreshold)
             {
                 _currentPosition = Position.BottomLeft;
-                transform.rotation = Quaternion.Euler(0, 0, -135);
+                _sprite.rotation = Quaternion.Euler(0, 0, -135);
             }
             else if (_playerInput.Horizontal > inputThreshold && _playerInput.Vertical > -inputThreshold &&
                      _playerInput.Vertical < inputThreshold)
             {
                 _currentPosition = Position.Right;
-                transform.rotation = Quaternion.identity;
+                _sprite.rotation = Quaternion.identity;
             }
             else if (_playerInput.Horizontal < -inputThreshold && _playerInput.Vertical > inputThreshold)
             {
                 _currentPosition = Position.TopLeft;
-                transform.rotation = Quaternion.Euler(0, 0, 135);
+                _sprite.rotation = Quaternion.Euler(0, 0, 135);
             }
             else if (_playerInput.Horizontal > inputThreshold && _playerInput.Vertical > inputThreshold)
             {
                 _currentPosition = Position.TopRight;
-                transform.rotation = Quaternion.Euler(0, 0, 45);
+                _sprite.rotation = Quaternion.Euler(0, 0, 45);
             }
             else if (_playerInput.Horizontal > inputThreshold && _playerInput.Vertical < -inputThreshold)
             {
                 _currentPosition = Position.BottomRight;
-                transform.rotation = Quaternion.Euler(0, 0, -45);
+                _sprite.rotation = Quaternion.Euler(0, 0, -45);
             }
             else if (_playerInput.Vertical < -inputThreshold && _playerInput.Horizontal > -inputThreshold &&
                      _playerInput.Horizontal < inputThreshold)
             {
                 _currentPosition = Position.Bottom;
-                transform.rotation = Quaternion.Euler(0, 0, -90);
+                _sprite.rotation = Quaternion.Euler(0, 0, -90);
             }
             else if (_playerInput.Vertical > inputThreshold && _playerInput.Horizontal > -inputThreshold &&
                      _playerInput.Horizontal < inputThreshold)
             {
                 _currentPosition = Position.Top;
-                transform.rotation = Quaternion.Euler(0, 0, 90);
+                _sprite.rotation = Quaternion.Euler(0, 0, 90);
             }
         }
 

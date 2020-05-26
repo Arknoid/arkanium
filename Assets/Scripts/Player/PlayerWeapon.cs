@@ -1,12 +1,13 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using ScoreSpace.Core;
 using ScoreSpace.Interfaces;
 using ScoreSpace.Managers;
+using Unity.Mathematics;
 using UnityEngine;
 
 namespace ScoreSpace.Player
 {
-    [RequireComponent(typeof(PlayerInput))]
     public class PlayerWeapon : MonoBehaviour
     {
         
@@ -24,6 +25,11 @@ namespace ScoreSpace.Player
         [SerializeField] private AudioClip _baseWeaponSound;
         [SerializeField] private AudioClip _beamWeaponSound;
         [SerializeField] private float _shootRate = 0.2f;
+        [SerializeField] private Transform _weapon;
+        private Rigidbody2D _rbWeapon;
+        private Rigidbody2D _rb;
+        
+        private PlayerInput _playerInput;
 
         public float ShootRate
         {
@@ -32,7 +38,7 @@ namespace ScoreSpace.Player
         }
 
         private PlayerPowerUp _playerPowerUp;
-        private PlayerInput _playerInput;
+
         private PlayerMovement _playerMovement;
         private bool _canShoot = true;
         private static readonly int Power = Animator.StringToHash("power");
@@ -46,13 +52,21 @@ namespace ScoreSpace.Player
         }
         private void Awake()
         {
-            _playerInput = GetComponent<PlayerInput>();
+            _playerInput = FindObjectOfType<PlayerInput>();
             _playerInput.OnFire += HandleFire;
             _playerInput.OnHoldFire += HandleBeamFire;
-            _playerPowerUp = GetComponent<PlayerPowerUp>();
-            _playerMovement = GetComponent<PlayerMovement>();
+            _playerPowerUp = FindObjectOfType<PlayerPowerUp>();
+            _rbWeapon = _weapon.GetComponent<Rigidbody2D>();
+            _rb = GetComponent<Rigidbody2D>();
         }
-        
+
+        private void FixedUpdate()
+        {
+            Vector2 lookDir = (_playerInput.MousePos - _weapon.transform.position);
+            var angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg ;
+            _weapon.transform.eulerAngles  = new Vector3(0f,0f,angle);
+        }
+
         private void OnDestroy()
         {
             CleanEventsDelegate();
@@ -73,7 +87,7 @@ namespace ScoreSpace.Player
         {
 
             if (!_canShoot) return;
-            SpawnShot(_baseShotTag, _baseWeaponMountPoint.transform, GetDirectionByPlayerDirection(), _playerPowerUp.LaserLevel , transform.rotation.eulerAngles.z);
+            SpawnShot(_baseShotTag, _baseWeaponMountPoint.transform, transform.right , _playerPowerUp.LaserLevel , transform.rotation.eulerAngles.z);
             SoundManager.Instance.RandomizeSfx(_baseWeaponSound);
             if (_playerPowerUp.SideShotsLevel > 0)
             {
@@ -81,68 +95,30 @@ namespace ScoreSpace.Player
             }
             StartCoroutine(FireDelay());
         }
-
-        private Vector2 GetDirectionByPlayerDirection(float offset = 0)
-        {
-            Vector2 direction;
-            switch (_playerMovement.CurrentPosition)
-            {
-                case Position.Right:
-                    direction = Vector2.right + new Vector2(0, offset);
-                    break;
-                case Position.BottomRight:
-                    direction = new Vector2(1, -1) + new Vector2(offset,offset);
-                    break;
-                case Position.Bottom:
-                    direction = Vector2.down + new Vector2(offset, 0);
-                    break;
-                case Position.BottomLeft:
-                    direction = new Vector2(-1, -1) + new Vector2(offset,-offset);
-                    break;
-                case Position.Left:
-                    direction = Vector2.left - new Vector2(0, offset);
-                    break;
-                case Position.TopLeft:
-                    direction = new Vector2(-1, 1) - new Vector2(offset,offset);
-                    break;
-                case Position.Top:
-                    direction = Vector2.up - new Vector2(offset, 0);
-                    break;
-                case Position.TopRight:
-                    direction = new Vector2(1, 1) - new Vector2(offset,-offset);
-                    break;
-                default:
-                    direction = Vector2.zero;
-                    break;
-            }
-
-            return direction;
-        }
-
+        
         private void SpawnShot(string shotTag,Transform mountPoint, Vector2 direction,int power = 1,float eulerAngle = 0f)
         {
             var spawnedShot = ObjectPooler.Instance.GetPooledObject(shotTag);
             if (spawnedShot == null) return;
             spawnedShot.transform.position = mountPoint.position;
-            spawnedShot.transform.rotation = Quaternion.Euler(0, 0, eulerAngle);
+            spawnedShot.transform.rotation = mountPoint.rotation;
             spawnedShot.SetActive(true);
-            spawnedShot.GetComponent<IMovable>().Direction = direction;
             spawnedShot.GetComponent<Animator>().SetInteger(Power, power);
         }
         private void SpawnSideShots()
         {
-            const float eulerAngle = 15f;
-            SpawnShot(_sideShotsTag,_sideShotMountPointLeft,
-                GetDirectionByPlayerDirection(0.05f),_playerPowerUp.SideShotsLevel -1,transform.rotation.eulerAngles.z + eulerAngle);
-            SpawnShot(_sideShotsTag,_sideShotMountPointRight,
-                GetDirectionByPlayerDirection(-0.05f),_playerPowerUp.SideShotsLevel -1,transform.rotation.eulerAngles.z -eulerAngle);
-            
-            // extra shots
-            if (_playerPowerUp.SideShotsLevel <= 3) return;
-            SpawnShot(_sideShotsTag,_sideShotMountPointLeft,
-                GetDirectionByPlayerDirection(0.2f),1,transform.rotation.eulerAngles.z + eulerAngle);
-            SpawnShot(_sideShotsTag,_sideShotMountPointRight,
-                GetDirectionByPlayerDirection(-0.2f),1,transform.rotation.eulerAngles.z -eulerAngle);
+            // const float eulerAngle = 15f;
+            // SpawnShot(_sideShotsTag,_sideShotMountPointLeft,
+            //     GetDirectionByPlayerDirection(0.05f),_playerPowerUp.SideShotsLevel -1,transform.rotation.eulerAngles.z + eulerAngle);
+            // SpawnShot(_sideShotsTag,_sideShotMountPointRight,
+            //     GetDirectionByPlayerDirection(-0.05f),_playerPowerUp.SideShotsLevel -1,transform.rotation.eulerAngles.z -eulerAngle);
+            //
+            // // extra shots
+            // if (_playerPowerUp.SideShotsLevel <= 3) return;
+            // SpawnShot(_sideShotsTag,_sideShotMountPointLeft,
+            //     GetDirectionByPlayerDirection(0.2f),1,transform.rotation.eulerAngles.z + eulerAngle);
+            // SpawnShot(_sideShotsTag,_sideShotMountPointRight,
+            //     GetDirectionByPlayerDirection(-0.2f),1,transform.rotation.eulerAngles.z -eulerAngle);
         }
         private void HandleBeamFire(bool isFull)
         {
@@ -150,14 +126,14 @@ namespace ScoreSpace.Player
             if (isFull)
             {
                 SpawnShot(_beamShotTag, _doubleBeamWeaponMountPoint1.transform,
-                    GetDirectionByPlayerDirection(), _playerPowerUp.LaserLevel , transform.rotation.eulerAngles.z);
+                    Vector2.right, _playerPowerUp.LaserLevel , transform.rotation.eulerAngles.z);
                 SpawnShot(_beamShotTag, _doubleBeamWeaponMountPoint2.transform,
-                    GetDirectionByPlayerDirection(), _playerPowerUp.LaserLevel , transform.rotation.eulerAngles.z);
+                    Vector2.right, _playerPowerUp.LaserLevel , transform.rotation.eulerAngles.z);
             }
             else
             {
                 SpawnShot(_beamShotTag, _beamWeaponMountPoint.transform,
-                    GetDirectionByPlayerDirection(), _playerPowerUp.LaserLevel , transform.rotation.eulerAngles.z);
+                    Vector2.right, _playerPowerUp.LaserLevel , transform.rotation.eulerAngles.z);
             }
             SoundManager.Instance.RandomizeSfx(_beamWeaponSound);
             StartCoroutine(FireDelay());

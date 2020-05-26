@@ -5,7 +5,7 @@ using Random = UnityEngine.Random;
 namespace ScoreSpace.Core
 {
     [RequireComponent(typeof(Rigidbody2D))]
-    public class MovableObject : MonoBehaviour, IMovable
+    public class MovableObject : MonoBehaviour
     {
         [SerializeField] private int _speed = 100;
         [SerializeField] private Vector2 _direction = Vector2.down;
@@ -14,15 +14,15 @@ namespace ScoreSpace.Core
         [SerializeField] private float _frequency = 1;
         [SerializeField] private float _magnitude = 2f;
 
-        public Vector2 Direction
-        {
-            get => _direction;
-            set
-            {
-                _direction = value;
-                _rb.velocity = _direction * _speed;
-            }
-        }
+        // public Vector2 Direction
+        // {
+        //     get => _direction;
+        //     set
+        //     {
+        //         _direction = value;
+        //         _rb.velocity = _direction * _speed;
+        //     }
+        // }
 
         private Rigidbody2D _rb;
         private float _randomFrequencyMultiplier = 1;
@@ -38,7 +38,7 @@ namespace ScoreSpace.Core
         
         private void OnEnable()
         {
-            _rb.velocity = _direction * _speed;
+            _rb.velocity = _rb.transform.right * _speed;
         }
 
         private void FixedUpdate()

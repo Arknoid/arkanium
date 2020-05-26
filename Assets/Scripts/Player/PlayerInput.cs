@@ -8,7 +8,7 @@ namespace ScoreSpace.Player
 
         public float Horizontal { get; private set; }
         public float Vertical { get; private set; }
-
+        public Vector3 MousePos { get; private set; }
         public bool IsFireHolding { get; private set; }
         public bool IsFullFireHolding { get; private set; }
         
@@ -16,6 +16,7 @@ namespace ScoreSpace.Player
         [SerializeField] private float _holdFireFullPressThreshold = 2f;
         [SerializeField] private AudioClip _soundHoldFire;
         [SerializeField] private AudioClip _soundFullHoldFire;
+        [SerializeField] private Camera _camera;
         
         private bool _isFire;
         private bool _isHoldFireButton;
@@ -26,8 +27,13 @@ namespace ScoreSpace.Player
         public delegate void OnHoldFireHandler(bool isFull);
         public event OnHoldFireHandler OnHoldFire;
 
+        
+        
         private void Update()
         {
+
+            MousePos = _camera.ScreenToWorldPoint(Input.mousePosition);
+            
             CheckInput();
             if (_isHoldFireButton)
             {
