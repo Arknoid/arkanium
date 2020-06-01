@@ -32,7 +32,7 @@ namespace ScoreSpace.Player
         private void Update()
         {
 
-            MousePos = _camera.ScreenToWorldPoint(Input.mousePosition);
+           
             
             CheckInput();
             if (_isHoldFireButton)
@@ -58,7 +58,7 @@ namespace ScoreSpace.Player
         {
             IsFireHolding = _holdFireTimer >= _holdFirePressThreshold;
             IsFullFireHolding = _holdFireTimer >= _holdFireFullPressThreshold;
-            
+            MousePos = _camera.ScreenToWorldPoint(Input.mousePosition);
             Horizontal = Input.GetAxis("Horizontal");
             Vertical = Input.GetAxis("Vertical");
             _isFire = Input.GetButtonUp("Fire1") || Input.GetButtonUp("Jump");

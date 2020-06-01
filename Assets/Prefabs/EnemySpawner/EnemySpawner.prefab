@@ -177,12 +177,12 @@ PrefabInstance:
     - target: {fileID: 6395997797655888746, guid: 007658eecbc8bde4cb09e5a2bfd0c611,
         type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6395997797655888746, guid: 007658eecbc8bde4cb09e5a2bfd0c611,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6954231450699459327, guid: 007658eecbc8bde4cb09e5a2bfd0c611,
         type: 3}
@@ -313,7 +313,7 @@ PrefabInstance:
     - target: {fileID: 7492034486982272302, guid: 007658eecbc8bde4cb09e5a2bfd0c611,
         type: 3}
       propertyPath: _itemsToLoots.Array.size
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7492034486982272302, guid: 007658eecbc8bde4cb09e5a2bfd0c611,
         type: 3}
@@ -323,7 +323,7 @@ PrefabInstance:
     - target: {fileID: 7492034486982272302, guid: 007658eecbc8bde4cb09e5a2bfd0c611,
         type: 3}
       propertyPath: _health
-      value: 40
+      value: 80
       objectReference: {fileID: 0}
     - target: {fileID: 7492034486982272302, guid: 007658eecbc8bde4cb09e5a2bfd0c611,
         type: 3}
@@ -378,12 +378,12 @@ PrefabInstance:
     - target: {fileID: 7492034486982272303, guid: 007658eecbc8bde4cb09e5a2bfd0c611,
         type: 3}
       propertyPath: m_Offset.y
-      value: -0.05744362
+      value: -0.0090613365
       objectReference: {fileID: 0}
     - target: {fileID: 7492034486982272303, guid: 007658eecbc8bde4cb09e5a2bfd0c611,
         type: 3}
       propertyPath: m_Radius
-      value: 1.417881
+      value: 0.99856615
       objectReference: {fileID: 0}
     - target: {fileID: 7492034486982272303, guid: 007658eecbc8bde4cb09e5a2bfd0c611,
         type: 3}
@@ -404,6 +404,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7492034486982272722, guid: 007658eecbc8bde4cb09e5a2bfd0c611,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8732211860639812384, guid: 007658eecbc8bde4cb09e5a2bfd0c611,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1586477213, guid: 007658eecbc8bde4cb09e5a2bfd0c611, type: 3}

@@ -191,9 +191,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.06518364}
+  m_Offset: {x: 0, y: 0.0036001205}
   serializedVersion: 2
-  m_Radius: 1.6783066
+  m_Radius: 0.95836717
 --- !u!114 &7492034486982272302
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -224,8 +224,6 @@ MonoBehaviour:
   - _tag: PowerUpHealth
     _chanceToLoot: 55
   - _tag: PowerUpShield
-    _chanceToLoot: 100
-  - _tag: PowerUpSideShot
     _chanceToLoot: 100
 --- !u!95 &7492034486982272297
 Animator:
@@ -484,6 +482,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: MinimapSprite
+      objectReference: {fileID: 0}
+    - target: {fileID: 5801409460822947334, guid: f4d5970b95e7f97479159d0b763fa9b3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7307933537878024923, guid: f4d5970b95e7f97479159d0b763fa9b3,
         type: 3}

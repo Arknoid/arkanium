@@ -1,4 +1,5 @@
-﻿using ScoreSpace.Interfaces;
+﻿
+using ScoreSpace.Interfaces;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -14,16 +15,6 @@ namespace ScoreSpace.Core
         [SerializeField] private float _frequency = 1;
         [SerializeField] private float _magnitude = 2f;
 
-        // public Vector2 Direction
-        // {
-        //     get => _direction;
-        //     set
-        //     {
-        //         _direction = value;
-        //         _rb.velocity = _direction * _speed;
-        //     }
-        // }
-
         private Rigidbody2D _rb;
         private float _randomFrequencyMultiplier = 1;
         private void Awake()
@@ -38,7 +29,7 @@ namespace ScoreSpace.Core
         
         private void OnEnable()
         {
-            _rb.velocity = _rb.transform.right * _speed;
+            _rb.velocity = _rb.transform.right  * _speed;
         }
 
         private void FixedUpdate()
