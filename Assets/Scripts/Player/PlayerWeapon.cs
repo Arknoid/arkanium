@@ -14,6 +14,7 @@ namespace ScoreSpace.Player
         [SerializeField] private GameObject[] _baseWeaponShots;
 
         [SerializeField] private Transform _baseWeaponMountPoint;
+        [SerializeField] private Transform _targetCursor;
         [SerializeField] private Transform _beamWeaponMountPoint;
         [SerializeField] private Transform _sideShotMountPointLeft;
         [SerializeField] private Transform _sideShotMountPointRight;
@@ -39,9 +40,11 @@ namespace ScoreSpace.Player
 
         private PlayerPowerUp _playerPowerUp;
 
-        private PlayerMovement _playerMovement;
         private bool _canShoot = true;
         private static readonly int Power = Animator.StringToHash("power");
+
+        private Vector3 _prevMousePos = Vector3.zero;
+        private float _angle;
 
         private IEnumerator FireDelay()
         {
@@ -60,11 +63,40 @@ namespace ScoreSpace.Player
             _rb = GetComponent<Rigidbody2D>();
         }
 
-        private void FixedUpdate()
+        private void Start()
         {
-            Vector2 lookDir = (_playerInput.MousePos - _weapon.transform.position);
-            var angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg;
-            _weapon.transform.eulerAngles = new Vector3(0f, 0f, angle);
+            _prevMousePos = Input.mousePosition;
+        }
+
+
+
+        private void Update()
+        {
+            RotateWeapon();
+        }
+
+
+        private void RotateWeapon()
+        {
+            // Check if mouse is used
+            if (!_prevMousePos.Equals(Input.mousePosition))
+            {
+                // Rotate with mouse
+                var dir = _playerInput.CameraMousePos - _weapon.transform.position;
+                _angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+                _prevMousePos = Input.mousePosition;
+                _targetCursor.gameObject.SetActive(false);
+                Cursor.visible = true;
+            }
+            // Check if right analog axe of joypad is used
+            if (Mathf.Abs(_playerInput.HorizontalShoot) > 0.01 && Mathf.Abs(_playerInput.VerticalShoot) > 0.01)
+            {
+                // Rotate with joypad
+                _angle = Mathf.Atan2( - _playerInput.HorizontalShoot, _playerInput.VerticalShoot) * Mathf.Rad2Deg;
+                _targetCursor.gameObject.SetActive(true);
+                Cursor.visible = false;
+            }
+            _weapon.transform.eulerAngles = new Vector3(0f, 0f, _angle);
         }
 
         private void OnDestroy()

@@ -8,7 +8,9 @@ namespace ScoreSpace.Player
 
         public float Horizontal { get; private set; }
         public float Vertical { get; private set; }
-        public Vector3 MousePos { get; private set; }
+        public float HorizontalShoot { get; private set; }
+        public float VerticalShoot { get; private set; }
+        public Vector3 CameraMousePos { get; private set; }
         public bool IsFireHolding { get; private set; }
         public bool IsFullFireHolding { get; private set; }
         
@@ -27,14 +29,13 @@ namespace ScoreSpace.Player
         public delegate void OnHoldFireHandler(bool isFull);
         public event OnHoldFireHandler OnHoldFire;
 
-        
-        
+
         private void Update()
         {
-
-            MousePos = _camera.ScreenToWorldPoint(Input.mousePosition);
+            CameraMousePos = _camera.ScreenToWorldPoint(Input.mousePosition);
             
             CheckInput();
+
             if (_isHoldFireButton)
             {
                 IncrementHoldFireButtonTimer();
@@ -61,8 +62,10 @@ namespace ScoreSpace.Player
             
             Horizontal = Input.GetAxis("Horizontal");
             Vertical = Input.GetAxis("Vertical");
-            _isFire = Input.GetButtonUp("Fire1") || Input.GetButtonUp("Jump");
-            _isHoldFireButton = Input.GetButton("Fire1") || Input.GetButton("Jump");
+            HorizontalShoot = Input.GetAxis("Mouse X");
+            VerticalShoot = Input.GetAxis("Mouse Y");
+            _isFire = Input.GetButtonUp("Fire1") || Input.GetButtonUp("Jump") || Input.GetButtonUp("Fire2");
+            _isHoldFireButton = Input.GetButton("Fire2") || Input.GetButton("Fire1") || Input.GetButton("Jump") ;
 
         }
 
