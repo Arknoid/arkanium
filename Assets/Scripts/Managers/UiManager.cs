@@ -22,7 +22,8 @@ namespace ScoreSpace.Managers
         [SerializeField] private Text _gameOverHiScoreText;
         [SerializeField] private Text _winBonusText;
         [SerializeField] private GameObject _pausePanel;
-        
+        [SerializeField] private GameObject _miniMAp;
+
         private PlayerPowerUp _playerPowerUp;
         private PlayerHealth _playerHealth;
         private PlayerWeapon _playerWeapon;
@@ -51,10 +52,14 @@ namespace ScoreSpace.Managers
         }
 
         public void ShowGameOver(bool isWin, bool value = true)
+
         {
+            Cursor.visible = true;
             _energyBar.gameObject.SetActive(false);
             _returnText.gameObject.SetActive(false);
             _scoreText.gameObject.SetActive(false);
+            _miniMAp.gameObject.SetActive(false);
+
             _gameOverPanel.SetActive(value);
             if (isWin)
             {
@@ -82,13 +87,15 @@ namespace ScoreSpace.Managers
                 _gameOverScoreText.text = "Score : " + GameManager.Instance.PlayerScore.ToString();
             }
         }
-
+    
         public void Pause(bool value = true)
         {
+            
             if (value)
             {
                 Time.timeScale = 0;
                 _pausePanel.SetActive(true);
+                Cursor.visible = true;
             }
             else
             {
