@@ -66829,13 +66829,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5efbd765de14d3fae6e746a0a90156d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _poolObjectsTag:
-  - Enemy
-  _cameraSpawnPoints: {fileID: 1403549372}
-  _spawnRate: 10
   _spawnerSpawnRate: 15
   _spanwerEnemy2Delay: 240
-  _spawnRateDecreaseDelay: 20
 --- !u!4 &823318449 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1896365464338464316, guid: 6800f684cee971b4fb2de84dbf8bb5a5,
@@ -69021,12 +69016,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1402266863}
   m_CullTransparentMesh: 0
---- !u!1 &1403549372 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3499404314210273411, guid: 8e3586bc388c6914caef4eb50b42465d,
-    type: 3}
-  m_PrefabInstance: {fileID: 3499404313410764351}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1403917883 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8095788121969591550, guid: f1272c96cf9b88641b9311eb7c4a6bae,
@@ -84527,7 +84516,7 @@ SpriteRenderer:
   m_SortingLayerID: -503521589
   m_SortingLayer: 4
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 94f177c17a4b3c34ca7a81de689fc86e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ea9bbaa35b7ea1a4b856d7cb24230d18, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

@@ -6,7 +6,6 @@ namespace ScoreSpace.Managers
     public class GameManager : MonoSingleton<GameManager>
     {
         private int _playerScore;
-        private int _hiScore;
         public bool NewHiScore { get; private set; } = false;
         public int PlayerScore
         {

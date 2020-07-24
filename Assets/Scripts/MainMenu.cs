@@ -15,7 +15,7 @@ namespace ScoreSpace
         
         private void Update()
         {
-            if( Input.GetButton("Jump"))
+            if (Input.GetButtonDown("Jump") || Input.GetButtonDown("Cancel"))
             {
                 StartGame();
             }

@@ -19,15 +19,17 @@ namespace ScoreSpace.Managers
         [SerializeField] private Text _gameOverText;
         [SerializeField] private GameObject _energyBar;
         [SerializeField] private Text _gameOverScoreText;
-        [SerializeField] private Text _gameOverHiScoreText;
         [SerializeField] private Text _winBonusText;
         [SerializeField] private GameObject _pausePanel;
+        [SerializeField] private Text _gameOverHiScoreText;
         [SerializeField] private GameObject _miniMAp;
 
         private PlayerPowerUp _playerPowerUp;
         private PlayerHealth _playerHealth;
         private PlayerWeapon _playerWeapon;
         private PlayerMovement _playerMovement;
+        private bool _isPaused = false;
+        private bool _isEnd = false;
 
         public GameObject Player
         {
@@ -54,6 +56,7 @@ namespace ScoreSpace.Managers
         public void ShowGameOver(bool isWin, bool value = true)
 
         {
+            _isEnd = true;
             Cursor.visible = true;
             _energyBar.gameObject.SetActive(false);
             _returnText.gameObject.SetActive(false);
@@ -90,7 +93,6 @@ namespace ScoreSpace.Managers
     
         public void Pause(bool value = true)
         {
-            
             if (value)
             {
                 Time.timeScale = 0;
@@ -106,9 +108,16 @@ namespace ScoreSpace.Managers
         
         private void Update()
         {
-            if (Input.GetButton("Cancel") || Input.GetKeyDown(KeyCode.Escape))
+            if (Input.GetButtonDown("Cancel"))
             {
-                Pause(true);
+                if(!_isEnd)
+                {
+                    _isPaused = !_isPaused;
+                    Pause(_isPaused);
+                } else
+                {
+                    LevelManager.Instance.Restart();
+                }
             }
             if (_player == null) return;
             _scoreText.text = "Score : " + GameManager.Instance.PlayerScore.ToString();

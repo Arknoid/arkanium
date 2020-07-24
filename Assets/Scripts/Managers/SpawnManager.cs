@@ -10,33 +10,16 @@ namespace ScoreSpace.Managers
     public class SpawnManager : MonoBehaviour
     {
 
-        [TagSelector]
-        [SerializeField] private string[] _poolObjectsTag;
-        [SerializeField] private float _spawnRate = 0.5f;
-        private Transform[] _cameraSpawnsPos;
         private Transform[] _spawnsPos;
         [SerializeField] private float _spawnerSpawnRate = 60f;
         [SerializeField] private float _spanwerEnemy2Delay = 120f;
-        [SerializeField] private float _spawnRateDecreaseDelay = 30f;
-        
         
         private void Start()
         {
             _spawnsPos = gameObject.GetComponentsInChildren<Transform>();
             StartCoroutine(SpawnEnemySpawner());
-            StartCoroutine(DecreaseSpawnRate());
         }
 
-        private IEnumerator DecreaseSpawnRate()
-        {
-            while (true)
-            {
-                yield return new WaitForSeconds(_spawnRateDecreaseDelay);
-                _spawnRate -= 0.05f;
-            }
-
-        }
-        
         private IEnumerator SpawnEnemySpawner()
         {
             yield return new WaitForSeconds(2);
