@@ -67316,6 +67316,7 @@ MonoBehaviour:
   _gameOverHiScoreText: {fileID: 1402266865}
   _winBonusText: {fileID: 1098384623}
   _pausePanel: {fileID: 2137533779}
+  _miniMAp: {fileID: 1242158746}
 --- !u!114 &938378913
 MonoBehaviour:
   m_ObjectHideFlags: 0

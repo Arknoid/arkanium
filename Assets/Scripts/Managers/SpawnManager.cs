@@ -12,7 +12,6 @@ namespace ScoreSpace.Managers
 
         [TagSelector]
         [SerializeField] private string[] _poolObjectsTag;
-        [SerializeField] private GameObject _cameraSpawnPoints;
         [SerializeField] private float _spawnRate = 0.5f;
         private Transform[] _cameraSpawnsPos;
         private Transform[] _spawnsPos;
@@ -23,9 +22,7 @@ namespace ScoreSpace.Managers
         
         private void Start()
         {
-            _cameraSpawnsPos =_cameraSpawnPoints.gameObject.GetComponentsInChildren<Transform>();
             _spawnsPos = gameObject.GetComponentsInChildren<Transform>();
-            StartCoroutine(StartSpawn());
             StartCoroutine(SpawnEnemySpawner());
             StartCoroutine(DecreaseSpawnRate());
         }
@@ -40,7 +37,6 @@ namespace ScoreSpace.Managers
 
         }
         
-
         private IEnumerator SpawnEnemySpawner()
         {
             yield return new WaitForSeconds(2);
@@ -57,38 +53,6 @@ namespace ScoreSpace.Managers
                 yield return new WaitForSeconds(_spawnerSpawnRate);
             }
             
-        }
-        private IEnumerator StartSpawn()
-        {
-            var nextIndex = 0;
-            var randomSpawnPosIndex= Random.Range(0, _cameraSpawnsPos.Length);
-            yield return new WaitForSeconds(2);
-            while (true)
-            {
-                
-                if (nextIndex > 6)
-                {
-                    randomSpawnPosIndex  = Random.Range(0, _cameraSpawnsPos.Length);
-                    nextIndex = 0;
-                }
-                var finalIndex = randomSpawnPosIndex + Random.Range(-3,3);
-                if (finalIndex >= _cameraSpawnsPos.Length || finalIndex <= 0)
-                {
-                    finalIndex = 0;
-                }
-                
-                var spawnedObject = Time.timeSinceLevelLoad > _spanwerEnemy2Delay ? ObjectPooler.Instance.GetPooledObject("Enemy2") : ObjectPooler.Instance.GetPooledObject("Enemy");
-                if (spawnedObject != null)
-                {
-                    var spawnPos = _cameraSpawnsPos[finalIndex];
-                    spawnedObject.transform.position = new Vector3(spawnPos.position.x, spawnPos.position.y,0);
-                    spawnedObject.SetActive(true);
-                }
-
-                nextIndex++;
-                yield return new WaitForSeconds(_spawnRate);
-            }
-
         }
         
     }
